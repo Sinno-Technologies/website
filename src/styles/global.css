@@ -1,0 +1,19 @@
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --white: rgba(255, 255, 255, 1);
+    --yellow: rgba(255, 215, 0, 1);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'IBMPlexMonoRegular', sans-serif;
+}
+html {
+    background-color: var(--black);
+    color: var(--white);
+}
+code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+        Bitstream Vera Sans Mono, Courier New, monospace;
+}
