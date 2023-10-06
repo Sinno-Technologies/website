@@ -1,9 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import LogoMain from "../assets/logo_main.svg";
-import Links from "../components/Links.astro";
-import Hamburger from "../components/Hamburger.astro";
-import Contact from "../components/Contact.astro";
+import Links from "./Links.astro";
+import HamburgerMenu from "../components/HamburgerMenu.jsx";
 ---
 <header>
     <section class="wrapper">
@@ -14,7 +13,7 @@ import Contact from "../components/Contact.astro";
             <Links/>
         <section/>
         <section class="right"/>
-            <Hamburger/>
+            <HamburgerMenu/>
         <section />
     </section>
 </header>
