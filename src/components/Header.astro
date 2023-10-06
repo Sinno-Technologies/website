@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import LogoMain from "../assets/logo_main.svg";
+import Links from "../components/Links.astro";
+import Hamburger from "../components/Hamburger.astro";
+import Contact from "../components/Contact.astro";
+---
+<header>
+    <section class="wrapper">
+        <section class="left">
+            <Image src={LogoMain}  alt="Sinno Technologies Main Logo. The logo has a black background, a yellow icon and white text. The text says Sinno Technologies, the yellow icon is a circle with a hollow square in the middle with 4 circles and 4 hollow squares extending from it in an octagonal shape"/>
+        </section>
+        <section class="center"/>
+            <Links/>
+        <section/>
+        <section class="right"/>
+            <Hamburger/>
+        <section />
+    </section>
+</header>
+
+<style>
+    .wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .left *{
+        max-height: 80px;
+        width: auto;
+    }
+
+    .right{
+        display: flex; 
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+</style>
