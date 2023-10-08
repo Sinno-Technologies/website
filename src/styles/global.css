@@ -18,6 +18,9 @@ code {
         Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+/* ######################
+            LINKS  
+   ######################*/
 a{
     text-decoration: none;
     color: var(--white);
