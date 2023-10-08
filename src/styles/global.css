@@ -26,3 +26,9 @@ a{
 a:hover{
     color: var(--yellow);
 }
+
+a:focus{
+    outline: 2px solid var(--yellow);
+    outline-offset: 2px; 
+    border-radius: 1rem;
+}
