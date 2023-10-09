@@ -2,6 +2,7 @@
     --black: rgba(0, 0, 0, 1);
     --white: rgba(255, 255, 255, 1);
     --yellow: rgba(255, 215, 0, 1);
+    --whiteHover: rgba(255, 255, 255, 0.5);
 }
 *{
     box-sizing: border-box;
