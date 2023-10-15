@@ -33,6 +33,6 @@ a:hover{
 
 a:focus{
     outline: 2px solid var(--yellow);
-    outline-offset: 2px; 
+    outline-offset: 0.5rem; 
     border-radius: 1rem;
 }

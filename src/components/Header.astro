@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import LogoMain from "../assets/logo_main.svg";
-import Nav from "./Nav.astro";
 import HamburgerMenu from "../components/HamburgerMenu.jsx";
 ---
 <header>
@@ -9,9 +8,6 @@ import HamburgerMenu from "../components/HamburgerMenu.jsx";
         <section class="left">
             <Image src={LogoMain}  alt="Sinno Technologies Main Logo. The logo has a black background, a yellow icon and white text. The text says Sinno Technologies, the yellow icon is a circle with a hollow square in the middle with 4 circles and 4 hollow squares extending from it in an octagonal shape"/>
         </section>
-        <section class="center"/>
-            <Nav/>
-        <section/>
         <section class="right"/>
             <HamburgerMenu client:load/>
         <section />

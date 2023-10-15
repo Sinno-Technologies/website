@@ -4,22 +4,46 @@ const HamburgerMenu = () => {
   const $isNavOpen = useStore(isNavOpen); 
   return (
     <>
-      <div className="hamburger-menu" onClick={() => isNavOpen.set(!$isNavOpen)}>
-        {$isNavOpen === false && <><div className="burger"></div>
-        <div className="burger"></div>
-        <div className="burger"></div></>}
-        {$isNavOpen === true && <><div className="burger burger1"></div>
-        <div className="burger burger2"></div>
-        <div className="burger burger3"></div></>}
-      </div>
+      <button href="#" className="hamburger-menu" onClick={() => isNavOpen.set(!$isNavOpen)} aria-label="Toggle Menu">
+        {!$isNavOpen && (
+          <>
+            <span className="visuallyHidden">Close</span>
+            <img className="img" src="../../public/icons/burger_icon.png" alt="Open Navigation Menu icon" />
+          </>
+        )}
+        {$isNavOpen && (
+          <>
+            <span className="visuallyHidden">Close</span>
+            <img className="img" src="../../public/icons/close_icon.png" alt="Close Navigation Menu icon" />
+          </>
+        )}
+      </button>
       <style jsx="true">{`
+        .img{
+          max-width: 50px;
+          max-height: 50px;
+        }
+        .visuallyHidden {
+          position: absolute;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          padding: 0;
+          border: 0;
+          white-space: nowrap;
+        }
         .hamburger-menu {
-          width: 2rem;
+          width: 3rem;
           height: 2rem;
           display: flex;
           flex-flow: column nowrap;
           justify-content: space-around;
+          align-items: center;
           cursor: pointer;
+          background-color: var(--black);
+          border: none;
         } 
 
         .burger{
@@ -29,6 +53,7 @@ const HamburgerMenu = () => {
           background-color: var(--yellow);
           transform-origin: 1px;
           transition: all 0.3s ease-in-out;
+          transform: rotate(0); /* Add this */
         }
 
         .burger1{

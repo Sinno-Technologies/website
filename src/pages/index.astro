@@ -1,14 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro"; 
 import Header from "../components/Header.astro";
+import Nav from "../components/Nav.jsx";
 ---
 
 <Layout title="Sinno Technologies Limited" >
 	<Header />
+	<section class="wrapper">
+		<Nav client:load/>
+	</section>
 </Layout>
 
 <style>
-	h1{
-		color: var(--yellow);
+	.wrapper{
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		align-items: center;
 	}
 </style>
