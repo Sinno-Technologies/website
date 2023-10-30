@@ -1,0 +1,105 @@
+---
+import image from "../../public/images/jamilSinnoBrush.svg";
+import resume from "../../public/JamilSinnoresume.pdf";
+---
+
+<div class="container">
+    <h4 class="image">
+        <img src={image} alt="Jamil Sinno's Hero image. The words are Jamil Sinno with a brush stroke in the back. The word Sinno is in between carats which is supposed to make it look like a component. The theme of the logo is an 8 bit design.">
+    </h4>
+    <section class="txtContainer">
+        <h1 class="mainTxt">I enjoy <a class="link" href="https://github.com/jamilsinno" target="_blank" rel="noreferrer noopener">writing code</a>, <a class="link" href="https://1drv.ms/x/s!AkPXqkA8Qy8miULhLB_qMRzfvRFB?e=VdvnT5" target="_blank" rel="noreferrer noopener">lifting weights</a>, and <a class="link" href="https://linktr.ee/sinnotech" target="_blank" rel="noreferrer noopener">creating content</a>.</h1>
+        <p class="pContainer">I work as a Full-Stack Software Developer, and I specialize in building web and mobile applications. My career goal is to promote education and advocate for accessibility and diversity in the technology industry.</p>
+        <div class="btnContainer">
+            <a id="resume" href={resume} target="_blank">My Resume</a>
+            <a id="consult" href={"https://calendly.com/sinno-technologies/free-consult"} target="_blank">Book a Free Consult</a>
+        </div>
+    </section>
+</div>
+
+<style>
+    .container{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image img{
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .txtContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+	.pContainer {
+		margin: 1rem 0;
+        border: 1px solid rgba(186, 55, 47, 0.5); 
+		background-color: rgba(255, 255, 255, 0.75);
+        padding: 1rem;
+		border-radius: 0.7rem;
+	}
+
+    .btnContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #consult,
+    #resume{
+		background-color: rgba(255, 255, 255, 0.75);
+        padding: 1rem;
+        font-size: 1.8rem;
+        border: 1px solid rgba(186, 55, 47, 0.5); 
+        border-radius: 0.7em;
+    }
+
+    #consult:hover,
+    #resume:hover{
+        background-color: rgba(186, 55, 47, 0.5); 
+        color: #fff;
+        border: 1px solid #000;
+    }
+
+    #consult:active,
+    #resume:active{
+        transform: scale(0.9);
+    }
+
+    .mainTxt{
+        font-size: 3em;
+        font-weight: bold;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .txtContainer p {
+        font-size: 2.0rem;
+    }
+
+    .link{
+        color: #ba372f;
+    }
+
+    @media (min-width: 981px) {
+        .btnContainer{
+            flex-direction: row;
+        }
+        h4 img{
+            justify-self: flex-end;
+        }
+    }
+
+</style>

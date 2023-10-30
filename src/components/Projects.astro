@@ -1,0 +1,74 @@
+---
+import cardData from "../data/cardData";
+import Card from "./Card.astro";
+---
+
+<section class="container">
+    <h3 class="projects">Projects</h3>
+    <ul class="cardContainer">
+        {cardData.map((card, index) => (
+            <Card
+              key={index}
+              title={card.title}
+              body={card.body}
+              img={card.img}
+              href={card.href}
+              alt={card.alt}
+            />
+          ))}
+    </ul>
+    <a href="https://github.com/jamilsinno?tab=repositories" target="_blank" rel="noreferrer noopener" class="github">View more of my projects on GitHub</a>
+</section>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .projects{
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    .cardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .github{
+        font-size: 1.8rem;
+        text-align: center;
+		background-color: rgba(255, 255, 255, 0.75);
+        padding: 1rem;
+        border: 1px solid rgba(186, 55, 47, 0.5); 
+        border-radius: 0.7rem;
+        max-width: 50%;
+        align-self:center;
+    }
+
+    .github:hover{
+        background-color: rgba(186, 55, 47, 0.5); 
+        color: #fff;
+        border: 1px solid #000;
+    }
+
+    .github:active{
+        transform: scale(0.9);
+    }
+
+    @media (max-width: 980px) {
+        .cardContainer{
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

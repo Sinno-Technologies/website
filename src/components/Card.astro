@@ -1,0 +1,83 @@
+---
+export interface Props {
+		key: number,
+        title: string,
+        body: string,
+        img: string,
+        href: string,
+		alt: string,
+}
+
+const { href, title, body, img, alt } = Astro.props;
+---
+
+<li class="link-card">
+	<a class="pLink" href={href} target="_blank" rel="noreferrer noopener">
+		<img class="image" src={img} alt={alt}>
+		<section>
+			<h2 class="title">
+				{title}
+			</h2>
+			<p class="text">
+				{body}
+			</p>
+		</section>
+	</a>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0.25rem;
+		background-color: white;
+		background-image: none;
+		background-size: 400%;
+		border-radius: 0.6rem;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(186, 55, 47, 0.5); 
+	}
+
+	.link-card > .pLink,
+	.link-card .rLink {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: 1rem 1.3rem;
+		border-radius: 0.35rem;
+		color: #111;
+		background-color: white;
+		opacity: 0.8;
+	}
+	.image{
+		width:100%;
+		max-height: 100%;
+	}
+	.title {
+		font-size: 1.5rem;
+		font-weight: bold;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		padding: 0.5rem 0;
+	}
+	.text{
+		padding: 0 0 1rem 0;
+	}
+	.rLink{
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+	.link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-image: var(--accent-gradient);
+	}
+	.link-card:is(:hover, :focus-within) h2{
+		color: rgb(var(--accent));
+	}
+</style>
