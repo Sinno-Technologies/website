@@ -5,18 +5,8 @@ const HamburgerMenu = () => {
   return (
     <>
       <button href="#" className="hamburger-menu" onClick={() => isNavOpen.set(!$isNavOpen)} aria-label="Toggle Menu">
-        {!$isNavOpen && (
-          <>
-            <span className="visuallyHidden">Close</span>
-            <img className="img" src="../../public/icons/burger_icon.png" alt="Open Navigation Menu icon" />
-          </>
-        )}
-        {$isNavOpen && (
-          <>
-            <span className="visuallyHidden">Close</span>
-            <img className="img" src="../../public/icons/close_icon.png" alt="Close Navigation Menu icon" />
-          </>
-        )}
+        {!$isNavOpen && <img className="img" src="../../public/icons/burger_icon.png" alt="Open Navigation Menu icon" />}
+        {$isNavOpen && <img className="img" src="../../public/icons/close_icon.png" alt="Close Navigation Menu icon" />}
       </button>
       <style jsx="true">{`
         .img{
