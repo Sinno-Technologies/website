@@ -5,16 +5,19 @@ const Nav = () => {
   const $isNavOpen = useStore(isNavOpen);
 
   return $isNavOpen ? (
-  <>
+  <aside className="navContainer">
     <nav className="navLinks">
         <ul>
-            <li class="link"><a href="/">Home</a></li>
-            <li class="link"><a href="#">Contact</a></li>
+            <li><a  className="link" href="/">Home</a></li>
+            <li><a  className="link" href="#">Contact</a></li>
         </ul>
     </nav>
         <style jsx="true">{`
+            .navContainer{
+                min-width: 25%;
+            }
             .navLinks{
-                width: 33%;
+                width: 100%;
                 height: 100%;
                 padding: 1rem;
             }
@@ -30,9 +33,10 @@ const Nav = () => {
             }
             .link:hover{
                 text-decoration: underline var(--yellow);
+                transition: 0.3s;
             }
         `}</style>
-  </>
+  </aside>
   ) : null;
 }
 
