@@ -8,8 +8,8 @@ const Nav = () => {
   <>
     <nav className="navLinks">
         <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="#">Contact</a></li>
+            <li class="link"><a href="/">Home</a></li>
+            <li class="link"><a href="#">Contact</a></li>
         </ul>
     </nav>
         <style jsx="true">{`
@@ -24,6 +24,12 @@ const Nav = () => {
                 justify-content: center;
                 align-items: center;
                 gap: 1rem;
+            }
+            .link{
+                font-size: 1.5rem;
+            }
+            .link:hover{
+                text-decoration: underline var(--yellow);
             }
         `}</style>
   </>
