@@ -1,5 +1,6 @@
 :root {
     --black: rgba(0, 0, 0, 1);
+    --bgBlack: rgba(0, 0, 0, 0.9);
     --white: rgba(255, 255, 255, 1);
     --yellow: rgba(255, 215, 0, 1);
     --whiteHover: rgba(255, 255, 255, 0.5);
@@ -29,10 +30,16 @@ a{
 
 a:hover{
     color: var(--yellow);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 a:focus{
     outline: 2px solid var(--yellow);
     outline-offset: 0.5rem; 
     border-radius: 1rem;
+}
+
+a:active{
+    transform: scale(0.9);
 }

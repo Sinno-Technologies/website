@@ -4,12 +4,12 @@ const HamburgerMenu = () => {
   const $isNavOpen = useStore(isNavOpen); 
   return (
     <>
-      <button href="#" className="hamburger-menu" onClick={() => isNavOpen.set(!$isNavOpen)} aria-label="Toggle Menu">
-        {!$isNavOpen && <img className="img" src="../../public/icons/burger_icon.png" alt="Open Navigation Menu icon" />}
-        {$isNavOpen && <img className="img" src="../../public/icons/close_icon.png" alt="Close Navigation Menu icon" />}
+      <button className="hamburger-menu" onClick={() => isNavOpen.set(!$isNavOpen)} aria-label="Toggle Menu">
+        {!$isNavOpen && <img className="imgBurger" src="../../public/icons/burger_icon.png" alt="Open Navigation Menu icon" />}
+        {$isNavOpen && <img className="imgBurger" src="../../public/icons/close_icon.png" alt="Close Navigation Menu icon" />}
       </button>
       <style jsx="true">{`
-        .img{
+        .imgBurger{
           max-width: 50px;
           max-height: 50px;
         }
@@ -23,6 +23,7 @@ const HamburgerMenu = () => {
           padding: 0;
           border: 0;
           white-space: nowrap;
+          transition: 3s;
         }
         .hamburger-menu {
           width: 3rem;
@@ -34,6 +35,7 @@ const HamburgerMenu = () => {
           cursor: pointer;
           background-color: var(--black);
           border: none;
+          transition: 3s;
         } 
 
         .burger{
@@ -42,19 +44,8 @@ const HamburgerMenu = () => {
           border-radius: 0.5rem;
           background-color: var(--yellow);
           transform-origin: 1px;
-          transition: all 0.3s ease-in-out;
+          transition: 3s;
           transform: rotate(0); /* Add this */
-        }
-
-        .burger1{
-          transform: ${$isNavOpen ? 'rotate(45deg)' : 'rotate(0)'};
-        }
-        .burger2{
-          opacity: ${$isNavOpen ? '0' : '1'};
-          transform: ${$isNavOpen ? 'translateX(100%)' : 'translateX(0)'};
-        }
-        .burger3{
-          transform: ${$isNavOpen ? 'rotate(-45deg)' : 'rotate(0)'};
         }
       `}</style>
     </>
