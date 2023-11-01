@@ -5,8 +5,8 @@ const HamburgerMenu = () => {
   return (
     <>
       <button className="hamburger-menu" onClick={() => isNavOpen.set(!$isNavOpen)} aria-label="Toggle Menu">
-        {!$isNavOpen && <img className="imgBurger" src="../../public/icons/burger_icon.png" alt="Open Navigation Menu icon" />}
-        {$isNavOpen && <img className="imgBurger" src="../../public/icons/close_icon.png" alt="Close Navigation Menu icon" />}
+        {!$isNavOpen && <img className="imgBurger" src="/icons/burger_icon.png" alt="Open Navigation Menu icon" />}
+        {$isNavOpen && <img className="imgBurger" src="/icons/close_icon.png" alt="Close Navigation Menu icon" />}
       </button>
       <style jsx="true">{`
         .imgBurger{
