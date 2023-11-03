@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import LogoMain from "../assets/logo_main.svg";
 import HamburgerMenu from "../components/HamburgerMenu.jsx";
 ---
-<header>
+<header class="header" id="header">
     <section class="wrapper">
         <section class="left">
             <Image src={LogoMain}  alt="Sinno Technologies Main Logo. The logo has a black background, a yellow icon and white text. The text says Sinno Technologies, the yellow icon is a circle with a hollow square in the middle with 4 circles and 4 hollow squares extending from it in an octagonal shape"/>
@@ -15,6 +15,12 @@ import HamburgerMenu from "../components/HamburgerMenu.jsx";
 </header>
 
 <style>
+    .header{
+        position: sticky;
+        top: 0; 
+        width: 100%;
+        background-color: var(--bgBlack);
+    }
     .wrapper{
         display: flex;
         flex-direction: row;

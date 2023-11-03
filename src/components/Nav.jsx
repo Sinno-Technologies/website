@@ -8,17 +8,22 @@ const Nav = () => {
   <aside className="navContainer">
     <nav className="navLinks">
         <ul>
-            <li><a  className="link" href="/">Home</a></li>
+            <li><a  className="link" href="#home">Home</a></li>
+            <li><a  className="link" href="#services">Services</a></li>
             <li><a  className="link" href="#">Contact</a></li>
         </ul>
     </nav>
         <style jsx="true">{`
             .navContainer{
-                min-width: 25%;
+                position: sticky;
+                top: 50%;
+                width: 25%;
+                height: auto;
+                border-left: 3px solid var(--yellow);
             }
             .navLinks{
                 width: 100%;
-                height: 100%;
+                height: auto;
                 padding: 1rem;
             }
             .navLinks ul{

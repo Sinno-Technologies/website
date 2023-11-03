@@ -6,9 +6,9 @@ import Hero from "../components/Hero.astro";
 import Services from "../components/Services.astro";
 ---
 
-<Layout title="Sinno Technologies Limited" >
+<Layout title="Sinno Technologies Limited">
 	<Header />
-	<main class="wrapper">
+	<main class="wrapper" id="home">
 		<section class="content">
 			<Hero />
 			<Services />
@@ -20,8 +20,10 @@ import Services from "../components/Services.astro";
 <style>
 	.wrapper{
 		display: flex;
+		width: 100%;
+		height; 100vh;
 		flex-direction: row;
-		justify-content: start;
+		justify-content: center;
 		align-items: center;
 	}
 	.content{
@@ -31,5 +33,6 @@ import Services from "../components/Services.astro";
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		overflow-y: auto;
 	}
 </style>
