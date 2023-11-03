@@ -1,0 +1,189 @@
+---
+import { Image } from "astro:assets";
+import conversation from "../assets/icons/conversation.svg";
+import proposal from "../assets/icons/proposal.svg";
+import code from "../assets/icons/code.svg";
+import rocket from "../assets/icons/rocket.svg";
+---
+
+<section class="mainContainer">
+    <h1 class="title">Is Your Web Presence Accessible?</h1>
+    <section class="container">
+        <h2 class="services">Our Services</h2>
+        <section class="textContainer">
+            <p class="mainText">Is your website designed to captivate potential customers seeking the services you offer? Does it seamlessly adapt to any device, ensuring a flawless user experience? In today's digital landscape, having a responsive and accessible website is no longer a luxury—it's a necessity.</p>
+            <p class="mainText">My mission is to deliver top-notch, responsive, and accessible websites to small businesses and insectioniduals in our community. Whether you're in need of a brand-new website or a revamp to thrive in the mobile era, I'm here to assist you. I specialize in creating a virtual hub where interested parties can discover and engage with your unique offerings. How may I be of service to you today?</p>
+        </section>
+        <section class="servicesContainer">
+                <section class="featureContainer">
+                    <Image class="image" src={conversation} alt="a picture of two chat bubbles from either direction indicating a conversation."/>
+                    <section class="content">
+                        <h3 class="topic">1. Consultation</h2>
+                        <p class="text">It starts with a conversation where we'll determine what your project is about.</p>
+                    </section>
+                </section>
+                <section class="featureContainer">
+                    <Image class="image" src={proposal} alt="a picture of a pen and paper representing a proposal."/>
+                    <section class="content">
+                        <h3 class="topic">2. Proposal</h2>
+                        <p class="text">A detailed project proposal will be presented, followed by an action plan.</p>
+                    </section>
+                </section>
+                <section class="featureContainer">
+                    <Image class="image" src={code} alt="a picture of a left carrat, forward slash and a right carrat."/>
+                    <section class="content">
+                        <h3 class="topic">3. Creation</h2>
+                        <p class="text">Clients receive regular status updates as I work on and test the project.</p>
+                    </section>
+                </section>
+                <section class="featureContainer">
+                    <Image class="image" src={rocket} alt="a picture of a rocket."/>
+                    <section class="content">
+                        <h3 class="topic">4. Launch</h2>
+                        <p class="text">Your product comes to life with value added and peace of mind. </p>
+                    </section>
+                </section>
+        </section>
+        <section class="btnContainer">
+            <a href="https://calendly.com/sinno-technologies/free-consult" target="_blank" rel="noreferrer noopener" id="consult">Book a Free Consult</a>
+        </section>
+    </section>
+</section>
+
+<style>
+    .mainContainer{
+        width:80%;
+        height: auto;
+    }
+    .container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .services{
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 1rem;
+        height: 100%;
+        background-color: var(--bgWhite);
+        color: var(--black);
+        border: 2px solid var(--yellow); 
+        border-radius: 1rem;
+    }
+
+    .mainText{
+        font-size: 1.8rem;
+        width:100%;
+        text-align: justify;
+        padding: 1rem;
+        flex-grow: 1;
+    }
+
+    .servicesContainer{
+        width:100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .content{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .content * {
+        color: var(--black);
+    }
+
+    .title{
+        font-size: 4em;
+        font-weight: bold;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .topic{
+        font-size: 2.6rem;
+        font-weight: bold;
+    }
+
+    .featureContainer{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bgWhite);
+        border: 2px solid var(--yellow); 
+        border-radius: 1rem;
+    }
+
+    .featureContainer .text{
+        font-size: 1.8rem;
+    }
+
+    .image {
+        width:15%;
+        max-height: 15%;
+        padding: 1rem 0;
+    }
+
+    .btnContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #consult{
+        padding: 1rem;
+        font-size: 1.8rem;
+        border: 2px solid var(--yellow); 
+        border-radius: 1em;
+    }
+
+    #consult:hover {
+        background-color: var(--yellow);
+        color: var(--black);
+        border: 2px solid var(--white);
+        transition: 0.3s;
+    }
+
+	@media screen and (max-width: 1080px){
+        .servicesContainer{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+
+        .textContainer,
+        .features{
+            width:100%;
+            height: auto;
+        }
+	}
+</style>
