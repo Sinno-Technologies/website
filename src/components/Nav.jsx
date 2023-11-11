@@ -17,7 +17,7 @@ const Nav = () => {
         <style jsx="true">{`
             .navContainer{
                 position: sticky;
-                top: 50%;
+                top: 10%;
                 width: 25%;
                 height: auto;
                 border-left: 3px solid var(--yellow);

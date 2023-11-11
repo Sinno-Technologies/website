@@ -1,13 +1,13 @@
 ---
-export interface Props {
-	title: string;
-}
-
+import { SEO, type Props as SEOProps } from 'astro-seo';
 import "../styles/reset.css";
 import "../styles/fonts.css";
 import "../styles/global.css";
 
-const { title } = Astro.props;
+export interface Props {
+	seo?: SEOProps;
+}
+const { seo } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -28,13 +28,17 @@ const { title } = Astro.props;
         <meta name="geo.region" content="CA-NS">
         <meta name="geo.position" content="45.3657;-63.2523">
         <meta name="language" content="English">
-        <!-- <meta property="og:image" content="/images/intro.jpeg"> -->
         <meta property="og:title" content="Software Development Services in Halifax, Nova Scotia | Atlantic Canada">
         <meta property="og:description" content="Expert software development services in Halifax, Nova Scotia. Enhance your digital presence with our professional solutions.">
         <meta property="og:url" content="https://www.jamilsinno.ca">
-        <!-- <link rel="icon" type="image/svg+xml" href="/logo/tabLogo.svg" /> -->
+        <link rel="icon" type="image/svg+xml" href="/icons/main_icon.svg" />
         <link rel="canonical" href="https://www.jamilsinno.ca">
-        <title>{title}</title>
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <SEO 
+            {...seo}
+            title={seo?.title ?? "Sinno Technologies Limited"}
+            description={seo?.description ?? "Sinno Technologies Limited Company Website"}
+        />
 	</head>
 	<body>
 		<slot />
