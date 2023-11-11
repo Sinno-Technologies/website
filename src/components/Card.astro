@@ -3,7 +3,7 @@ export interface Props {
 		key: number,
         title: string,
         body: string,
-		img: string,
+		img: ImageMetadata,
         href: string,
 		alt: string,
 }
@@ -33,7 +33,6 @@ const { href, title, body, img, alt } = Astro.props;
 		flex-direction: column;
 		justify-content: space-between;
 		background-color: var(--bgBlack);
-		background-size: 400%;
 		border-radius: 1rem;
 		background-position: 100%;
         border: 2px solid var(--yellow); 
