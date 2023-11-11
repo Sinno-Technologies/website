@@ -3,7 +3,7 @@ import cardData from "../data/cardData";
 import Card from "./Card.astro";
 ---
 
-<section class="container">
+<section class="mainContainer" id="projects">
     <h3 class="projects">Projects</h3>
     <ul class="cardContainer">
         {cardData.map((card, index) => (
@@ -17,15 +17,19 @@ import Card from "./Card.astro";
             />
           ))}
     </ul>
-    <a href="https://github.com/jamilsinno?tab=repositories" target="_blank" rel="noreferrer noopener" class="github">View more of my projects on GitHub</a>
+    <a href="https://github.com/jamilsinno?tab=repositories" target="_blank" rel="noreferrer noopener nofollow" class="buttonProjects">View more of my projects on GitHub</a>
 </section>
 
 <style>
-    .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1rem;
+    .mainContainer{
+        width:80%;
+        height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+        padding: 2rem 1rem;
+        gap: 2rem;
     }
     
     .container {
@@ -41,32 +45,24 @@ import Card from "./Card.astro";
 
     .cardContainer{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
-    .github{
-        font-size: 1.8rem;
-        text-align: center;
-		background-color: rgba(255, 255, 255, 0.75);
+    .buttonProjects{
         padding: 1rem;
-        border: 1px solid rgba(186, 55, 47, 0.5); 
-        border-radius: 0.7rem;
-        max-width: 50%;
-        align-self:center;
+        font-size: 1.8rem;
+        border: 2px solid var(--yellow); 
+        border-radius: 1em;
     }
 
-    .github:hover{
-        background-color: rgba(186, 55, 47, 0.5); 
-        color: #fff;
-        border: 1px solid #000;
+    .buttonProjects:hover {
+        background-color: var(--yellow);
+        color: var(--black);
+        border: 2px solid var(--white);
+        transition: 0.3s;
     }
-
-    .github:active{
-        transform: scale(0.9);
-    }
-
-    @media (max-width: 980px) {
+    @media (max-width: 1080px) {
         .cardContainer{
             grid-template-columns: 1fr;
         }
