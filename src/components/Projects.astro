@@ -1,6 +1,12 @@
 ---
 import cardData from "../data/cardData";
 import Card from "./Card.astro";
+import parkland from "../assets/ParklandPM.png";
+import unum from "../assets/unumHealth.png";
+import login from "../assets/Login.png";
+import ramp from "../assets/rampatl.png";
+
+const imgArr = [parkland, unum, login, ramp];
 ---
 
 <section class="mainContainer" id="projects">
@@ -11,7 +17,7 @@ import Card from "./Card.astro";
               key={index}
               title={card.title}
               body={card.body}
-              img={card.img}
+              img={imgArr[index]}
               href={card.href}
               alt={card.alt}
             />

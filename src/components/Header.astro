@@ -5,11 +5,11 @@ import HamburgerMenu from "../components/HamburgerMenu.jsx";
 ---
 <header class="header" id="header">
     <section class="wrapper">
-        <section class="left">
-            <Image src={LogoMain}  alt="Sinno Technologies Main Logo. The logo has a black background, a yellow icon and white text. The text says Sinno Technologies, the yellow icon is a circle with a hollow square in the middle with 4 circles and 4 hollow squares extending from it in an octagonal shape"/>
-        </section>
         <section class="right">
             <HamburgerMenu client:load/>
+        </section>
+        <section class="left">
+            <Image src={LogoMain}  alt="Sinno Technologies Main Logo. The logo has a black background, a yellow icon and white text. The text says Sinno Technologies, the yellow icon is a circle with a hollow square in the middle with 4 circles and 4 hollow squares extending from it in an octagonal shape"/>
         </section>
     </section>
 </header>
@@ -20,6 +20,7 @@ import HamburgerMenu from "../components/HamburgerMenu.jsx";
         top: 0; 
         width: 100%;
         background-color: var(--bgBlack);
+        z-index: 1;
     }
     .wrapper{
         display: flex;
