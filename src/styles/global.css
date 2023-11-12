@@ -38,7 +38,7 @@ a:hover{
 }
 
 a:focus{
-    outline: 2px solid var(--yellow);
+    outline: 2px dotted var(--yellow);
     outline-offset: 0.5rem; 
     border-radius: 1rem;
 }
