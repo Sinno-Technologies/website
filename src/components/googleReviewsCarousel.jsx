@@ -7,6 +7,7 @@ const GoogleReviews = () => {
     return (
         <section className="carouselContainer">
             <h3 className="title" id="reviews">Client Reviews</h3>
+            <div className="line"></div>
             <Carousel
                 ariaLabel="Reviews"
                 emulateTouch={true}
@@ -77,7 +78,7 @@ const GoogleReviews = () => {
                 }
                 
                 .carousel-root{
-                    width: 90%;
+                    width: 80%;
                 }
 
                 .carousel .control-dots .dot{

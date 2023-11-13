@@ -11,6 +11,7 @@ const imgArr = [parkland, unum, login, ramp];
 
 <section class="mainContainer" id="projects">
     <h3 class="projects">Projects</h3>
+    <div class="line"></div>
     <ul class="cardContainer">
         {cardData.map((card, index) => (
             <Card
@@ -28,7 +29,7 @@ const imgArr = [parkland, unum, login, ramp];
 
 <style>
     .mainContainer{
-        width:80%;
+        width:100%;
         height: auto;
 		display: flex;
 		flex-direction: column;
@@ -44,6 +45,7 @@ const imgArr = [parkland, unum, login, ramp];
     }
 
     .cardContainer{
+        width: 80%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
