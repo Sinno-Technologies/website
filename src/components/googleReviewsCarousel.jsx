@@ -13,12 +13,13 @@ const GoogleReviews = () => {
                 showArrows={true} 
                 showStatus={false}
                 useKeyboardArrows={true}
+                showThumbs={false}
                 aria-labelledby="carousel"
             >
                 {reviews.map((review, index) => (
-                    <section class="slide" key={index}>
-                        <h4 class="body">"{review.body}"</h4>
-                        <section class="stars">
+                    <section className="slide" key={index}>
+                        <h4 className="body">"{review.body}"</h4>
+                        <section className="stars">
                             <span>{review.stars}</span>
                             <span>- {review.author}</span>
                         </section>
