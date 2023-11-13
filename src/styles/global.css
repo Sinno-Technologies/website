@@ -31,7 +31,7 @@ a{
     color: var(--white);
 }
 
-.carouselContainer .carousel-root,
+.carouselContainer .carousel-root:hover,
 button:hover,
 a:hover{
     color: var(--yellow);
@@ -39,7 +39,7 @@ a:hover{
     transition: 0.3s;
 }
 
-.carouselContainer .carousel-root,
+.carouselContainer .carousel-root:focus,
 button:focus,
 a:focus{
     outline: 2px dotted var(--yellow);
