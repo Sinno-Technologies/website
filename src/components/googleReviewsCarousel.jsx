@@ -33,6 +33,8 @@ const GoogleReviews = () => {
                     align-items: center;
                     gap: 2rem;
                     width: 100%;
+                    height: auto;
+                    padding: 2rem 0;
                 }
                 .title{
                     font-size: 3.5rem;
