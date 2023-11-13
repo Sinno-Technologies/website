@@ -5,24 +5,83 @@ import reviews from '../data/googleReviews';
 
 const GoogleReviews = () => {
     return (
-        <Carousel
-            ariaLabel="Reviews"
-            emulateTouch={true}
-            showArrows={true} 
-            showStatus={false}
-            swipeable={true}
-            useKeyboardArrows={true}
-        >
-            {reviews.map((review, index) => (
-                <section class="review" key={index}>
-                    <h4>"{review.body}"</h4>
-                    <div class="reviewInfo">
-                        <span>{review.stars}</span>
-                        <span>- {review.author}</span>
-                    </div>
-                </section>
-            ))}
-        </Carousel>
+        <section className="carouselContainer">
+            <h3 className="title">Client Reviews</h3>
+            <Carousel
+                ariaLabel="Reviews"
+                emulateTouch={true}
+                showArrows={true} 
+                showStatus={false}
+                swipeable={true}
+                useKeyboardArrows={true}
+                aria-labelledby="carousel"
+            >
+                {reviews.map((review, index) => (
+                    <section class="slide" key={index}>
+                        <h4 class="body">"{review.body}"</h4>
+                        <section class="stars">
+                            <span>{review.stars}</span>
+                            <span>- {review.author}</span>
+                        </section>
+                    </section>
+                ))}
+                <style jsx="true">{`
+                    .carouselContainer{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 2rem;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .title{
+                        font-size: 3.5rem;
+                        font-weight: bold;
+                    }
+                    .slide{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 2rem;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        color: var(--black);
+                        border: 3px solid var(--black); 
+                        background-color: var(--yellow);
+                        border-radius: 0.7rem;
+                    }
+
+                    .slide h4{
+                        padding: 1rem;
+                        font-size: 2rem;
+                    }
+
+                    .stars{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        height: auto;
+                        text-align: center;
+                        padding: 1rem;
+                    }
+
+                    .stars span{
+                        font-style: italic;
+                        font-size: 1.5rem;
+                    }
+                    
+                    .carousel.carousel-slider .control-arrow, 
+                    .carousel.carousel-slider .control-next{
+                        opacity: 1;
+                        background-color: var(--black);
+                    }
+                `}</style>
+            </Carousel>
+        </section>
     );
 };
 

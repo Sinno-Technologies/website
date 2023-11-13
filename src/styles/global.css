@@ -31,18 +31,23 @@ a{
     color: var(--white);
 }
 
+.carouselContainer .carousel-root,
+button:hover,
 a:hover{
     color: var(--yellow);
     cursor: pointer;
     transition: 0.3s;
 }
 
+.carouselContainer .carousel-root,
+button:focus,
 a:focus{
     outline: 2px dotted var(--yellow);
     outline-offset: 0.5rem; 
     border-radius: 1rem;
 }
 
+button:focus,
 a:active{
     transform: scale(0.9);
 }
