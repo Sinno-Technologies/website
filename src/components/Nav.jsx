@@ -5,7 +5,7 @@ const Nav = () => {
   const $isNavOpen = useStore(isNavOpen);
 
   return $isNavOpen ? (
-  <aside className="navContainer">
+  <section className="navContainer">
     <nav className="navLinks">
         <ul>
             <li><a  className="link" href="#home">Home</a></li>
@@ -19,12 +19,12 @@ const Nav = () => {
             .navContainer{
                 position: sticky;
                 width: 100%;
-                height: auto;
+                height: 100%;
                 // background-color: var(--bgBlack);
             }
             .navLinks{
                 width: 100%;
-                height: auto;
+                height: 100%;
                 padding: 1rem;
                 border-bottom: 2px solid var(--yellow);
             }
@@ -43,7 +43,7 @@ const Nav = () => {
                 transition: 0.3s;
             }
         `}</style>
-  </aside>
+  </section>
   ) : null;
 }
 
