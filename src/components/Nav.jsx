@@ -18,15 +18,15 @@ const Nav = () => {
         <style jsx="true">{`
             .navContainer{
                 position: sticky;
-                top: 15%;
-                width: 25%;
+                width: 100%;
                 height: auto;
-                border-left: 3px solid var(--yellow);
+                // background-color: var(--bgBlack);
             }
             .navLinks{
                 width: 100%;
                 height: auto;
                 padding: 1rem;
+                border-bottom: 2px solid var(--yellow);
             }
             .navLinks ul{
                 display: flex;
@@ -36,7 +36,7 @@ const Nav = () => {
                 gap: 1rem;
             }
             .link{
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             .link:hover{
                 text-decoration: underline var(--yellow);
