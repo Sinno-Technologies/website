@@ -4,15 +4,19 @@ import { isNavOpen } from '../stores/navStore';
 const Nav = () => {
   const $isNavOpen = useStore(isNavOpen);
 
+  const toggleNav = () => {
+    isNavOpen.set(!$isNavOpen);
+  }
+
   return $isNavOpen ? (
   <section className="navContainer">
     <nav className="navLinks">
         <ul>
-            <li><a  className="link" href="#home">Home</a></li>
-            <li><a  className="link" href="#services">Services</a></li>
-            <li><a  className="link" href="#projects">Projects</a></li>
-            <li><a  className="link" href="#reviews">Reviews</a></li>
-            <li><a  className="link" href="#contact">Contact</a></li>
+            <li><a  className="link" href="#home" onClick={toggleNav}>Home</a></li>
+            <li><a  className="link" href="#services" onClick={toggleNav}>Services</a></li>
+            <li><a  className="link" href="#projects" onClick={toggleNav}>Projects</a></li>
+            <li><a  className="link" href="#reviews" onClick={toggleNav}>Reviews</a></li>
+            <li><a  className="link" href="#contact" onClick={toggleNav}>Contact</a></li>
         </ul>
     </nav>
         <style jsx="true">{`
