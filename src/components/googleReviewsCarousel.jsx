@@ -15,6 +15,7 @@ const GoogleReviews = () => {
                 showStatus={false}
                 useKeyboardArrows={true}
                 showThumbs={false}
+                infiniteLoop={true}
                 aria-labelledby="carousel"
             >
                 {reviews.map((review, index) => (
