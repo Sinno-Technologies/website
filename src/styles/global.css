@@ -47,7 +47,7 @@ a:focus{
     border-radius: 1rem;
 }
 
-button:focus,
+button:active,
 a:active{
     transform: scale(0.9);
 }

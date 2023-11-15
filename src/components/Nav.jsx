@@ -12,7 +12,7 @@ const Nav = () => {
             <li><a  className="link" href="#services">Services</a></li>
             <li><a  className="link" href="#projects">Projects</a></li>
             <li><a  className="link" href="#reviews">Reviews</a></li>
-            <li><a  className="link" href="#">Contact</a></li>
+            <li><a  className="link" href="#contact">Contact</a></li>
         </ul>
     </nav>
         <style jsx="true">{`
