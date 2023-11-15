@@ -64,6 +64,7 @@ import rocket from "../assets/icons/rocket.svg";
     }
     .container{
         width:80%;
+        height:auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -73,12 +74,15 @@ import rocket from "../assets/icons/rocket.svg";
     }
 
     .services{
+        width: auto;
+        height: auto;
         font-size: 3rem;
         font-weight: bold;
         padding-top: 1rem;
     }
 
     .textContainer{
+        width: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -94,6 +98,7 @@ import rocket from "../assets/icons/rocket.svg";
     .mainText{
         font-size: 1.8rem;
         width:100%;
+        height: auto;
         text-align: justify;
         padding: 1rem;
         flex-grow: 1;
@@ -120,6 +125,8 @@ import rocket from "../assets/icons/rocket.svg";
     }
 
     .title{
+        width: auto;
+        height: auto;
         font-size: 4rem;
         font-weight: bold;
         text-align: center;
@@ -127,6 +134,8 @@ import rocket from "../assets/icons/rocket.svg";
     }
 
     .topic{
+        width: auto;
+        height: auto;
         font-size: 2.6rem;
         font-weight: bold;
     }
@@ -186,10 +195,19 @@ import rocket from "../assets/icons/rocket.svg";
 
 	@media screen and (max-width: 1080px){
         .servicesContainer{
+            width: auto;
+            height: 100%;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
         }
 
+        .featureContainer{
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+
+        .featureContainer,
         .textContainer,
         .features{
             width:100%;
