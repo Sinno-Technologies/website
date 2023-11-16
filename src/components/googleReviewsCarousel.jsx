@@ -51,11 +51,15 @@ const GoogleReviews = () => {
                     padding: 2rem;
                     width: 100%;
                     height: 100%;
-                    text-align: center;
+                    text-align: left;
                     color: var(--black);
                     border: 3px solid var(--black); 
                     background-color: var(--yellow);
                     border-radius: 0.7rem;
+                }
+
+                .body{
+                    text-align: left;
                 }
 
                 .slide h4{
@@ -69,7 +73,7 @@ const GoogleReviews = () => {
                     justify-content: center;
                     align-items: center;
                     height: auto;
-                    text-align: center;
+                    text-align: left;
                     padding: 1rem;
                 }
 

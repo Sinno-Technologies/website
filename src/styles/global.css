@@ -55,7 +55,7 @@ a:active{
 }
 
 .line{
-    width: 80%;
+    width: 90%;
     height: 2px;
     background-color: var(--yellow);
 }
