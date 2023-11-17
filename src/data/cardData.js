@@ -13,7 +13,7 @@ const cardData = [
         body: "Start up - Full Stack Application built with React, PHP, and PostgreSQL in Docker environment. Contract complete.",
         img: "/src/assets/unumHealth.png",
         alt: "Unum Health Login Page",
-        href: "#",
+        href: "#projects",
         target:"",
         rel: "" 
     },
@@ -22,7 +22,7 @@ const cardData = [
         body: "Designed in HTML, CSS, JavaScript, EJS, Node.js, Express, Passport.js, Tailwind CSS, Daisy UI, MongoDB",
         img: "/src/assets/Login.png",
         alt: "Front page of No Game Left Behind",
-        href: "#",
+        href: "#projects",
         target:"",
         rel: "" 
     },
