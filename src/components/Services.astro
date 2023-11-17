@@ -7,7 +7,7 @@ import rocket from "../assets/icons/rocket.svg";
 ---
 
 <section class="mainContainer" id="services">
-    <h1 class="title">Accessible Software Development Solutions</h1>
+    <h1 class="title">Accessible Software Solutions</h1>
     <div class="line"></div>
     <section class="container">
         <h2 class="services">Our Services</h2>
@@ -163,6 +163,8 @@ import rocket from "../assets/icons/rocket.svg";
     }
 
     .content{
+        width: 100%;
+        height: auto;
         padding: 1rem;
     }
 
@@ -208,6 +210,7 @@ import rocket from "../assets/icons/rocket.svg";
         }
 
         .featureContainer{
+            overflow: auto;
             max-height: 100%;
         }
         
@@ -216,6 +219,14 @@ import rocket from "../assets/icons/rocket.svg";
         .features{
             width:100%;
             height: auto;
+        }
+
+        .topic{
+            font-size: 2rem;
+        }
+        .title{
+            font-size: 3rem;
+            overflow-wrap: break-word;
         }
 	}
 </style>
