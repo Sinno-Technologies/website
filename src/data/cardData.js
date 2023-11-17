@@ -5,6 +5,8 @@ const cardData = [
         img: "/src/assets/ParklandPM.png",
         alt: "Parkland Property Management Home Page",
         href: "https://www.parklandpm.ca/",
+        target:"_blank",
+        rel: "noreferrer noopener nofollow" 
     },
     {
         title: "UNUM Health",
@@ -12,6 +14,8 @@ const cardData = [
         img: "/src/assets/unumHealth.png",
         alt: "Unum Health Login Page",
         href: "#",
+        target:"",
+        rel: "" 
     },
     {
         title: "No Game Left Behind",
@@ -19,6 +23,8 @@ const cardData = [
         img: "/src/assets/Login.png",
         alt: "Front page of No Game Left Behind",
         href: "#",
+        target:"",
+        rel: "" 
     },
     {
         title: "R.A.M.P. Atlantic Ltd.",
@@ -26,6 +32,8 @@ const cardData = [
         img: "/src/assets/rampatl.png",
         alt: "RAMP Atlantic Home Page",
         href: "https://rampatlantic.netlify.app/index.html",
+        target:"_blank",
+        rel: "noreferrer noopener nofollow" 
     },
 ]
 

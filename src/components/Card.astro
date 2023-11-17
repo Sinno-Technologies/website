@@ -6,15 +6,17 @@ export interface Props {
 		img: ImageMetadata,
         href: string,
 		alt: string,
+		target: string,
+		rel: string,
 }
 
 import { Image } from "astro:assets";
 
-const { href, title, body, img, alt } = Astro.props;
+const { href, title, body, img, alt, target, rel } = Astro.props;
 ---
 
 <li class="link-card">
-	<a class="pLink" href={href} target="_blank" rel="noreferrer noopener nofollow">
+	<a class="pLink" href={href} target={target} rel={rel}>
 		<Image class="image" src={img} alt={alt}/>
 		<section>
 			<h2 class="title">
