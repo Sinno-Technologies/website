@@ -40,8 +40,11 @@ const GoogleReviews = () => {
                     padding: 2rem 0;
                 }
                 .title{
+                    width: 100%;
+                    height: auto;
                     font-size: 3.5rem;
                     font-weight: bold;
+                    text-align: center;
                 }
 
                 @media screen and (max-width: 1080px){
@@ -61,11 +64,14 @@ const GoogleReviews = () => {
                     color: var(--black);
                     border: 3px solid var(--black); 
                     background-color: var(--yellow);
-                    border-radius: 0.7rem;
+                    border-radius: 1rem;
                 }
 
                 .body{
                     text-align: left;
+                    width: 100%;
+                    height: auto;
+                    overflow-wrap: break-word;
                 }
 
                 .slide h4{
