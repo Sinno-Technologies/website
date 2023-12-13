@@ -8,6 +8,8 @@ const HamburgerMenu = () => {
         {$isNavOpen && <img className="imgBurger" src="/icons/close_icon.png" alt="Close Navigation Menu icon" />}
         <style jsx="true">{`
           .imgBurger{
+            width: 40px;
+            height: 40px;
             max-width: 50px;
             max-height: 50px;
           }
