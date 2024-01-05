@@ -24,7 +24,6 @@ const Nav = () => {
                 position: sticky;
                 width: 100%;
                 height: 100%;
-                // background-color: var(--bgBlack);
             }
             .navLinks{
                 width: 100%;
@@ -45,6 +44,12 @@ const Nav = () => {
             .link:hover{
                 text-decoration: underline var(--yellow);
                 transition: 0.3s;
+            }
+
+            @media screen and (max-width: 1080px){
+                .link{
+                    font-size: 1.4rem;
+                }
             }
         `}</style>
   </section>
