@@ -76,33 +76,44 @@
     }
 
     .submit{
-        margin-top: 1rem;
-        align-self: center;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         padding: 1rem;
-        border-radius: 1rem;
-		background-color: var(--bgWhite);
-        min-width: 50%;
-        font-size: 1.4rem;
+        text-align: center;
+        background-color: var(--bgBlack);
+        border: 2px solid var(--yellow); 
+        color: var(--white);
+        border-radius: 1em;
     }
 
-    .submit:hover{
-        background-color: var(--yellow); 
+    .submit:hover {
+        background-color: var(--yellow);
         color: var(--black);
+        border: 2px solid var(--white);
+        transition: 0.3s;
     }
 
     @media screen and (max-width: 1080px) {
+        .contact{
+            font-size: 2.5rem;
+        }
+        .text{
+            font-size: 1.8rem;
+        }
         .form{
-            max-width: 70%;
+            width: 90%;
         }
 
         .label,
         .input,
+        .submit,
         #message{
-            font-size: 1.5rem;
-        }
-
-        .contact{
-            font-size: 2.5rem;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
         }
     }
 </style>
