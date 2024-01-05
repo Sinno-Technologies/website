@@ -13,17 +13,6 @@ const HamburgerMenu = () => {
             max-width: 50px;
             max-height: 50px;
           }
-          .visuallyHidden {
-            position: absolute;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            padding: 0;
-            border: 0;
-            white-space: nowrap;
-          }
           .hamburger-menu {
             width: 3rem;
             height: 2rem;
