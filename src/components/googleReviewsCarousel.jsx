@@ -46,12 +46,6 @@ const GoogleReviews = () => {
                     font-weight: bold;
                     text-align: center;
                 }
-
-                @media screen and (max-width: 1080px){
-                    .title{
-                        font-size: 2.5rem;
-                    }
-                }
                 .slide{
                     display: flex;
                     flex-direction: column;
@@ -107,6 +101,15 @@ const GoogleReviews = () => {
                 .carousel.carousel-slider .control-next{
                     opacity: 1;
                     background-color: var(--bgBlack);
+                }
+
+                @media screen and (max-width: 1080px){
+                    .title{
+                        font-size: 2.5rem;
+                    }
+                    .carousel-root{
+                        width: 100%;
+                    }
                 }
             `}</style>
         </section>
