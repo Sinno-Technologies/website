@@ -50,7 +50,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		justify-content: space-between;
 		text-decoration: none;
 		line-height: 1.4;
-		padding: 1rem 1.3rem;
+		padding: 1rem;
 		border-radius: 1rem;
 		color: var(--yellow);
 		background-color: var(--bgBlack);
@@ -82,5 +82,13 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		border-radius: 1rem;
         color: var(--yellow);
         transition: 0.3s;
+	}
+	@media screen and (max-width: 1080px) {
+		.title{
+			font-size: 1.8rem;
+		}
+		.text{
+			font-size: 1.2rem;
+		}
 	}
 </style>
