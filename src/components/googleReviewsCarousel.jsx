@@ -37,7 +37,7 @@ const GoogleReviews = () => {
                     gap: 2rem;
                     width: 100%;
                     height: auto;
-                    padding: 2rem 0;
+                    padding: 1rem;
                 }
                 .title{
                     width: 100%;
@@ -75,27 +75,26 @@ const GoogleReviews = () => {
                 }
 
                 .slide h4{
-                    padding: 1rem;
-                    font-size: 2rem;
+                    font-size: 1.2rem;
                 }
 
                 .stars{
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
                     height: auto;
                     text-align: left;
-                    padding: 1rem;
+                    padding-top: 1rem;
                 }
 
                 .stars span{
-                    font-style: italic;
-                    font-size: 1.5rem;
+                    font-weight: 600;
+                    font-size: 1.2rem;
                 }
                 
                 .carousel-root{
-                    width: 80%;
+                    width: 90%;
                 }
 
                 .carousel .control-dots .dot{
