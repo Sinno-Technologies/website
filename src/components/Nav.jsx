@@ -8,7 +8,7 @@ const Nav = () => {
     isNavOpen.set(!$isNavOpen);
   }
 
-  return $isNavOpen ? (
+  return (
   <section className="navContainer">
     <nav className="navLinks">
         <ul>
@@ -23,7 +23,10 @@ const Nav = () => {
             .navContainer{
                 position: sticky;
                 width: 100%;
-                height: 100%;
+                max-height: ${$isNavOpen ? 100 :0}vh;
+                opacity: ${$isNavOpen ? 1 : 0};
+                transition: opacity 0.5s, max-height 0.5s;
+                overflow: hidden;
             }
             .navLinks{
                 width: 100%;
@@ -53,7 +56,7 @@ const Nav = () => {
             }
         `}</style>
   </section>
-  ) : null;
+  );
 }
 
 export default Nav;
