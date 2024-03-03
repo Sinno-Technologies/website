@@ -4,6 +4,8 @@ import conversation from "../assets/icons/conversation.svg";
 import proposal from "../assets/icons/proposal.svg";
 import code from "../assets/icons/code.svg";
 import rocket from "../assets/icons/rocket.svg";
+import accessibility from "../assets/icons/accessibility.svg";
+import support from "../assets/icons/support.svg";
 ---
 
 <section class="mainContainer" id="services">
@@ -38,10 +40,26 @@ import rocket from "../assets/icons/rocket.svg";
                     </section>
                 </section>
                 <section class="featureContainer">
+                    <Image class="image" src={accessibility} alt="a picture of a laptop with the word a11y inside of it representing accessibility."/>
+                    <section class="content">
+                        <h3 class="topic">4. Accessibility Testing</h2>
+                        <p class="text">
+                            We will conduct accessibility testing to ensure your application meets the Web Content Accessibility Guidelines (WCAG) AA level requirements and accessibility standards.
+                        </p>
+                    </section>
+                </section>
+                <section class="featureContainer">
                     <Image class="image" src={rocket} alt="a picture of a rocket."/>
                     <section class="content">
-                        <h3 class="topic">4. Launch</h2>
+                        <h3 class="topic">5. Launch</h2>
                         <p class="text">Your product comes to life with value added and peace of mind. </p>
+                    </section>
+                </section>
+                <section class="featureContainer">
+                    <Image class="image" src={support} alt="A smiley face indicating good user experience."/>
+                    <section class="content">
+                        <h3 class="topic">6. Post-Launch Support</h2>
+                        <p class="text">We offer support to ensure your product is running smoothly post launch.</p>
                     </section>
                 </section>
         </section>
