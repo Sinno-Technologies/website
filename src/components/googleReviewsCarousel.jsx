@@ -31,6 +31,9 @@ const GoogleReviews = () => {
         ))}
       </Carousel>
       <style jsx="true">{`
+        .carousel-root {
+          width: 100%;
+        }
         .carouselContainer {
           display: flex;
           flex-direction: column;
@@ -101,6 +104,12 @@ const GoogleReviews = () => {
 
         .carousel.carousel-slider .control-arrow,
         .carousel.carousel-slider .control-next {
+          opacity: 0.2;
+          background-color: var(--bgBlack);
+        }
+
+        .carousel.carousel-slider .control-arrow:hover,
+        .carousel.carousel-slider .control-next:hover {
           opacity: 1;
           background-color: var(--bgBlack);
         }
