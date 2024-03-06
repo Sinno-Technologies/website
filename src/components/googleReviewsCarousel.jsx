@@ -25,7 +25,7 @@ const GoogleReviews = () => {
             <h4 className="body">"{review.body}"</h4>
             <section className="stars">
               <span>{review.stars}</span>
-              <span>- {review.author}</span>
+              <span className="author">- {review.author}</span>
             </section>
           </section>
         ))}
@@ -71,7 +71,7 @@ const GoogleReviews = () => {
         }
 
         .slide h4 {
-          font-size: 1.2rem;
+          font-size: 1.6rem;
         }
 
         .stars {
@@ -87,6 +87,10 @@ const GoogleReviews = () => {
         .stars span {
           font-weight: 600;
           font-size: 1.2rem;
+        }
+
+        .stars .author {
+          font-size: 1.4rem;
         }
 
         .carousel .control-dots .dot {
