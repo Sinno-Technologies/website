@@ -8,98 +8,58 @@ import accessibility from "../assets/icons/accessibility.svg";
 import support from "../assets/icons/support.svg";
 ---
 
-<section class="mainContainer" id="services">
-    <h1 class="title">Accessible Software Solutions</h1>
-    <div class="line"></div>
-    <section class="container">
-        <h2 class="services">Our Services</h2>
-        <section class="textContainer">
-            <p class="mainText">Is your website compliant with WCAG standards for accessibility? Does it feature responsive design to engage diverse user bases effectively? And does it seamlessly adapt to various devices, ensuring optimal user experience across the board? In today's competitive digital landscape, prioritizing web accessibility isn't just best practice—it's a strategic advantage.</p>
-            <p class="mainText">At Sinno Technologies Limited, we specialize in delivering WCAG-compliant, responsive websites tailored to the needs of businesses and individuals alike. Whether you're seeking a fresh digital presence or aiming to enhance accessibility, our expertise is at your service. Get in touch today to elevate your online performance.</p>
+<h3 class="subtitle">Application Development</h3>
+<section class="servicesContainer">
+        <section class="featureContainer">
+            <Image class="image" src={conversation} alt="a picture of two chat bubbles from either direction indicating a conversation."/>
+            <section class="content">
+                <h4 class="topic">1. Consultation</h4>
+                <p class="text">It starts with a conversation where we will determine what your project is about.</p>
+            </section>
         </section>
-        <h3 class="subtitle">Application Development</h3>
-        <section class="servicesContainer">
-                <section class="featureContainer">
-                    <Image class="image" src={conversation} alt="a picture of two chat bubbles from either direction indicating a conversation."/>
-                    <section class="content">
-                        <h3 class="topic">1. Consultation</h2>
-                        <p class="text">It starts with a conversation where we will determine what your project is about.</p>
-                    </section>
-                </section>
-                <section class="featureContainer">
-                    <Image class="image" src={proposal} alt="a picture of a pen and paper representing a proposal."/>
-                    <section class="content">
-                        <h3 class="topic">2. Proposal</h2>
-                        <p class="text">A detailed project proposal will be presented, followed by an action plan.</p>
-                    </section>
-                </section>
-                <section class="featureContainer">
-                    <Image class="image" src={code} alt="a picture of a left carrat, forward slash and a right carrat."/>
-                    <section class="content">
-                        <h3 class="topic">3. Creation</h2>
-                        <p class="text">Clients receive regular status updates as we work on and test the project.</p>
-                    </section>
-                </section>
-                <section class="featureContainer">
-                    <Image class="image" src={accessibility} alt="a picture of a laptop with the word a11y inside of it representing accessibility."/>
-                    <section class="content">
-                        <h3 class="topic">4. Accessibility Testing</h2>
-                        <p class="text">
-                            We will conduct accessibility testing to ensure your application meets the Web Content Accessibility Guidelines (WCAG) AA level requirements and accessibility standards.
-                        </p>
-                    </section>
-                </section>
-                <section class="featureContainer">
-                    <Image class="image" src={rocket} alt="a picture of a rocket."/>
-                    <section class="content">
-                        <h3 class="topic">5. Launch</h2>
-                        <p class="text">Your product comes to life with value added and peace of mind. </p>
-                    </section>
-                </section>
-                <section class="featureContainer">
-                    <Image class="image" src={support} alt="A smiley face indicating good user experience."/>
-                    <section class="content">
-                        <h3 class="topic">6. Post-Launch Support</h2>
-                        <p class="text">We offer support to ensure your product is running smoothly post launch.</p>
-                    </section>
-                </section>
+        <section class="featureContainer">
+            <Image class="image" src={proposal} alt="a picture of a pen and paper representing a proposal."/>
+            <section class="content">
+                <h4 class="topic">2. Proposal</h4>
+                <p class="text">A detailed project proposal will be presented, followed by an action plan.</p>
+            </section>
         </section>
-        <section class="btnContainer">
-            <a href="https://calendly.com/sinno-technologies/free-consult" target="_blank" rel="noreferrer noopener" id="consult">Book a Free Consultation</a>
+        <section class="featureContainer">
+            <Image class="image" src={code} alt="a picture of a left carrat, forward slash and a right carrat."/>
+            <section class="content">
+                <h4 class="topic">3. Creation</h4>
+                <p class="text">Clients receive regular status updates as we work on and test the project.</p>
+            </section>
         </section>
-    </section>
+        <section class="featureContainer">
+            <Image class="image" src={accessibility} alt="a picture of a laptop with the word a11y inside of it representing accessibility."/>
+            <section class="content">
+                <h4 class="topic">4. Accessibility Testing</h4>
+                <p class="text">
+                    We will conduct accessibility testing to ensure your application meets the Web Content Accessibility Guidelines (WCAG) AA level requirements and accessibility standards.
+                </p>
+            </section>
+        </section>
+        <section class="featureContainer">
+            <Image class="image" src={rocket} alt="a picture of a rocket."/>
+            <section class="content">
+                <h4 class="topic">5. Launch</h4>
+                <p class="text">Your product comes to life with value added and peace of mind. </p>
+            </section>
+        </section>
+        <section class="featureContainer">
+            <Image class="image" src={support} alt="A smiley face indicating good user experience."/>
+            <section class="content">
+                <h4 class="topic">6. Post-Launch Support</h4>
+                <p class="text">We offer support to ensure your product is running smoothly post launch.</p>
+            </section>
+        </section>
+</section>
+<section class="btnContainer">
+    <a href="https://calendly.com/sinno-technologies/free-consult" target="_blank" rel="noreferrer noopener" id="consult">Book a Free Consultation</a>
 </section>
 
 <style>
-    .mainContainer{
-        width:100%;
-        height: auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-        padding: 1rem;
-        gap: 1rem;
-    }
-    .container{
-        width: 100%;
-        height:auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-        gap: 2rem;
-    }
-
-    .services{
-        width: 100%;
-        height: auto;
-        font-size: 3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        text-align: center;
-    }
-
     .subtitle{
         font-size: 2.4rem;
         text-decoration: underline;
@@ -108,35 +68,11 @@ import support from "../assets/icons/support.svg";
         text-align: center;
     }
 
-    .textContainer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        gap: 1rem;
-        height: 100%;
-        background-color: var(--bgBlack);
-        border: 2px solid var(--yellow); 
-        border-radius: 1rem;
-        padding: 1rem;
-    }
-
-    .mainText{
-        font-size: 1.6rem;
-        width:100%;
-        height: auto;
-        text-align: left;
-        padding: 1rem;
-        flex-grow: 1;
-    }
-
     .servicesContainer{
         width:100%;
         height: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
     }
 
@@ -169,8 +105,8 @@ import support from "../assets/icons/support.svg";
     }
 
     .featureContainer{
+        flex: 1 1 calc(50% - 1rem);
         width: 100%;
-        height: 100%;
         padding: 1rem;
         display:flex;
         flex-direction: column;
@@ -179,7 +115,6 @@ import support from "../assets/icons/support.svg";
         background-color: var(--bgBlack);
         border: 2px solid var(--yellow); 
         border-radius: 1rem;
-        overflow: auto;
     }
 
     .featureContainer .text{
@@ -227,32 +162,20 @@ import support from "../assets/icons/support.svg";
         transition: 0.3s;
     }
 
-	@media screen and (max-width: 1080px){
-        .mainContainer{
-            padding: 1rem 0;
-        }
-        .container{
-            padding: 0 1rem;
-        }
-        .servicesContainer{
-            width: 100%;
-            height: 100%;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            place-items: center;
-        }
-
+    @media screen and (max-width: 768px){
         .featureContainer{
-            min-height: 340px;
+            flex: 1 1 100%;
         }
+    }
 
-        .textContainer,
+	@media screen and (max-width: 1080px){
         .features{
             width:100%;
             height: auto;
         }
         
         .image{
+            width: auto;
             max-height: 120px;
         }
 
@@ -266,13 +189,6 @@ import support from "../assets/icons/support.svg";
         
         #consult,
         .featureContainer .text{
-            font-size: 1.2rem;
-        }
-
-        .services{
-            font-size: 1.8rem;
-        }
-        .mainText{
             font-size: 1.2rem;
         }
 	}

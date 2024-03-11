@@ -1,61 +1,65 @@
 :root {
-    --black: rgba(0, 0, 0, 1);
-    --bgBlack: rgba(0, 0, 0, 0.9);
-    --white: rgba(255, 255, 255, 1);
-    --bgWhite: rgba(255, 255, 255, 0.9);
-    --yellow: rgba(255, 215, 0, 1);
-    --whiteHover: rgba(255, 255, 255, 0.5);
+  --black: rgba(0, 0, 0, 1);
+  --bgBlack: rgba(0, 0, 0, 0.9);
+  --white: rgba(255, 255, 255, 1);
+  --bgWhite: rgba(255, 255, 255, 0.9);
+  --yellow: rgba(255, 215, 0, 1);
+  --whiteHover: rgba(255, 255, 255, 0.5);
 }
-*{
-    box-sizing: border-box;
-    margin: 0;
-    font-size: 62.5%;
-    line-height: 1.5;
-    font-family: 'IBMPlexMonoRegular', sans-serif;
-    scroll-behavior: smooth;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 62.5%;
+  line-height: 1.5;
+  font-family: "IBMPlexMonoRegular", sans-serif;
+  scroll-behavior: smooth;
 }
 html {
-    width:100%;
-    height: 100%;
-    background-color: var(--black);
-    color: var(--white);
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  color: var(--white);
 }
 code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-        Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 /* ######################
             LINKS  
    ######################*/
-a{
-    text-decoration: none;
-    color: var(--white);
+a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 .carouselContainer .carousel-root:hover,
 button:hover,
-a:hover{
-    color: var(--yellow);
-    cursor: pointer;
-    transition: 0.3s;
+a:hover {
+  color: var(--yellow);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .carouselContainer .carousel-root:focus,
 button:focus,
-a:focus{
-    outline: 2px dotted var(--yellow);
-    outline-offset: 0.5rem; 
-    border-radius: 1rem;
+a:focus {
+  outline: 2px dotted var(--yellow);
+  outline-offset: 0.5rem;
+  border-radius: 1rem;
 }
 
 button:active,
-a:active{
-    transform: scale(0.9);
+a:active {
+  transform: scale(0.9);
 }
 
-.line{
-    width: 90%;
-    height: 2px;
-    background-color: var(--yellow);
+.line {
+  width: 90%;
+  height: 2px;
+  background-color: var(--yellow);
+}
+
+.underline {
+  text-decoration: underline;
 }

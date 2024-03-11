@@ -1,0 +1,212 @@
+---
+import { Image } from "astro:assets";
+import check from "../assets/icons/check.svg";
+import proposal from "../assets/icons/proposal.svg";
+---
+
+<h3 class="subtitle">Auditing Services</h3>
+<section class="textContainer">
+    <p class="mainText">
+        At Sinno Technologies Limited, we are dedicated towe are dedicated to ensuring that your website meets the highest standards of accessibility. Our manual web accessibility audit is tailored to Canadian regulations, including the Web Content Accessibility Guidelines (WCAG) and the Accessible Canada Act (ACA). 
+    </p>
+</section>
+<section class="servicesContainer">
+        <section class="featureContainer">
+            <Image class="image" src={proposal} alt="A picture of a piece of paper with 3 lines gonig across it indicating a report."/>
+            <section class="content">
+                <h4 class="topic">Web Accessibility Audits</h4>
+                <p class="text">Our team performs a web accessibility audit on your website, reviewing each element of your website. Potential accessibility issues are identified, and we provide reccommedations and notes.</p>
+                <p class="text underline">The audit includes:</p>
+                <ul>
+                    <li class="listItem"><Image class="icon" src={check} alt="check mark"/><span> Scan for accessibility issues on your website</span></li>
+                    <li class="listItem"><Image class="icon" src={check} alt="check mark"/><span> A list of issues that need attention</span></li>
+                </ul>
+                <p class="text underline">Additional services include:</p>
+                <ul>
+                    <li class="listItem"><Image class="icon" src={check} alt="check mark"/><span> Recommendations to address accessibility issues</span></li>
+                    <li class="listItem"><Image class="icon" src={check} alt="check mark"/><span> Screenshots of your website with accessibility issues</span></li>
+                    <li class="listItem"><Image class="icon" src={check} alt="check mark"/><span> Identification of nonaccessible source code</span></li>
+                </ul>
+            </section>
+        </section>
+    </section>
+<section class="btnContainer">
+    <a href="#contact" id="consult">Request a quote</a>
+</section>
+
+<style>
+    .textContainer{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 1rem;
+        height: 100%;
+        background-color: var(--bgBlack);
+        border: 2px solid var(--yellow); 
+        border-radius: 1rem;
+    }
+
+    .mainText{
+        font-size: 1.6rem;
+        width:100%;
+        height: auto;
+        text-align: left;
+        padding: 1rem;
+        flex-grow: 1;
+    }
+    .subtitle{
+        font-size: 2.4rem;
+        text-decoration: underline;
+        color: var(--yellow);
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .servicesContainer{
+        width:100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .content{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .title{
+        width: 100%;
+        height: auto;
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .topic{
+        width: auto;
+        height: auto;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .featureContainer{
+        flex: 1 1 calc(50% - 1rem);
+        width: 100%;
+        padding: 1rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: left;
+        background-color: var(--bgBlack);
+        border: 2px solid var(--yellow); 
+        border-radius: 1rem;
+    }
+
+    .featureContainer .text{
+        width: auto;
+        height: 100%;
+        font-size: 1.6rem;
+        text-align: left;
+    }
+
+    .content{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+		max-height: 180px;
+        padding: 1rem;
+    }
+
+    .btnContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #consult{
+        padding: 1rem;
+        font-size: 1.6rem;
+        border: 2px solid var(--yellow); 
+        border-radius: 1em;
+    }
+
+    #consult:hover {
+        background-color: var(--yellow);
+        color: var(--black);
+        border: 2px solid var(--white);
+        transition: 0.3s;
+    }
+
+    #consult,
+    .featureContainer .text{
+        font-size: 1.6rem;
+    }
+
+    .listItem{
+        width: 100%;
+        height: auto;
+        font-size: 1.4rem;
+    }
+
+    .listItem .icon{
+        width: auto;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 768px){
+        .featureContainer{
+            flex: 1 1 100%;
+        }
+    }
+
+	@media screen and (max-width: 1080px){
+        .textContainer,
+        .features{
+            width:100%;
+            height: auto;
+        }
+        
+        .image{
+            width: auto;
+            max-height: 120px;
+        }
+
+        .title{
+            font-size: 2.5rem;
+        }
+
+        .topic{
+            font-size: 1.8rem;
+        }
+        
+        #consult,
+        .featureContainer .text{
+            font-size: 1.4rem;
+        }
+
+        .listItem{
+            font-size: 1.2rem;
+        }
+	}
+</style>
