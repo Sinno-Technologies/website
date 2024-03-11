@@ -60,35 +60,6 @@ import support from "../assets/icons/support.svg";
 </section>
 
 <style>
-    .mainContainer{
-        width:100%;
-        height: auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-        padding: 1rem;
-        gap: 1rem;
-    }
-    .container{
-        width: 100%;
-        height:auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-        gap: 2rem;
-    }
-
-    .services{
-        width: 100%;
-        height: auto;
-        font-size: 3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        text-align: center;
-    }
-
     .subtitle{
         font-size: 2.4rem;
         text-decoration: underline;
@@ -97,34 +68,11 @@ import support from "../assets/icons/support.svg";
         text-align: center;
     }
 
-    .textContainer{
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        gap: 1rem;
-        height: 100%;
-        background-color: var(--bgBlack);
-        border: 2px solid var(--yellow); 
-        border-radius: 1rem;
-    }
-
-    .mainText{
-        font-size: 1.6rem;
-        width:100%;
-        height: auto;
-        text-align: left;
-        padding: 1rem;
-        flex-grow: 1;
-    }
-
     .servicesContainer{
         width:100%;
         height: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
     }
 
@@ -157,8 +105,8 @@ import support from "../assets/icons/support.svg";
     }
 
     .featureContainer{
+        flex: 1 1 calc(50% - 1rem);
         width: 100%;
-        height: 100%;
         padding: 1rem;
         display:flex;
         flex-direction: column;
@@ -167,7 +115,6 @@ import support from "../assets/icons/support.svg";
         background-color: var(--bgBlack);
         border: 2px solid var(--yellow); 
         border-radius: 1rem;
-        overflow: auto;
     }
 
     .featureContainer .text{
@@ -215,20 +162,15 @@ import support from "../assets/icons/support.svg";
         transition: 0.3s;
     }
 
+    @media screen and (max-width: 768px){
+        .featureContainer{
+            flex: 1 1 100%;
+        }
+    }
+
 	@media screen and (max-width: 1080px){
         .mainContainer{
             padding: 1rem 0;
-        }
-        .servicesContainer{
-            width: 100%;
-            height: 100%;
-            grid-template-columns: auto;
-            grid-template-rows: auto;
-            place-items: center;
-        }
-
-        .featureContainer{
-            min-height: 340px;
         }
 
         .textContainer,
