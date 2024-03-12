@@ -1,39 +1,54 @@
-import { useStore } from '@nanostores/react';
-import { isNavOpen } from '../stores/navStore';
+import { useStore } from "@nanostores/react"
+import { isNavOpen } from "../stores/navStore"
 const HamburgerMenu = () => {
-  const $isNavOpen = useStore(isNavOpen); 
+  const $isNavOpen = useStore(isNavOpen)
   return (
-      <button className="hamburger-menu" onClick={() => isNavOpen.set(!$isNavOpen)} aria-label="Toggle Menu">
-        {!$isNavOpen && <img className="imgBurger" src="/icons/burger_icon.png" alt="Open Navigation Menu icon" />}
-        {$isNavOpen && <img className="imgBurger" src="/icons/close_icon.png" alt="Close Navigation Menu icon" />}
-        <style jsx="true">{`
-          .imgBurger{
-            width: 40px;
-            height: 40px;
-            max-width: 50px;
-            max-height: 50px;
-          }
-          .hamburger-menu {
-            width: 3rem;
-            height: 2rem;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-around;
-            align-items: center;
-            cursor: pointer;
-            background-color: var(--black);
-            border: none;
-          } 
+    <button
+      className="hamburger-menu"
+      onClick={() => isNavOpen.set(!$isNavOpen)}
+      aria-label="Toggle Menu"
+    >
+      {!$isNavOpen && (
+        <img
+          className="imgBurger"
+          src="/icons/burger_icon.png"
+          alt="Open Navigation Menu icon"
+        />
+      )}
+      {$isNavOpen && (
+        <img
+          className="imgBurger"
+          src="/icons/close_icon.png"
+          alt="Close Navigation Menu icon"
+        />
+      )}
+      <style jsx="true">{`
+        .imgBurger {
+          width: auto;
+          height: 100%;
+          max-width: 50px;
+          max-height: 50px;
+        }
+        .hamburger-menu {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          cursor: pointer;
+          background-color: var(--black);
+          border: none;
+        }
 
-          .hamburger-menu:focus {
-            outline: 2px dotted var(--yellow);
-            outline-offset: 0.5rem; 
-            border-radius: 1rem;
-          }
-        `}</style>
-      </button>
-  );
-};
+        .hamburger-menu:focus {
+          outline: 2px dotted var(--yellow);
+          outline-offset: 0.5rem;
+          border-radius: 1rem;
+        }
+      `}</style>
+    </button>
+  )
+}
 
-export default HamburgerMenu;
-
+export default HamburgerMenu
