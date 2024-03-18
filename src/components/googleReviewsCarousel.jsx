@@ -24,8 +24,8 @@ const GoogleReviews = () => {
           <section className="slide" key={index}>
             <h4 className="body">"{review.body}"</h4>
             <section className="stars">
-              <span>{review.stars}</span>
               <span className="author">- {review.author}</span>
+              <span>{review.company}</span>
             </section>
           </section>
         ))}
