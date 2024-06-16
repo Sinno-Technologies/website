@@ -11,8 +11,7 @@ const imgArr = [parkland, unum, login, ramp];
 
 <section class="mainContainer" id="projects">
     <h3 class="projects">Projects</h3>
-    <div class="line"></div>
-    <ul class="cardContainer">
+    <div class="cardContainer">
         {cardData.map((card, index) => (
             <Card
               key={index}
@@ -25,7 +24,7 @@ const imgArr = [parkland, unum, login, ramp];
               rel={card.rel}
             />
           ))}
-    </ul>
+    </div>
     <a href="https://github.com/jamilsinno?tab=repositories" target="_blank" rel="noreferrer noopener nofollow" class="buttonProjects">View more projects on GitHub</a>
 </section>
 
@@ -37,6 +36,7 @@ const imgArr = [parkland, unum, login, ramp];
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+        background-color: var(--sectWhite);
         padding: 1rem;
         gap: 3rem;
     }
@@ -47,6 +47,7 @@ const imgArr = [parkland, unum, login, ramp];
         width: 100%;
         height: auto;
         text-align: center;
+        color: black;
     }
 
     .cardContainer{
@@ -60,17 +61,17 @@ const imgArr = [parkland, unum, login, ramp];
     .buttonProjects{
         padding: 1rem;
         font-size: 1.6rem;
-        border: 2px solid var(--yellow); 
+        background-color: var(--black);
         border-radius: 1em;
         text-align: center;
     }
 
     .buttonProjects:is(:hover, :focus-within) {
-        background-color: var(--yellow);
-        color: var(--black);
-        border: 2px solid var(--white);
-        transition: 0.3s;
+		background-color: var(--bgBlack);
+		transition: 0.3s;
     }
+
+    .buttonProjects 
     @media (max-width: 1080px) {
         .projects{
             font-size: 2.5rem;

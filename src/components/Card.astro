@@ -15,7 +15,7 @@ import { Image } from "astro:assets";
 const { href, title, body, img, alt, target, rel } = Astro.props;
 ---
 
-<li class="link-card">
+<div class="link-card">
 	<a class="pLink" href={href} target={target} rel={rel}>
 		<Image class="image" src={img} alt={alt}/>
 		<section>
@@ -27,7 +27,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 			</p>
 		</section>
 	</a>
-</li>
+</div>
 <style>
 	.link-card {
 		list-style: none;
@@ -37,7 +37,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		background-color: var(--bgBlack);
 		border-radius: 1rem;
 		background-position: 100%;
-        border: 2px solid var(--yellow); 
+        /* border: 2px solid var(--yellow);  */
 		width: 100%;
 		height: auto;
 	}

@@ -52,7 +52,7 @@ import Jamil from "../assets/jamil.jpeg";
     }
 
     .imageContainer {
-        max-width: 50%;
+        /* max-width: 50%; */
     }
 
     .image {
@@ -76,6 +76,14 @@ import Jamil from "../assets/jamil.jpeg";
             flex-direction: column;
         }
 
+        .contentContainer{
+            flex-direction: column-reverse;
+        }
+
+        .textContainer,
+        .imageContainer{
+            max-width: 100%;
+        }
         .image {
             max-width: 300px;
             max-height: 300px;
