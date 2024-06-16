@@ -2,19 +2,105 @@
 ---
 
 <section class="sectionContainer" id="process">
-    <h2 class="process"></h2>
-    <div class="line"></div>
-    <div>
-        <h3>Accessibility Audit</h3>
-        <p>We start with evaluation your current digitatl solutions to identify and address accessibility issues, ensuring compliance with WCAG standards.</p>
+    <div class="maxWidth">
+        <h2 class="processTitle">Our Process</h2>
+        <div class="processContainer">
+            <div class="processBlock">
+                <h3 class="process">Accessibility Audit</h3>
+                <p class="text">We start with evaluation your current digital solutions to identify and address accessibility issues, ensuring compliance with WCAG standards.</p>
+            </Titlediv>
+            <div class="processBlock">
+                <h3 class="process">Custom development</h3>
+                <p class="text">Tailored software development and optimization to meet your specific business needs. There's no one-size-fits-all solution.</p>
+            </Titlediv>
+            <div class="processBlock">
+                <h3 class="process">Enhanced Performance</h3>
+                <p class="text">Continuous optimization of your applications to maximize efficiency and effectiveness.</p>
+            </div>
+        </div>
     </div>
-    <div>
-        <h3>Custom development</h3>
-        <p>Tailored software development and optimization to meet your specific business needs. There's no one-size-fits-all solution.</p>
-    </div>
-    <div>
-        <h3>Enhanced Performance</h3>
-        <p>Continuous optimization of your applications to maximize efficiency and effectiveness.</p>
-    </div>
-
 </section>
+
+<style>
+    .sectionContainer {
+        width: 100%;
+        height: auto;
+        background-color: var(--sectWhite);
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .processContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .processBlock{
+        width: 100%;
+        height: auto;
+    }
+
+    .processTitle,
+    .process{
+        font-weight: bold;
+    }
+
+    .processTitle{
+        font-size: 3.0rem;
+    }
+
+    .process{
+        font-size: 2.0rem;
+    }
+
+    .text{
+        font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        .processTitle{
+            font-size: 2.5rem;
+        }
+        
+        .process{
+            font-size: 1.5rem;
+        }
+
+        .text{
+            font-size: 1rem;
+        }
+
+        .processContainer{
+            flex-direction: column;
+            align-items:  flex-start;
+        }
+    }
+
+    @media (min-width: 601px) and (max-width: 1080px) {
+        .processTitle{
+            font-size: 3.0rem;
+        }
+        
+        .processContainer{
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        .process{
+            font-size: 2.0rem;
+        }
+        
+        .text{
+            font-size: 1.2rem;
+        }
+    }
+</style>
