@@ -2,8 +2,8 @@
 ---
 <section class="sectionContainer" id="contact">
     <h1 class="contact">Contact Us</h1>
-    <div class="line"></div>
     <p class="text">Get in contact today!</p>
+    <p class="star">* means required</p>
     <form class="form" name="contactForm" method="POST" netlify>
 
         <label class="label" for="fname">First Name*</label>
@@ -24,7 +24,6 @@
         <label class="label" for="message">Subject*</label>
         <textarea id="message" rows="6" name="message" placeholder="Your message here" required></textarea>
 
-        <p class="text">* Required</p>
         <button class="submit" type="submit">Submit</button>
 
     </form>
@@ -37,7 +36,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: var(--bgBlack);
+        background-color: var(--sectWhite);
         gap: 1rem;
     }
 
@@ -45,11 +44,23 @@
         font-size: 3.5rem;
         padding: 1rem;
         text-align: center;
+        color: var(--black);
         font-weight: bold;
     }
 
     .text{
         font-size: 1.8rem;
+        color: var(--black);
+        padding: 1rem;
+    }
+
+    .star{
+        font-size: 1.2rem;
+        color: var(--black);
+        width: 100%;
+        text-align: left;
+        font-weight: bold;
+        max-width: 800px;
         padding: 1rem;
     }
     .form{
@@ -61,13 +72,14 @@
         align-items: flex-start;
         gap: 1rem;
         padding: 1rem;
-        border: 2px solid var(--yellow);
+        border: 2px solid var(--black);
 		border-radius: 1rem;
         max-width: 800px;
     }
 
     .label{
         font-weight: 500;
+        color: var(--black);
         font-size: 1.6rem;
     }
 
@@ -86,17 +98,16 @@
         align-self: center;
         padding: 1rem;
         text-align: center;
-        background-color: var(--bgBlack);
-        border: 2px solid var(--yellow); 
+        background-color: var(--black);
+        border: 2px solid var(--black); 
         color: var(--white);
         border-radius: 1em;
         font-size: 1.4rem;
     }
 
     .submit:hover {
-        background-color: var(--yellow);
+        background-color: var(--white);
         color: var(--black);
-        border: 2px solid var(--white);
         transition: 0.3s;
     }
 
