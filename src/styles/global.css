@@ -1,6 +1,7 @@
 :root {
   --black: rgba(0, 0, 0, 1);
-  --bgBlack: rgba(0, 0, 0, 0.9);
+  --bgBlack: rgba(0, 0, 0, 0.7);
+  --buttonBlack: rgba(0, 0, 0, 0.9);
   --white: rgba(255, 255, 255, 1);
   --bgWhite: rgba(255, 255, 255, 0.9);
   --yellow: rgba(255, 215, 0, 1);
