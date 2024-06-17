@@ -1,5 +1,6 @@
 import { useStore } from "@nanostores/react"
 import { isNavOpen } from "../stores/navStore"
+import { useEffect } from "react"
 
 const Nav = () => {
   const $isNavOpen = useStore(isNavOpen)
@@ -7,6 +8,20 @@ const Nav = () => {
   const toggleNav = () => {
     isNavOpen.set(!$isNavOpen)
   }
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape" && $isNavOpen) {
+      toggleNav()
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [$isNavOpen])
 
   return (
     <section className="navContainer" onClick={$isNavOpen ? toggleNav : null}>
