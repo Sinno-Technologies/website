@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import Jamil from "../assets/jamil.jpeg";
+---
+
+<section class="teamContainer maxWidth" id="team">
+    <h2 class="title">Meet Our Team</h2>
+    <div class="contentContainer">
+        <div class="textContainer">
+            <h3 class="name">Jamil Sinno</h3>
+            <h4 class="role">Founder & Principal Consultant</h4>
+            <h6 class="location">Halifax, NS</h6>
+            <p class="text">
+                I believe in the power of accessible web design to transform businesses. At Sinno Technologies Limited, our mission is to help companies bring their visions to life by creating inclusive digital experiences that drive engagement, generate leads, and boost sales.
+            </p>
+        </div>
+        <div class="imageContainer">
+            <Image class="image" src={Jamil} alt="Photo of Jamil Sinno"/>
+        </div>
+    </div>
+</section>
+
+<style>
+    .teamContainer {
+        width: 100%;
+        height: auto;
+        background-color: var(--sectYellow);
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .contentContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .textContainer{
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .name {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .role{
+        font-weight: bold;
+    }
+
+    .role,
+    .text{
+        font-size: 1.2rem;
+    }
+
+    .location{
+        font-size: 1.0rem;
+        font-style: italic;
+    }
+
+    @media screen and (max-width: 600px) {
+        .teamContainer {
+            flex-direction: column;
+        }
+
+        .contentContainer{
+            flex-direction: column-reverse;
+        }
+
+        .textContainer,
+        .imageContainer{
+            max-width: 100%;
+        }
+        .image {
+            max-width: 300px;
+            max-height: 300px;
+        }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1080px) {
+        .image {
+            max-width: 400px;
+            max-height: 400px;
+        }
+    }
+</style>

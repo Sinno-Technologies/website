@@ -1,9 +1,13 @@
 :root {
   --black: rgba(0, 0, 0, 1);
-  --bgBlack: rgba(0, 0, 0, 0.9);
+  --bgBlack: rgba(0, 0, 0, 0.7);
+  --buttonBlack: rgba(0, 0, 0, 0.9);
   --white: rgba(255, 255, 255, 1);
   --bgWhite: rgba(255, 255, 255, 0.9);
+  --sectWhite: rgb(242, 241, 229, 1);
+  --sectWhite2: rgb(227, 227, 227, 1);
   --yellow: rgba(255, 215, 0, 1);
+  --sectYellow: rgb(230, 219, 154);
   --whiteHover: rgba(255, 255, 255, 0.5);
 }
 * {
@@ -62,4 +66,9 @@ a:active {
 
 .underline {
   text-decoration: underline;
+}
+
+/* max width */
+.maxWidth {
+  max-width: 1400px;
 }

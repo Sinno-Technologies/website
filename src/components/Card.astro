@@ -15,7 +15,7 @@ import { Image } from "astro:assets";
 const { href, title, body, img, alt, target, rel } = Astro.props;
 ---
 
-<li class="link-card">
+<div class="link-card">
 	<a class="pLink" href={href} target={target} rel={rel}>
 		<Image class="image" src={img} alt={alt}/>
 		<section>
@@ -27,17 +27,17 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 			</p>
 		</section>
 	</a>
-</li>
+</div>
 <style>
 	.link-card {
 		list-style: none;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		background-color: var(--bgBlack);
+		background-color: var(--white);
 		border-radius: 1rem;
 		background-position: 100%;
-        border: 2px solid var(--yellow); 
+        border: 2px solid var(--black); 
 		width: 100%;
 		height: auto;
 	}
@@ -52,8 +52,8 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		line-height: 1.4;
 		padding: 1rem;
 		border-radius: 1rem;
-		color: var(--yellow);
-		background-color: var(--bgBlack);
+		color: var(--black);
+		background-color: var(--white);
 	}
 	.image{
 		width:100%;
@@ -65,23 +65,27 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		font-size: 1.8rem;
 		font-weight: bold;
 		padding: 0.5rem 0;
-		color: var(--white);
+		color: var(--black);
 	}
 	.text{
 		padding: 0 0 1rem 0;
-		color: var(--white);
+		color: var(--black);
 		font-size: 1.4rem;
 	}
 
+	.link-card > .pLink:hover{
+		background-color: var(--bgBlack);
+		transition: 0.3s;
+	}
 	.link-card:is(:hover, :focus-within){
-		background-color: var(--bgWhite);
+		background-color: var(--bgBlack);
 		border-color: var(--white);
 		transition: 0.3s;
 	}
 	.link-card:is(:hover, :focus-within) .title,
 	.link-card:is(:hover, :focus-within) .text {
 		border-radius: 1rem;
-        color: var(--yellow);
+        color: var(--white);
         transition: 0.3s;
 	}
 	@media screen and (max-width: 1080px) {

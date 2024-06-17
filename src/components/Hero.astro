@@ -2,12 +2,13 @@
 ---
 
 <section class="container">
-    <section class="content">
-        <h1 class="title">SINNO TECHNOLOGIES LIMITED</h1>
-        <div class="line"></div>
-        <h2 class="subtitle">Building A More Inclusive Web, One Application At A Time</h2>
-        <a href="#contact" class="contact">Contact Us</a>
-    </section>
+    <div class="background">
+        <div class="content">
+            <h1 class="title">SINNO TECHNOLOGIES LTD.</h1>
+            <h2 class="subtitle">Is your website or app struggling with web accessibility compliance? Sinno Technologies Limited offers expert web accessibility audits, custom software development, and consulting services. Let us be your fractional CTO, ensuring your digital solutions are accessible, efficient, and user-friendly.</h2>
+            <a href="#contact" class="contact outlined">Contact Us</a>
+        </div>
+    </div>
 </section>
 
 <style>
@@ -17,66 +18,105 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         width: 100%;
-        height: auto;
-        min-height: 80vh;
+        height: 100vh;
+        color: var(--white);
+    }
+
+    .background{
+        width:100%; 
+        height: 100%;
+        background-color: var(--bgBlack);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        color: var(--white);
-        padding: 1rem;
     }
 
     .content{
-        background-color: var(--bgBlack);
         width: 100%;
-        height: auto;
-        padding: 4rem;
+        max-width: 1440px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
-        border-radius: 1rem;
-        max-width: 1080px;
+        gap: 5rem;
+        padding: 0 1rem;
     }
 
     .title{
         width: 100%;
         height: auto;
-        text-align: center;
-        font-size: 4.0rem;
+        text-align: left;
+        font-size: 5.0rem;
         font-weight: bold;
+        align-self: flex-start;
+        color: var(--white);
     }
 
     .subtitle{
-        font-size: 1.8rem;
-        font-weight: 600;
-        font-style: italic;
-        text-align: center;
+        font-size: 1.4rem;
+        text-align: left;
+        align-self: flex-end;
+        max-width: 50%;
+        letter-spacing: 0.1rem;
     }
 
     .contact{
         font-size: 1.6rem;
         padding: 1rem;
-        border: 2px solid var(--yellow);
+        background-color: var(--buttonBlack);
+        border: 2px solid var(--white);
         border-radius: 1rem;
+        justify-self: flex-end;
+        align-self: center;
     }
 
     .contact:hover{
-        background-color: var(--yellow);
+        background-color: var(--white);
         color: var(--black);
         border: 2px solid var(--white);
         transition: 0.3s;
     }
 
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 600px) {
+        .container{
+            justify-content: flex-start;;
+            height: auto;
+        }
+
+        .title{
+            font-size: 2.5rem;
+        }
+
+        .subtitle{
+            font-size: 1.0rem;
+            max-width: 80%;
+        }
+
+        .contact{
+            font-size: 1.0rem;
+        }
+    }
+    @media (min-width: 601px) and (max-width: 1080px) {
+        .container{
+            justify-content: flex-start;;
+            height: auto;
+        }
+
+        .background{
+            background-attachment: scroll;
+        }
         .content{
             padding: 1rem;
         }
         .title{
-            font-size: 2.5rem;
+            font-size: 3.5rem;
+        }
+
+        .subtitle{
+            font-size: 1.2rem;
         }
         .contact{
             font-size: 1.2rem;

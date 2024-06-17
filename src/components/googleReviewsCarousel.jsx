@@ -9,7 +9,6 @@ const GoogleReviews = () => {
       <h3 className="title" id="reviews">
         Client Reviews
       </h3>
-      <div className="line"></div>
       <Carousel
         ariaLabel="Reviews"
         emulateTouch={true}
@@ -39,6 +38,7 @@ const GoogleReviews = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-color: var(--sectYellow);
           gap: 2rem;
           width: 100%;
           height: auto;
@@ -50,6 +50,7 @@ const GoogleReviews = () => {
           font-size: 3.5rem;
           font-weight: bold;
           text-align: center;
+          color: var(--black);
         }
         .slide {
           display: flex;
@@ -61,8 +62,8 @@ const GoogleReviews = () => {
           height: 100%;
           text-align: left;
           color: var(--black);
-          border: 3px solid var(--black);
-          background-color: var(--yellow);
+          border: 2px solid var(--black);
+          background-color: var(--sectWhite);
           border-radius: 1rem;
         }
 

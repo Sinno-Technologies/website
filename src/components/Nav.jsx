@@ -18,8 +18,13 @@ const Nav = () => {
             </a>
           </li>
           <li>
-            <a className="link" href="#services" onClick={toggleNav}>
-              Services
+            <a className="link" href="#process" onClick={toggleNav}>
+              Process
+            </a>
+          </li>
+          <li>
+            <a className="link" href="#team" onClick={toggleNav}>
+              Our Team
             </a>
           </li>
           <li>
