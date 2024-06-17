@@ -105,9 +105,8 @@ import support from "../assets/icons/support.svg";
     }
 
     .featureContainer{
-        flex: 1 1 calc(50% - 1rem);
+        flex: 1 1 calc(33.33% - 1rem);
         width: 100%;
-        padding: 1rem;
         display:flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -133,7 +132,7 @@ import support from "../assets/icons/support.svg";
     .image {
         width: 100%;
         height: auto;
-		max-height: 180px;
+		max-height: 150px;
         padding: 1rem;
         align-self: center;
     }
@@ -166,6 +165,9 @@ import support from "../assets/icons/support.svg";
     @media screen and (max-width: 768px){
         .featureContainer{
             flex: 1 1 100%;
+        }
+        .image{
+            display: none;
         }
     }
 
