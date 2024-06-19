@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Jamil from "../assets/jamil.jpeg";
 import LinkedIn from "../assets/icons/linkedin.svg"
+import GitHub from "../assets/icons/github.svg"
 ---
 
 <section class="teamContainer maxWidth" id="team">
@@ -16,7 +17,10 @@ import LinkedIn from "../assets/icons/linkedin.svg"
             </p>
             <div class="linkContainer">
                 <h6 class="linkTitle">Connect with me:</h6>
-                <a href="https://www.linkedin.com/in/jamilsinno/" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={LinkedIn} alt="LinkedIn Icon"/>LinkedIn</a>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/jamilsinno/" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={LinkedIn} alt="LinkedIn Icon"/>LinkedIn</a>
+                    <a href="https://github.com/jamilsinno" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={GitHub} alt="GitHub Icon"/>GitHub</a>
+                </div>
             </div>
         </div>
         <div class="imageContainer">
@@ -74,6 +78,14 @@ import LinkedIn from "../assets/icons/linkedin.svg"
     .role{
         font-weight: bold;
     }
+    
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
 
     .link{
         color: var(--black);
@@ -84,6 +96,7 @@ import LinkedIn from "../assets/icons/linkedin.svg"
         justify-content: flex-start;
         align-items: center;
         gap: 0.5rem;
+        width: 100%;
     }
     
     .linkTitle{
@@ -122,6 +135,10 @@ import LinkedIn from "../assets/icons/linkedin.svg"
         .image {
             max-width: 300px;
             max-height: 300px;
+        }
+
+        .links{
+            flex-direction: column;
         }
     }
 
