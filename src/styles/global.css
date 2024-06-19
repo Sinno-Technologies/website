@@ -72,3 +72,20 @@ a:active {
 .maxWidth {
   max-width: 1400px;
 }
+
+/* scroll fix */
+:target {
+  scroll-margin-block: 28rem;
+}
+
+@media screen and (max-width: 600px) {
+  :target {
+    scroll-margin-block: 25rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1080px) {
+  :target {
+    scroll-margin-block: 25rem;
+  }
+}
