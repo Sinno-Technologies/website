@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Jamil from "../assets/jamil.jpeg";
+import LinkedIn from "../assets/icons/linkedin.svg"
 ---
 
 <section class="teamContainer maxWidth" id="team">
@@ -9,10 +10,14 @@ import Jamil from "../assets/jamil.jpeg";
         <div class="textContainer">
             <h3 class="name">Jamil Sinno</h3>
             <h4 class="role">Founder & Principal Consultant</h4>
-            <h6 class="location">Halifax, NS</h6>
+            <h5 class="location">Halifax, NS</h5>
             <p class="text">
                 I believe in the power of accessible web design to transform businesses. At Sinno Technologies Limited, our mission is to help companies bring their visions to life by creating inclusive digital experiences that drive engagement, generate leads, and boost sales.
             </p>
+            <div class="linkContainer">
+                <h6 class="linkTitle">Connect with me:</h6>
+                <a class="link"><Image class="icon" src={LinkedIn} alt="LinkedIn Icon"/>LinkedIn</a>
+            </div>
         </div>
         <div class="imageContainer">
             <Image class="image" src={Jamil} alt="Photo of Jamil Sinno"/>
@@ -70,8 +75,29 @@ import Jamil from "../assets/jamil.jpeg";
         font-weight: bold;
     }
 
+    .link{
+        color: var(--black);
+        text-decoration: underline;
+        font-size: 1.0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .linkTitle{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .icon{
+        max-width: 30px;
+        max-height: 30px;
+    }
+
     .role,
-    .text{
+    .text {
         font-size: 1.2rem;
     }
 
