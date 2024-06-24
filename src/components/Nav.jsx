@@ -28,32 +28,62 @@ const Nav = () => {
       <nav className="navLinks">
         <ul>
           <li>
-            <a className="link" href="#home" onClick={toggleNav}>
+            <a
+              className="link"
+              href="#home"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
               Home
             </a>
           </li>
           <li>
-            <a className="link" href="#process" onClick={toggleNav}>
+            <a
+              className="link"
+              href="#process"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
               Process
             </a>
           </li>
           <li>
-            <a className="link" href="#team" onClick={toggleNav}>
+            <a
+              className="link"
+              href="#team"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
               Our Team
             </a>
           </li>
           <li>
-            <a className="link" href="#projects" onClick={toggleNav}>
+            <a
+              className="link"
+              href="#projects"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
               Projects
             </a>
           </li>
           <li>
-            <a className="link" href="#reviews" onClick={toggleNav}>
+            <a
+              className="link"
+              href="#reviews"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
               Reviews
             </a>
           </li>
           <li>
-            <a className="link" href="#contact" onClick={toggleNav}>
+            <a
+              className="link"
+              href="#contact"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
               Contact
             </a>
           </li>
