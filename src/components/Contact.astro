@@ -1,32 +1,33 @@
 ---
 ---
 <section class="sectionContainer" id="contact">
-    <h1 class="contact">Contact Us</h1>
-    <p class="text">Get in contact today!</p>
-    <p class="star">* means required</p>
-    <form class="form" name="contactForm" method="POST" netlify>
+    <div class="contentContainer maxWidth">
+        <h1 class="contact">Contact Us</h1>
+        <p class="star">* means required</p>
+        <form class="form" name="contactForm" method="POST" netlify>
 
-        <label class="label" for="fname">First Name*</label>
-        <input class="input" type="text" id="fname" name="firstname" placeholder="Your first name" required>
+            <label class="label" for="fname">First Name*</label>
+            <input class="input" type="text" id="fname" name="firstname" placeholder="Your first name" required>
 
-        <label class="label" for="lname">Last Name*</label>
-        <input class="input" type="text" id="lname" name="lastname" placeholder="Your last name" required>
+            <label class="label" for="lname">Last Name*</label>
+            <input class="input" type="text" id="lname" name="lastname" placeholder="Your last name" required>
 
-        <label class="label" for="email">Email Address*</label>
-        <input class="input" type="email" id="email" name="email" placeholder="Your email address" required>
+            <label class="label" for="email">Email Address*</label>
+            <input class="input" type="email" id="email" name="email" placeholder="Your email address" required>
 
-        <label class="label" for="company">Company</label>
-        <input class="input" type="text" id="company" name="company" placeholder="Your company name">
+            <label class="label" for="company">Company</label>
+            <input class="input" type="text" id="company" name="company" placeholder="Your company name">
 
-        <label class="label" for="number">Number</label>
-        <input class="input" type="tel" id="number" name="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Please use ten digit format 999-999-9999">
+            <label class="label" for="number">Number</label>
+            <input class="input" type="tel" id="number" name="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Please use ten digit format 999-999-9999">
 
-        <label class="label" for="message">Subject*</label>
-        <textarea id="message" rows="6" name="message" placeholder="Your message here" required></textarea>
+            <label class="label" for="message">Subject*</label>
+            <textarea id="message" rows="6" name="message" placeholder="Your message here" required></textarea>
 
-        <button class="submit" type="submit">Submit</button>
+            <button class="submit" type="submit">Submit</button>
 
-    </form>
+        </form>
+    </div>
 </section>
 <style>
     .sectionContainer{
@@ -37,7 +38,15 @@
         justify-content: center;
         align-items: center;
         background-color: var(--sectWhite);
-        gap: 1rem;
+    }
+
+    .contentContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .contact{
@@ -53,7 +62,7 @@
     }
 
     .text{
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         color: var(--black);
         padding: 1rem;
     }
@@ -119,22 +128,9 @@
         .contact{
             font-size: 2.5rem;
         }
-        .text{
-            font-size: 1.8rem;
-        }
-        .form{
-            width: 90%;
-        }
         .submit{
             width: auto;
         }
 
-        .label,
-        .input,
-        .submit,
-        #message{
-            font-size: 1.2rem;
-            line-height: 1.2rem;
-        }
     }
 </style>

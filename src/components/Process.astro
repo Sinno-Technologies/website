@@ -2,7 +2,7 @@
 ---
 
 <section class="sectionContainer" id="process">
-    <!-- <div class="maxWidth"> -->
+    <div class="contentContainer maxWidth">
         <h2 class="processTitle">Our Process</h2>
         <div class="processContainer">
             <div class="processBlock">
@@ -18,7 +18,7 @@
                 <p class="text">Continuous optimization of your applications to maximize efficiency and effectiveness.</p>
             </div>
         </div>
-    <!-- </div -->
+    </div
 </section>
 
 <style>
@@ -29,7 +29,16 @@
         color: var(--black);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .contentContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
         gap: 1rem;
         padding: 2rem 1rem;
@@ -56,7 +65,7 @@
     }
 
     .processTitle{
-        font-size: 3.0rem;
+        font-size: 3.5rem;
     }
 
     .process{

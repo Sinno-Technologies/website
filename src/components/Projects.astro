@@ -3,29 +3,31 @@ import cardData from "../data/cardData";
 import Card from "./Card.astro";
 import parkland from "../assets/ParklandPM.png";
 import unum from "../assets/unumHealth.png";
-import login from "../assets/Login.png";
+import game from "../assets/game_tracker.gif";
 import ramp from "../assets/rampatl.png";
 
-const imgArr = [parkland, unum, login, ramp];
+const imgArr = [parkland, unum, game, ramp];
 ---
 
 <section class="mainContainer" id="projects">
-    <h3 class="projects">Projects</h3>
-    <div class="cardContainer">
-        {cardData.map((card, index) => (
-            <Card
-              key={index}
-              title={card.title}
-              body={card.body}
-              img={imgArr[index]}
-              href={card.href}
-              alt={card.alt}
-              target={card.target}
-              rel={card.rel}
-            />
-          ))}
+    <div class="contentContainer maxWidth">
+        <h3 class="projects">Projects</h3>
+        <div class="cardContainer">
+            {cardData.map((card, index) => (
+                <Card
+                key={index}
+                title={card.title}
+                body={card.body}
+                img={imgArr[index]}
+                href={card.href}
+                alt={card.alt}
+                target={card.target}
+                rel={card.rel}
+                />
+            ))}
+        </div>
+        <a href="https://github.com/jamilsinno?tab=repositories" target="_blank" rel="noreferrer noopener nofollow" class="buttonProjects">View more projects on GitHub</a>
     </div>
-    <a href="https://github.com/jamilsinno?tab=repositories" target="_blank" rel="noreferrer noopener nofollow" class="buttonProjects">View more projects on GitHub</a>
 </section>
 
 <style>
@@ -39,6 +41,16 @@ const imgArr = [parkland, unum, login, ramp];
         background-color: var(--sectWhite);
         padding: 1rem;
         gap: 3rem;
+    }
+
+    .contentContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
     
     .projects{

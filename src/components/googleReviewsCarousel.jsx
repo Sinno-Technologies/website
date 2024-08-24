@@ -6,29 +6,31 @@ import reviews from "../data/googleReviews"
 const GoogleReviews = () => {
   return (
     <section className="carouselContainer">
-      <h3 className="title" id="reviews">
-        Client Reviews
-      </h3>
-      <Carousel
-        ariaLabel="Reviews"
-        emulateTouch={true}
-        showArrows={true}
-        showStatus={false}
-        useKeyboardArrows={true}
-        showThumbs={false}
-        infiniteLoop={true}
-        aria-labelledby="carousel"
-      >
-        {reviews.map((review, index) => (
-          <section className="slide" key={index}>
-            <h4 className="body">"{review.body}"</h4>
-            <section className="stars">
-              <span className="author">- {review.author}</span>
-              <span>{review.company}</span>
+      <div class="contentContainer maxWidth">
+        <h3 className="title" id="reviews">
+          Client Reviews
+        </h3>
+        <Carousel
+          ariaLabel="Reviews"
+          emulateTouch={true}
+          showArrows={true}
+          showStatus={false}
+          useKeyboardArrows={true}
+          showThumbs={false}
+          infiniteLoop={true}
+          aria-labelledby="carousel"
+        >
+          {reviews.map((review, index) => (
+            <section className="slide" key={index}>
+              <h4 className="body">"{review.body}"</h4>
+              <section className="stars">
+                <span className="author">- {review.author}</span>
+                <span>{review.company}</span>
+              </section>
             </section>
-          </section>
-        ))}
-      </Carousel>
+          ))}
+        </Carousel>
+      </div>
       <style jsx="true">{`
         .carousel-root {
           width: 100%;
@@ -43,6 +45,14 @@ const GoogleReviews = () => {
           width: 100%;
           height: auto;
           padding: 1rem;
+        }
+        .contentContainer{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: auto;
         }
         .title {
           width: 100%;
