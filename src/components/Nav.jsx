@@ -50,6 +50,16 @@ const Nav = () => {
           <li>
             <a
               className="link"
+              href="#calendly"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
+              Schedule a Call
+            </a>
+          </li>
+          <li>
+            <a
+              className="link"
               href="#team"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}

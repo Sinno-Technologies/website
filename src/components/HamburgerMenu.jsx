@@ -12,14 +12,16 @@ const HamburgerMenu = () => {
         <img
           className="imgBurger"
           src="/icons/burger_icon.png"
-          alt="Open Navigation Menu icon"
+          alt="Open menu"
+          aria-label="Open menu"
         />
       )}
       {$isNavOpen && (
         <img
           className="imgBurger"
           src="/icons/close_icon.png"
-          alt="Close Navigation Menu icon"
+          alt="Close menu"
+          aria-label="Close menu"
         />
       )}
       <style jsx="true">{`
