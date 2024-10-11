@@ -97,6 +97,16 @@ const Nav = () => {
               Contact
             </a>
           </li>
+          <li>
+            <a
+              className="link"
+              href="https://www.sinno.ca/sitemap-0.xml"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
+              Sitemap
+            </a>
+          </li>
         </ul>
       </nav>
       <style jsx="true">{`
