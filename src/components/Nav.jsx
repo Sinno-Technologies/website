@@ -30,7 +30,7 @@ const Nav = () => {
           <li>
             <a
               className="link"
-              href="#home"
+              href="/"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
             >
@@ -40,7 +40,7 @@ const Nav = () => {
           <li>
             <a
               className="link"
-              href="#process"
+              href="https://www.sinno.ca/#process"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
             >
@@ -50,7 +50,7 @@ const Nav = () => {
           <li>
             <a
               className="link"
-              href="#calendly"
+              href="https://www.sinno.ca/#calendly"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
             >
@@ -60,7 +60,7 @@ const Nav = () => {
           <li>
             <a
               className="link"
-              href="#team"
+              href="https://www.sinno.ca/#team"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
             >
@@ -70,7 +70,7 @@ const Nav = () => {
           <li>
             <a
               className="link"
-              href="#projects"
+              href="https://www.sinno.ca/#projects"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
             >
@@ -80,7 +80,7 @@ const Nav = () => {
           <li>
             <a
               className="link"
-              href="#reviews"
+              href="https://www.sinno.ca/#reviews"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
             >
@@ -90,7 +90,7 @@ const Nav = () => {
           <li>
             <a
               className="link"
-              href="#contact"
+              href="https://www.sinno.ca/#contact"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
             >
