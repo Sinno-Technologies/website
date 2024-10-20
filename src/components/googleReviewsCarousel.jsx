@@ -6,7 +6,7 @@ import reviews from "../data/googleReviews"
 const GoogleReviews = () => {
   return (
     <section className="carouselContainer">
-      <div class="contentContainer maxWidth">
+      <div className="contentContainer maxWidth">
         <h3 className="title" id="reviews">
           Client Reviews
         </h3>
