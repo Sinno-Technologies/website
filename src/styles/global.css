@@ -93,6 +93,12 @@ a:active {
 :target {
   scroll-margin-block: 28rem;
 }
+/* ######################
+            DESIGN  
+   ######################*/
+   .highlight {
+    color: var(--yellow);
+  }
 
 @media screen and (max-width: 600px) {
   :target {

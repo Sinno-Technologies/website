@@ -4,7 +4,7 @@ import type { APIContext } from "astro";
 export async function GET(context: APIContext){
     return rss({
         title: "Sinno Technologies Limited - RSS Feed",
-        description: "Sinno Technologies Limited is a Canadian based software development company.",
+        description: "Professional Software Development and Web Accessibility Auditing Services.",
         site: context.site?.toString() || "https://www.sinno.ca",
         items:[
             {
