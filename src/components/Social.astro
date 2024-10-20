@@ -1,28 +1,35 @@
 ---
+import LinkedIn from "../assets/icons/linkedin.svg"
+import Email from "../assets/icons/email.svg"
+import Twitter from "../assets/icons/twitter.svg"
+import Facebook from "../assets/icons/facebook.svg"
+import YouTube from "../assets/icons/youtube.svg"
+import { Image } from "astro:assets";
 ---
 
 <section>
-    <a href="#"><img src="/icons/facebook_icon.svg" alt="Facebook icon"></a>
-    <a href="#"><img src="/icons/twitter_icon.svg" alt="Twitter icon"></a>
-    <a href="#"><img src="/icons/youtube_icon.svg" alt="YouTube icon"></a>
-    <a href="mailto:sinno.technologies@gmail.com"> <img src="/icons/email_icon.svg" alt="Email icon"> </a>
+    <a href="https://www.linkedin.com/company/sinno-tech/" target="_blank" rel="noreferrer noopener"><Image src={LinkedIn} alt="LinkedIn" title="Follow us on LinkedIn"/></a>
+    <a href="#" target="_blank" rel="noreferrer noopener"><Image src={Facebook} alt="Facebook" title="Follow us on Facebook"></a>
+    <a href="#" target="_blank" rel="noreferrer noopener"><Image src={Twitter} alt="Twitter" title="Follow us on Twitter"></a>
+    <a href="#" target="_blank" rel="noreferrer noopener"><Image src={YouTube} alt="YouTube" title="Follow us on YouTube"></a>
+    <a href="mailto:contact@sinno.ca"> <Image src={Email} alt="Email icon" title="Email us"></a>
 </section>
 
 <style>
     section{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 0.5rem;
     }
 
-    section a {
+    /* section a {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-    }
+    } */
 
     section a img{
         width: auto;

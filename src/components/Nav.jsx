@@ -129,7 +129,7 @@ const Nav = () => {
           transition: 0.3s;
         }
 
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 992px) {
           .link {
             font-size: 1.4rem;
           }

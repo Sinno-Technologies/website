@@ -125,7 +125,7 @@ const GoogleReviews = () => {
           background-color: var(--bgBlack);
         }
 
-        @media screen and (max-width: 1080px) {
+        @media screen and (max-width: 992px) {
           .title {
             font-size: 2.5rem;
           }

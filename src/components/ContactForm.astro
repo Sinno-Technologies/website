@@ -2,7 +2,7 @@
 ---
 <section class="sectionContainer" id="contact">
     <div class="contentContainer maxWidth">
-        <h1 class="contact">Contact Us</h1>
+        <p class="subtitle">We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
         <p class="star">* means required</p>
         <form class="form" name="contactForm" method="POST" netlify>
 
@@ -38,6 +38,7 @@
         justify-content: center;
         align-items: center;
         background-color: var(--sectWhite);
+        color: var(--black);
     }
 
     .contentContainer{
@@ -53,8 +54,13 @@
         font-size: 3.5rem;
         padding: 1rem;
         text-align: center;
-        color: var(--black);
         font-weight: bold;
+    }
+
+    .subtitle{
+        font-size: 1.4rem;
+        text-align: left;
+        letter-spacing: 0.1rem;
     }
 
     .form{
@@ -62,7 +68,7 @@
     }
 
     .text{
-        font-size: 1.4rem;
+        /* font-size: 1.4rem; */
         color: var(--black);
         padding: 1rem;
     }
@@ -73,8 +79,7 @@
         width: 100%;
         text-align: left;
         font-weight: bold;
-        max-width: 800px;
-        padding: 1rem;
+        padding: 1rem 0;
     }
     .form{
         display: flex;
@@ -87,7 +92,6 @@
         padding: 1rem;
         border: 2px solid var(--black);
 		border-radius: 1rem;
-        max-width: 800px;
     }
 
     .label{
@@ -99,7 +103,7 @@
     .input,
     #message{
         width: 100%;
-        padding: 1rem;
+        padding: 0.5rem;
 		background-color: var(--sectWhite);
         border-radius: 1rem;
         font-size: 1.4rem;
@@ -124,7 +128,7 @@
         transition: 0.3s;
     }
 
-    @media screen and (max-width: 1080px) {
+    @media screen and (max-width: 992px) {
         .contact{
             font-size: 2.5rem;
         }

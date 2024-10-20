@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Social from '../components/Social.astro';
+---
+
+<Layout seo={{
+    title: "Contact Us - Sinno Technologies Limited",
+    description: "Sinno Technologies Limited Contact Us Page",
+}}>
+    <section id="contact" class="wrapper">
+        <div>
+            <h1 class="contact">Contact Us</h1>
+        </div>
+        <div class="content maxWidth">
+            <div class="contactInfo">
+                <div>
+                    <h2>Book A Call</h2>
+                    <div>
+                        <a href="">Schedule a free 30-minute consultation</a>
+                    </div>
+                </div>
+                <div>
+                    <h2>Get In Touch</h2>
+                    <div>
+                        <span>Email us: </span><a href="mailto:">Email us: contact@sinno.ca</a>
+                    </div>
+                </div>
+                <div>
+                    <h2>Follow Us On Social Media</h2>
+                    <div>
+                        <Social />
+                    </div>
+                </div>
+            </div>
+            <ContactForm />
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .content{
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+    }
+
+    .contactInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .content{
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+
