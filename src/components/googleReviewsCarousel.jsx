@@ -94,15 +94,6 @@ const GoogleReviews = () => {
           padding-top: 1rem;
         }
 
-        .stars span {
-          font-weight: 600;
-          font-size: 1.2rem;
-        }
-
-        .stars .author {
-          font-size: 1.4rem;
-        }
-
         .stars *,
         .body {
           font-size: var(--font-size-lg);
@@ -127,7 +118,7 @@ const GoogleReviews = () => {
         }
 
         @media screen and (max-width: 576px) {
-          .stars *,
+          .stars span,
           .body{
             font-size: var(--font-size-sm);
           }
@@ -137,7 +128,7 @@ const GoogleReviews = () => {
         }
         
         @media (min-width: 577px) and (max-width: 768px) {
-          .stars *,
+          .stars span,
           .body{
             font-size: var(--font-size-base);
           }

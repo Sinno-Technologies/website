@@ -78,6 +78,9 @@
 		border-radius: 0.5rem;
         background-color: var(--white);
     }
+    .label{
+        font-size: var(--font-size-lg);
+    }
 
     .input,
     #messageText{
@@ -89,7 +92,7 @@
     }
 
     .submit{
-        width: 25%;
+        width: auto;
         height: auto;
         align-self: center;
         padding: 1rem;
@@ -108,6 +111,7 @@
     }
 
     @media screen and (max-width: 576px) {
+        .label,
         .submit,
         .input,
         #messageText{
@@ -115,6 +119,7 @@
         }
     }
     @media (min-width: 577px) and (max-width: 768px) {
+        .label,
         .submit,
         .input,
         #messageText{
