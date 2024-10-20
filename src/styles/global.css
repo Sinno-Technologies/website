@@ -84,7 +84,7 @@ h6 {
   align-items: center;
 }
 /* ######################
-            MEDIA QUERIES  
+        MEDIA QUERIES  
    ######################*/
 
    @media (min-width: var(--breakpoint-sm)) {
@@ -113,7 +113,6 @@ a {
   color: var(--black);
 }
 
-.carouselContainer .carousel-root:hover,
 button:hover,
 a:hover {
   text-decoration: underline;
@@ -121,7 +120,6 @@ a:hover {
   transition: text-decoration 0.3s;
 }
 
-.carouselContainer .carousel-root:focus,
 button:focus,
 a:focus {
   outline: 2px solid var(--black);

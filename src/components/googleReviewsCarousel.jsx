@@ -22,7 +22,7 @@ const GoogleReviews = () => {
         >
           {reviews.map((review, index) => (
             <section className="slide" key={index}>
-              <h4 className="body">"{review.body}"</h4>
+              <p className="body">"{review.body}"</p>
               <section className="stars">
                 <span className="author">- {review.author}</span>
                 <span>{review.company}</span>
@@ -84,10 +84,6 @@ const GoogleReviews = () => {
           overflow-wrap: break-word;
         }
 
-        .slide h4 {
-          font-size: 1.6rem;
-        }
-
         .stars {
           display: flex;
           flex-direction: column;
@@ -105,6 +101,11 @@ const GoogleReviews = () => {
 
         .stars .author {
           font-size: 1.4rem;
+        }
+
+        .stars *,
+        .body {
+          font-size: var(--font-size-lg);
         }
 
         .carousel .control-dots .dot {
@@ -125,10 +126,22 @@ const GoogleReviews = () => {
           background-color: var(--bgBlack);
         }
 
-        @media screen and (max-width: 992px) {
-          .title {
-            font-size: 2.5rem;
+        @media screen and (max-width: 576px) {
+          .stars *,
+          .body{
+            font-size: var(--font-size-sm);
           }
+          .carousel-root {
+            width: 100%;
+          }
+        }
+        
+        @media (min-width: 577px) and (max-width: 768px) {
+          .stars *,
+          .body{
+            font-size: var(--font-size-base);
+          }
+
           .carousel-root {
             width: 100%;
           }
