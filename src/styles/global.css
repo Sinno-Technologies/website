@@ -1,7 +1,6 @@
 @import url(./fonts.css);
 
 :root {
-  --primary-color: #007bff;
   --font-size-base: 1rem;
   --font-size-lg: 1.2rem;
   --font-size-sm: 0.8rem;
@@ -125,7 +124,7 @@ a:hover {
 .carouselContainer .carousel-root:focus,
 button:focus,
 a:focus {
-  outline: 2px dotted var(--yellow);
+  outline: 2px solid var(--black);
   outline-offset: 0.5rem;
   border-radius: 1rem;
 }
