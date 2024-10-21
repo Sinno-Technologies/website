@@ -35,7 +35,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		flex-direction: column;
 		justify-content: space-between;
 		background-color: var(--white);
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 		background-position: 100%;
         border: 2px solid var(--black); 
 		width: 100%;
@@ -51,7 +51,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		text-decoration: none;
 		line-height: 1.4;
 		padding: 1rem;
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 		color: var(--black);
 		background-color: var(--white);
 	}
@@ -63,11 +63,10 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 	.image{
 		width:100%;
 		height: auto;
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 		max-height: 500px;
 	}
 	.title {
-		font-size: 1.8rem;
 		font-weight: bold;
 		padding: 0.5rem 0;
 		color: var(--black);
@@ -75,7 +74,6 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 	.text{
 		padding: 0 0 1rem 0;
 		color: var(--black);
-		font-size: 1.4rem;
 	}
 
 	.link-card > .pLink:hover{
@@ -89,16 +87,8 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 	}
 	.link-card:is(:hover, :focus-within) .title,
 	.link-card:is(:hover, :focus-within) .text {
-		border-radius: 1rem;
+		border-radius: 0.5rem;
         color: var(--white);
         transition: 0.3s;
-	}
-	@media screen and (max-width: 1080px) {
-		.title{
-			font-size: 1.8rem;
-		}
-		.text{
-			font-size: 1.2rem;
-		}
 	}
 </style>

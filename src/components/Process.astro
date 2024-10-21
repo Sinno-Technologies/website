@@ -1,23 +1,32 @@
 ---
+import Consultation from "./Consultation.astro";
+import { Image } from "astro:assets";
+import accessibility from "../assets/icons/accessibility.svg";
+import functional from "../assets/icons/functional.svg";
+import findable from "../assets/icons/findable.svg";
 ---
 
 <section class="sectionContainer" id="process">
     <div class="contentContainer maxWidth">
-        <h2 class="processTitle">Our Process</h2>
+        <h2 class="processTitle">Realizing Your Website's Potentional</h2>
         <div class="processContainer">
             <div class="processBlock">
-                <h3 class="process">Accessibility Audit</h3>
-                <p class="text">We start with evaluation your current digital solutions to identify and address accessibility issues, ensuring compliance with WCAG standards.</p>
-            </Titlediv>
+                <Image class="image" src={accessibility} alt="An accessibility person"/>
+                <h3 class="process">Accessible</h3>
+                <p class="text">Good design is inclusive. Design your website to meet the Web Content Accessibility Guidelines (WCAG) 2.2 standards.</p>
+            </div>
             <div class="processBlock">
-                <h3 class="process">Custom development</h3>
-                <p class="text">Tailored software development and optimization to meet your specific business needs. There's no one-size-fits-all solution.</p>
-            </Titlediv>
+                <Image class="image" src={functional} alt="a gear"/>
+                <h3 class="process">Functional</h3>
+                <p class="text">Stay on top of trends with a user-friendly, functional website.</p>
+            </div>
             <div class="processBlock">
-                <h3 class="process">Enhanced Performance</h3>
-                <p class="text">Continuous optimization of your applications to maximize efficiency and effectiveness.</p>
+                <Image class="image" src={findable} alt="a magnifying glass"/>
+                <h3 class="process">Findable</h3>
+                <p class="text">Increase traffic to your business with a search engine friendly website.</p>
             </div>
         </div>
+        <Consultation backgroundColor="var(--yellow)" color="var(--black)"/>
     </div
 </section>
 
@@ -57,52 +66,43 @@
     .processBlock{
         width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
 
     .processTitle,
     .process{
         font-weight: bold;
+        text-align: center;
     }
 
-    .processTitle{
-        font-size: 3.5rem;
+    .image{
+        width: 30%;
+        height: auto;
+        align-self: center;
     }
 
-    .process{
-        font-size: 2.0rem;
-    }
-
-    .text{
-        font-size: 1.2rem;
-    }
-
-    @media screen and (max-width: 600px) {
-        .processTitle{
-            font-size: 2.5rem;
-        }
-        
-        .process{
-            font-size: 1.5rem;
-        }
-
+    @media screen and (max-width: 768px) {
         .processContainer{
             flex-direction: column;
             align-items:  flex-start;
         }
+        .image{
+            width: 15%;
+        }
     }
 
-    @media (min-width: 601px) and (max-width: 1080px) {
-        .processTitle{
-            font-size: 3.0rem;
-        }
-        
+    @media (min-width: 769px) and (max-width: 992px) {
         .processContainer{
             flex-wrap: wrap;
             align-items: flex-start;
         }
-        .process{
-            font-size: 2.0rem;
-        }
         
+        .image{
+            width: 20%;
+        }
     }
 </style>

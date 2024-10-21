@@ -1,21 +1,26 @@
 ---
 import { Image } from "astro:assets";
-import LogoMain from "../assets/logo_main.svg";
+import LogoMain from "../assets/logo_header_white.svg";
 import HamburgerMenu from "../components/HamburgerMenu.jsx";
 import Nav from "../components/Nav.jsx";
 ---
 <header class="header" id="header">
     <section class="wrapper">
-        <section class="right">
+        <div class="right hamburger">
             <HamburgerMenu client:load/>
-        </section>
-        <section class="left">
+        </div>
+        <div class="right nav">
+            <Nav justify={true} client:load/>
+        </div>
+        <div class="left">
             <a href="/">
                 <Image src={LogoMain}  alt="Sinno Technologies Main Logo."/>
             </a>
-        </section>
+        </div>
     </section>
-	<Nav client:load/>
+    <div class="hamburger">
+        <Nav flexColumn={true} client:load/>
+    </div>
 </header>
 
 <style>
@@ -24,7 +29,7 @@ import Nav from "../components/Nav.jsx";
         top: 0; 
         width: 100%;
         height: auto;
-        background-color: var(--black);
+        background-color: var(--white);
         z-index: 100;
         padding: 0 1rem;
         display:flex;
@@ -34,7 +39,7 @@ import Nav from "../components/Nav.jsx";
     }
     .wrapper{
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
         width: 100%;
@@ -58,5 +63,27 @@ import Nav from "../components/Nav.jsx";
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .nav {
+            display: none;
+        }
     }
 </style>

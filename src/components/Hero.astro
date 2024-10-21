@@ -4,16 +4,16 @@
 <section class="container">
     <div class="background">
         <div class="content maxWidth">
-            <h1 class="title"><span class="highlight">Accessible</span> websites that create real connections.</h1>
-            <p class="subtitle">Grow your business with a fast and accessible website that reflects your brand's values and connects with your customers.</p>
-            <a href="#contact" class="contact outlined">Contact Us</a>
+            <h1 class="title"><span class="highlight">Accessible</span> websites that work.</h1>
+            <h5 class="subtitle">Grow your business with a fast and accessible website that reflects your brand's values and connects with your customers.</h5>
+            <a href="/contact" class="contact">Contact Us</a>
         </div>
     </div>
 </section>
 
 <style>
     .container{
-        background-image: url('../../public/halifax.webp');
+        background-image: url('/halifax.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -41,33 +41,32 @@
         justify-content: center;
         align-items: flex-start;
         gap: 5rem;
-        padding: 0 1rem;
+        padding: 1rem 0;
     }
 
     .title{
         width: 100%;
         height: auto;
         text-align: left;
-        font-size: 5.0rem;
         font-weight: bold;
         color: var(--white);
     }
 
     .subtitle{
-        font-size: 1.4rem;
         text-align: left;
         max-width: 50%;
-        letter-spacing: 0.1rem;
+        color: var(--white);
     }
 
     .contact{
-        font-size: 1.6rem;
         padding: 1rem;
         background-color: var(--buttonBlack);
         border: 2px solid var(--white);
-        border-radius: 1rem;
+        color: var(--white);
+        border-radius: 0.5rem;
         justify-self: flex-end;
         align-self: center;
+        font-size: var(--font-size-lg);
     }
 
     .contact:hover{
@@ -77,49 +76,25 @@
         transition: 0.3s;
     }
 
-    @media screen and (max-width: 600px) {
-        .container{
-            justify-content: flex-start;;
-            height: auto;
-        }
-
-        .title{
-            font-size: 2.5rem;
-        }
-
-        .subtitle{
-            font-size: 1.0rem;
-            max-width: 80%;
-        }
-
-        .content{
-            padding: 1rem;
-        }
-
+    @media screen and (max-width: 576px) {
         .contact{
-            font-size: 1.0rem;
+            font-size: var(--font-size-sm);
         }
     }
-    @media (min-width: 601px) and (max-width: 1080px) {
+
+    @media (min-width: 577px) and (max-width: 768px) {
+        .contact{
+            font-size: var(--font-size-base);
+        }
+    }
+
+    @media screen and (max-width: 992px) {
         .container{
             justify-content: flex-start;;
             height: auto;
         }
 
-        .background{
-            background-attachment: scroll;
-        }
-        .content{
-            padding: 1rem;
-        }
-        .title{
-            font-size: 3.5rem;
-        }
-
         .subtitle{
-            font-size: 1.2rem;
-        }
-        .contact{
-            font-size: 1.2rem;
+            max-width: 100%;
         }
     }

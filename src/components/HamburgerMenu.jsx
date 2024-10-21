@@ -11,16 +11,18 @@ const HamburgerMenu = () => {
       {!$isNavOpen && (
         <img
           className="imgBurger"
-          src="/icons/burger_icon.png"
+          src="/icons/burger_icon_white.svg"
           alt="Open menu"
+          title="Open menu"
           aria-label="Open menu"
         />
       )}
       {$isNavOpen && (
         <img
           className="imgBurger"
-          src="/icons/close_icon.png"
+          src="/icons/close_icon_white.svg"
           alt="Close menu"
+          title="Close menu"
           aria-label="Close menu"
         />
       )}
@@ -39,14 +41,13 @@ const HamburgerMenu = () => {
           justify-content: space-around;
           align-items: center;
           cursor: pointer;
-          background-color: var(--black);
+          background-color: var(--white);
           border: none;
         }
 
         .hamburger-menu:focus {
-          outline: 2px dotted var(--yellow);
-          outline-offset: 0.5rem;
-          border-radius: 1rem;
+          outline-offset: 0.25rem;
+          border-radius: 0.5rem;
         }
       `}</style>
     </button>

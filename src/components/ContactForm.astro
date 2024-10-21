@@ -1,0 +1,129 @@
+---
+---
+<section class="sectionContainer" id="contact">
+    <div class="contentContainer">
+        <p class="subtitle">We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+        <p class="star">* means required</p>
+        <form class="form" name="contactForm" method="POST" netlify>
+
+            <label class="label" for="fname" id="firstNameLabel" aria-label="First Name">First Name*</label>
+            <input class="input" type="text" id="fname" name="firstname" placeholder="Your first name" aria-labelledby="firstNameLabel" required>
+
+            <label class="label" for="lname" id="lastNameLabel" aria-label="Last Name">Last Name*</label>
+            <input class="input" type="text" id="lname" name="lastname" placeholder="Your last name" aria-labelledby="lastNameLabel" required>
+
+            <label class="label" for="email" id="emailLabel" aria-label="Email Address">Email Address*</label>
+            <input class="input" type="email" id="emailText" name="email" placeholder="Your email address" aria-labelledby="emailLabel" required>
+
+            <label class="label" for="company" id="companyLabel" aria-label="Company">Company</label>
+            <input class="input" type="text" id="companyText" name="company" placeholder="Your company name" aria-labelledby="companyLabel">
+
+            <label class="label" for="number" id="phoneNumberLabel" aria-label="Phone Number">Phone Number (Numbers only)</label>
+            <input class="input" type="tel" id="phoneNumberText" name="phone number" aria-labelledby="phoneNumberLabel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Please use ten digit format">
+
+            <label class="label" id="messageLabel" for="message" aria-label="Message">Message*</label>
+            <textarea id="messageText" rows="6" name="message" aria-labelledby="messageLabel" placeholder="Your message here" required></textarea>
+
+            <button class="submit" type="submit">Submit</button>
+
+        </form>
+    </div>
+</section>
+<style>
+    .sectionContainer{
+		padding: 1rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contentContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact{
+        padding: 1rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .subtitle{
+        text-align: left;
+        letter-spacing: 0.1rem;
+    }
+
+    .star{
+        width: 100%;
+        text-align: left;
+        padding: 1rem 0;
+    }
+
+    .form{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid var(--black);
+		border-radius: 0.5rem;
+        background-color: var(--white);
+    }
+    .label{
+        font-size: var(--font-size-lg);
+    }
+
+    .input,
+    #messageText{
+        width: 100%;
+        padding: 0.5rem;
+		background-color: var(--sectWhite);
+        border-radius: 0.5rem;
+        font-size: var(--font-size-lg);
+    }
+
+    .submit{
+        width: auto;
+        height: auto;
+        align-self: center;
+        padding: 1rem;
+        text-align: center;
+        background-color: var(--black);
+        border: 1px solid var(--black); 
+        color: var(--white);
+        border-radius: 0.5em;
+        font-size: var(--font-size-lg);
+    }
+
+    .submit:hover {
+        background-color: var(--white);
+        color: var(--black);
+        transition: 0.3s;
+    }
+
+    @media screen and (max-width: 576px) {
+        .label,
+        .submit,
+        .input,
+        #messageText{
+            font-size: var(--font-size-sm);
+        }
+    }
+    @media (min-width: 577px) and (max-width: 768px) {
+        .label,
+        .submit,
+        .input,
+        #messageText{
+            font-size: var(--font-size-base);
+        }
+    }
+</style>

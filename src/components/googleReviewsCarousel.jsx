@@ -6,7 +6,7 @@ import reviews from "../data/googleReviews"
 const GoogleReviews = () => {
   return (
     <section className="carouselContainer">
-      <div class="contentContainer maxWidth">
+      <div className="contentContainer maxWidth">
         <h3 className="title" id="reviews">
           Client Reviews
         </h3>
@@ -22,7 +22,7 @@ const GoogleReviews = () => {
         >
           {reviews.map((review, index) => (
             <section className="slide" key={index}>
-              <h4 className="body">"{review.body}"</h4>
+              <p className="body">"{review.body}"</p>
               <section className="stars">
                 <span className="author">- {review.author}</span>
                 <span>{review.company}</span>
@@ -57,7 +57,6 @@ const GoogleReviews = () => {
         .title {
           width: 100%;
           height: auto;
-          font-size: 3.5rem;
           font-weight: bold;
           text-align: center;
           color: var(--black);
@@ -74,7 +73,7 @@ const GoogleReviews = () => {
           color: var(--black);
           border: 2px solid var(--black);
           background-color: var(--sectWhite);
-          border-radius: 1rem;
+          border-radius: 0.5rem;
         }
 
         .body {
@@ -82,10 +81,6 @@ const GoogleReviews = () => {
           width: 100%;
           height: auto;
           overflow-wrap: break-word;
-        }
-
-        .slide h4 {
-          font-size: 1.6rem;
         }
 
         .stars {
@@ -98,13 +93,9 @@ const GoogleReviews = () => {
           padding-top: 1rem;
         }
 
-        .stars span {
-          font-weight: 600;
-          font-size: 1.2rem;
-        }
-
-        .stars .author {
-          font-size: 1.4rem;
+        .stars *,
+        .body {
+          font-size: var(--font-size-lg);
         }
 
         .carousel .control-dots .dot {
@@ -125,10 +116,22 @@ const GoogleReviews = () => {
           background-color: var(--bgBlack);
         }
 
-        @media screen and (max-width: 1080px) {
-          .title {
-            font-size: 2.5rem;
+        @media screen and (max-width: 576px) {
+          .stars span,
+          .body{
+            font-size: var(--font-size-sm);
           }
+          .carousel-root {
+            width: 100%;
+          }
+        }
+        
+        @media (min-width: 577px) and (max-width: 768px) {
+          .stars span,
+          .body{
+            font-size: var(--font-size-base);
+          }
+
           .carousel-root {
             width: 100%;
           }

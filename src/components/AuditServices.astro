@@ -31,7 +31,7 @@ import proposal from "../assets/icons/proposal.svg";
         </section>
     </section>
 <section class="btnContainer">
-    <a href="#contact" id="consult">Request a quote</a>
+    <a href="/contact" id="consult">Request a quote</a>
 </section>
 
 <style>
@@ -45,11 +45,10 @@ import proposal from "../assets/icons/proposal.svg";
         height: 100%;
         background-color: var(--bgBlack);
         border: 2px solid var(--yellow); 
-        border-radius: 1rem;
+        border-radius: 0.5rem;
     }
 
     .mainText{
-        font-size: 1.6rem;
         width:100%;
         height: auto;
         text-align: left;
@@ -57,7 +56,6 @@ import proposal from "../assets/icons/proposal.svg";
         flex-grow: 1;
     }
     .subtitle{
-        font-size: 2.4rem;
         text-decoration: underline;
         color: var(--yellow);
         font-weight: bold;
@@ -86,7 +84,6 @@ import proposal from "../assets/icons/proposal.svg";
     .title{
         width: 100%;
         height: auto;
-        font-size: 4rem;
         font-weight: bold;
         text-align: center;
         padding: 1rem;
@@ -95,7 +92,6 @@ import proposal from "../assets/icons/proposal.svg";
     .topic{
         width: auto;
         height: auto;
-        font-size: 1.8rem;
         font-weight: bold;
         text-align: left;
     }
@@ -109,13 +105,12 @@ import proposal from "../assets/icons/proposal.svg";
         align-items: left;
         background-color: var(--bgBlack);
         border: 2px solid var(--yellow); 
-        border-radius: 1rem;
+        border-radius: 0.5rem;
     }
 
     .featureContainer .text{
         width: auto;
         height: 100%;
-        font-size: 1.6rem;
         text-align: left;
     }
 
@@ -145,9 +140,8 @@ import proposal from "../assets/icons/proposal.svg";
 
     #consult{
         padding: 1rem;
-        font-size: 1.6rem;
         border: 2px solid var(--yellow); 
-        border-radius: 1em;
+        border-radius: 0.5em;
     }
 
     #consult:hover {
@@ -157,15 +151,9 @@ import proposal from "../assets/icons/proposal.svg";
         transition: 0.3s;
     }
 
-    #consult,
-    .featureContainer .text{
-        font-size: 1.6rem;
-    }
-
     .listItem{
         width: 100%;
         height: auto;
-        font-size: 1.4rem;
     }
 
     .listItem .icon{
@@ -182,7 +170,7 @@ import proposal from "../assets/icons/proposal.svg";
         }
     }
 
-	@media screen and (max-width: 1080px){
+	@media screen and (max-width: 992px){
         .textContainer,
         .features{
             width:100%;
@@ -192,23 +180,6 @@ import proposal from "../assets/icons/proposal.svg";
         .image{
             width: auto;
             max-height: 120px;
-        }
-
-        .title{
-            font-size: 2.5rem;
-        }
-
-        .topic{
-            font-size: 1.8rem;
-        }
-        
-        #consult,
-        .featureContainer .text{
-            font-size: 1.4rem;
-        }
-
-        .listItem{
-            font-size: 1.2rem;
         }
 	}
 </style>

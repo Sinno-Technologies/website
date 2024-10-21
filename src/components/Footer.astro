@@ -1,6 +1,8 @@
 ---
+import Nav from "./Nav.jsx";
 ---
 <footer class="footer">
+    <Nav colorWhite={true} footerVisible={true} client:load/>
     <p class="text">&copy; 2024 Sinno Technologies Limited. All rights reserved.</p>
     <p class="text">Halifax, NS</p>
 </footer>
@@ -18,9 +20,6 @@
     }
 
     .text{
-        font-size: 1.2rem;
-        padding: 0 1rem;
         text-align: center;
-        font-family: 'IBMPlexMonoMedium', sans-serif;
     }
 </style>

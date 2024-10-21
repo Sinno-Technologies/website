@@ -1,214 +1,105 @@
 ---
-import AppServices from "./AppServices.astro";
-import AuditServices from "./AuditServices.astro";
+import Consultation from "./Consultation.astro";
+import { Image } from "astro:assets";
+import computer from "../assets/icons/computer.svg";
+import remediation from "../assets/icons/remediation.svg";
+import teach from "../assets/icons/teach.svg";
 ---
 
-
-<section class="mainContainer" id="services">
-    <h1 class="title">Accessible Software Solutions</h1>
-    <div class="line"></div>
-    <section class="container">
-        <h2 class="services">Our Services</h2>
-        <section class="textContainer">
-            <p class="mainText">Can people with disabilities access your website? Is your website designed to captivate potential customers seeking the services you offer? Does it seamlessly adapt to any device, ensuring a flawless user experience? In today's digital landscape, having a responsive and accessible website is no longer a luxury—it's a necessity.</p>
-            <p class="mainText">Our mission is to deliver top-notch, responsive, and accessible websites to small businesses and individuals in our community. Whether you are in need of a brand-new website or a revamp to thrive in the mobile era, We are here to assist you.</p>
-        </section>
-        <AuditServices />
-        <AppServices />
-    </section>
+<section class="sectionContainer" id="services">
+    <div class="contentContainer maxWidth">
+        <h2 class="servicesTitle">How We Serve Your Business</h2>
+        <div class="servicesContainer">
+            <div class="servicesBlock">
+                <Image class="image" src={computer} alt="a computer" title="Computer for new websites" />
+                <h3 class="services">New Websites</h3>
+                <p class="text">For Businesses and Consultants who want to start their online journey.</p>
+            </div>
+            <div class="servicesBlock">
+                <Image class="image" src={remediation} alt="a first aid kit" title="First aid kit for websites" />
+                <h3 class="services">Website Rejuvenation</h3>
+                <p class="text">Audit and remediate your current website to be more accessible, functional and user-friendly.</p>
+            </div>
+            <div class="servicesBlock">
+                <Image class="image" src={teach} alt="a teacher" title="Educational services for digital accessibility" />
+                <h3 class="services">Education</h3>
+                <p class="text">Educate your team on digital accessibility best practices through webinars and talks.</p>
+            </div>
+        </div>
+        <Consultation backgroundColor="var(--yellow)" color="var(--black)"/>
+    </div
 </section>
+
 <style>
-    .mainContainer{
-        width:100%;
-        height: auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-        padding: 1rem;
-        gap: 1rem;
-    }
-    .container{
-        width: 100%;
-        height:auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-        gap: 2rem;
-    }
-
-    .services{
+    .sectionContainer {
         width: 100%;
         height: auto;
-        font-size: 3rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        text-align: center;
-    }
-
-    .subtitle{
-        font-size: 2.4rem;
-        text-decoration: underline;
-        color: var(--yellow);
-        font-weight: bold;
-    }
-
-    .textContainer{
-        width: auto;
+        background-color: var(--white);
+        color: var(--black);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: stretch;
-        gap: 1rem;
-        height: 100%;
-        background-color: var(--bgBlack);
-        border: 2px solid var(--yellow); 
-        border-radius: 1rem;
+        align-items: center;
     }
-
-    .mainText{
-        font-size: 1.6rem;
-        width:100%;
+    
+    .contentContainer{
+        width: 100%;
         height: auto;
-        text-align: left;
-        padding: 1rem;
-        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
     }
 
     .servicesContainer{
-        width:100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .content{
-        display: flex;
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: 0 1rem;
-        gap: 1rem;
-    }
-
-    .title{
-        width: 100%;
-        height: auto;
-        font-size: 4rem;
-        font-weight: bold;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .topic{
-        width: auto;
-        height: auto;
-        font-size: 1.8rem;
-        font-weight: bold;
-        text-align: left;
-    }
-
-    .featureContainer{
-        width: 100%;
-        height: 100%;
-        padding: 1rem;
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: left;
-        background-color: var(--bgBlack);
-        border: 2px solid var(--yellow); 
-        border-radius: 1rem;
-        overflow: auto;
-    }
-
-    .featureContainer .text{
-        width: auto;
-        height: 100%;
-        font-size: 1.6rem;
-        text-align: left;
-    }
-
-    .content{
-        width: 100%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .image {
-        width: 100%;
-        height: auto;
-		max-height: 180px;
-        padding: 1rem;
-    }
-
-    .btnContainer{
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .servicesBlock{
+        width: 100%;
+        height: auto;
+        border: 2px solid var(--black);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding: 1rem;
-        text-align: center;
+        gap: 1rem;
+        text-align: justify;
     }
 
-    #consult{
-        padding: 1rem;
-        font-size: 1.6rem;
-        border: 2px solid var(--yellow); 
-        border-radius: 1em;
+    .image{
+        width: 30%;
+        height: auto;
     }
-
-    #consult:hover {
-        background-color: var(--yellow);
-        color: var(--black);
-        border: 2px solid var(--white);
-        transition: 0.3s;
-    }
-
-	@media screen and (max-width: 1080px){
-        .mainContainer{
-            padding: 1rem;
-        }
+    @media screen and (max-width: 768px) {
         .servicesContainer{
-            width: 100%;
-            height: 100%;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            place-items: center;
+            flex-direction: column;
+            align-items:  flex-start;
         }
 
-        .textContainer,
-        .features{
-            width:100%;
-            height: auto;
-        }
-        
         .image{
-            max-height: 120px;
+            width: 15%;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+        .servicesContainer{
+            flex-wrap: wrap;
+            align-items: flex-start;
         }
 
-        .title{
-            font-size: 2.5rem;
+        .image{
+            width: 20%;
         }
-
-        .topic{
-            font-size: 1.8rem;
-        }
-        
-        #consult,
-        .featureContainer .text{
-            font-size: 1.2rem;
-        }
-
-        .services{
-            font-size: 1.8rem;
-        }
-	}
+    }
 </style>
