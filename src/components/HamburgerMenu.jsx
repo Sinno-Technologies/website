@@ -44,9 +44,8 @@ const HamburgerMenu = () => {
         }
 
         .hamburger-menu:focus {
-          outline: 2px dotted var(--yellow);
-          outline-offset: 0.5rem;
-          border-radius: 1rem;
+          outline-offset: 0.25rem;
+          border-radius: 0.5rem;
         }
       `}</style>
     </button>

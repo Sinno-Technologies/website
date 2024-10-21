@@ -139,8 +139,8 @@ a:hover {
 button:focus,
 a:focus {
   outline: 2px solid var(--black);
-  outline-offset: 0.5rem;
-  border-radius: 1rem;
+  outline-offset: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 button:active,

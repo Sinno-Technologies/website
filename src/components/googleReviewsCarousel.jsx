@@ -74,7 +74,7 @@ const GoogleReviews = () => {
           color: var(--black);
           border: 2px solid var(--black);
           background-color: var(--sectWhite);
-          border-radius: 1rem;
+          border-radius: 0.5rem;
         }
 
         .body {
