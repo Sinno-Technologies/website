@@ -86,6 +86,7 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
           display: flex;
           flex-direction: row;
           justify-content: ${justify ? 'flex-end' : 'center'};
+          flex-wrap: wrap;
           align-items: center;
           gap: 2rem;
         }
