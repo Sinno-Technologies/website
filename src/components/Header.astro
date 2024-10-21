@@ -10,7 +10,7 @@ import Nav from "../components/Nav.jsx";
             <HamburgerMenu client:load/>
         </div>
         <div class="right nav">
-            <Nav client:load/>
+            <Nav justify={true} client:load/>
         </div>
         <div class="left">
             <a href="/">
@@ -19,7 +19,7 @@ import Nav from "../components/Nav.jsx";
         </div>
     </section>
     <div class="hamburger">
-        <Nav client:load/>
+        <Nav flexColumn={true} client:load/>
     </div>
 </header>
 

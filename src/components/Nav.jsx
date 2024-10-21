@@ -2,7 +2,7 @@ import { useStore } from "@nanostores/react"
 import { isNavOpen } from "../stores/navStore"
 import { useEffect } from "react"
 
-const Nav = () => {
+const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVisible = false}) => {
   const $isNavOpen = useStore(isNavOpen)
 
   const toggleNav = () => {
@@ -24,12 +24,12 @@ const Nav = () => {
   }, [$isNavOpen])
 
   return (
-    <section className="navContainer" onClick={$isNavOpen ? toggleNav : null}>
+    <section className={`navContainer ${footerVisible ? "footerVisible" : ""}`} onClick={$isNavOpen ? toggleNav : null}>
       <nav className="navLinks">
-        <ul>
+        <ul className={`list ${flexColumn ? "flexColumn" : ""}`}>
           <li>
             <a
-              className="link"
+              className={`link ${colorWhite ? "colorWhite" : ""}`}
               href="/"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
@@ -39,7 +39,7 @@ const Nav = () => {
           </li>
           <li>
             <a
-              className="link"
+              className={`link ${colorWhite ? "colorWhite" : ""}`}
               href="#process"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
@@ -49,7 +49,7 @@ const Nav = () => {
           </li>
           <li>
             <a
-              className="link"
+              className={`link ${colorWhite ? "colorWhite" : ""}`}
               href="#team"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
@@ -59,7 +59,7 @@ const Nav = () => {
           </li>
           <li>
             <a
-              className="link"
+              className={`link ${colorWhite ? "colorWhite" : ""}`}
               href="#projects"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
@@ -69,7 +69,7 @@ const Nav = () => {
           </li>
           <li>
             <a
-              className="link"
+              className={`link ${colorWhite ? "colorWhite" : ""}`}
               href="#reviews"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
@@ -79,8 +79,8 @@ const Nav = () => {
           </li>
           <li>
             <a
-              className="link"
-              href="#contact"
+              className={`link ${colorWhite ? "colorWhite" : ""}`}
+              href="/contact"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
             >
@@ -89,7 +89,7 @@ const Nav = () => {
           </li>
           <li>
             <a
-              className="link"
+              className={`link ${colorWhite ? "colorWhite" : ""}`}
               href="https://www.sinno.ca/sitemap-0.xml"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
@@ -112,29 +112,22 @@ const Nav = () => {
           height: 100%;
           padding: 1rem;
         }
-        .navLinks ul {
+        .list {
           display: flex;
           flex-direction: row;
-          justify-content: flex-end;
+          justify-content: ${justify ? 'flex-end' : 'center'};
           align-items: center;
           gap: 1rem;
         }
         
         .link{
-          font-size: var(--font-size-lg);
+          color: var(--black);
+        }
+        
+        .colorWhite {
+          color: var(--white);
         }
 
-        @media screen and (max-width: 576px) {
-          .link{
-            font-size: var(--font-size-sm);
-          }
-        }
-
-        @media (mind-width: 577px) and (max-width: 768px) {
-          .link{
-            font-size: var(--font-size-base);
-          }
-        }
         @media screen and (max-width: 768px) {
           .navContainer{
             max-height: ${$isNavOpen ? 100 : 0}vh;
@@ -144,10 +137,19 @@ const Nav = () => {
           .navLinks{
             border-bottom: 2px solid var(--yellow);
           }
-          .navLinks ul{
-            flex-direction: column;
+          .list{
+            flex-direction: row;
             justify-content: center;
           }
+
+          .flexColumn{
+            flex-direction: column;
+          }
+        }
+
+        .footerVisible{
+          max-height: 100vh;
+          opacity: 1;
         }
       `}</style>
     </section>
