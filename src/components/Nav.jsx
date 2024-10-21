@@ -109,9 +109,6 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
             opacity: ${$isNavOpen ? 1 : 0};
             transition: opacity 0.5s, max-height 0.5s;
           }
-          .navLinks{
-            border-bottom: 2px solid var(--yellow);
-          }
           .list{
             flex-direction: row;
             justify-content: center;
