@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CalendlyApp from '../components/Calendly.astro';
+---
+
+<Layout seo={{
+    title: "Book A Free Consultation - Sinno Technologies Limited",
+    description: "Sinno Technologies Limited Book A Free Consultation Page",
+}}>
+    <section id="calendly" class="wrapper sectionContainer">
+        <h1 class="contact">Book A Free Consultation</h1>
+        <CalendlyApp client:load/>
+    </section>
+</Layout>
+
+<style>
+    .sectionContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+    }
+
+    .contact{
+        text-align: center;
+    }
+</style>
+
+
+
+

@@ -1,0 +1,21 @@
+---
+export interface Props {
+    backgroundColor: 'var(--yellow)' | 'var(--black)'
+    color: 'var(--black)' | 'var(--white)'
+}
+
+const { backgroundColor, color } = Astro.props
+---
+
+<a href="/calendly" class=`consultation` style={`background-color: ${backgroundColor}; color: ${color}`}>Book a Free Consultation</a>
+
+<style>
+    .consultation{
+        min-width: 25%;
+        height: auto;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: var(--black);
+        text-align: center;
+    }
+</style>

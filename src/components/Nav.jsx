@@ -40,46 +40,6 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
           <li>
             <a
               className={`link ${colorWhite ? "colorWhite" : ""}`}
-              href="#process"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Process
-            </a>
-          </li>
-          <li>
-            <a
-              className={`link ${colorWhite ? "colorWhite" : ""}`}
-              href="#team"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Our Team
-            </a>
-          </li>
-          <li>
-            <a
-              className={`link ${colorWhite ? "colorWhite" : ""}`}
-              href="#projects"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              className={`link ${colorWhite ? "colorWhite" : ""}`}
-              href="#reviews"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Reviews
-            </a>
-          </li>
-          <li>
-            <a
-              className={`link ${colorWhite ? "colorWhite" : ""}`}
               href="/contact"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}
@@ -95,6 +55,16 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
               tabIndex={$isNavOpen ? 0 : -1}
             >
               Sitemap
+            </a>
+          </li>
+          <li>
+            <a
+              className={`link calendly`}
+              href="/calendly"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
+              Book a Consultation
             </a>
           </li>
         </ul>
@@ -117,7 +87,7 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
           flex-direction: row;
           justify-content: ${justify ? 'flex-end' : 'center'};
           align-items: center;
-          gap: 1rem;
+          gap: 2rem;
         }
         
         .link{
@@ -126,6 +96,11 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
         
         .colorWhite {
           color: var(--white);
+        }
+        
+        .calendly{
+          background-color: var(--yellow);
+          padding: 0.5rem;
         }
 
         @media screen and (max-width: 768px) {
