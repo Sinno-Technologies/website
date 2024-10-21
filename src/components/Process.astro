@@ -1,5 +1,9 @@
 ---
 import Consultation from "./Consultation.astro";
+import { Image } from "astro:assets";
+import accessibility from "../assets/icons/accessibility.svg";
+import functional from "../assets/icons/functional.svg";
+import findable from "../assets/icons/findable.svg";
 ---
 
 <section class="sectionContainer" id="process">
@@ -7,14 +11,17 @@ import Consultation from "./Consultation.astro";
         <h2 class="processTitle">Realizing Your Website's Potentional</h2>
         <div class="processContainer">
             <div class="processBlock">
+                <Image class="image" src={accessibility} alt="An accessibility person"/>
                 <h3 class="process">Accessible</h3>
                 <p class="text">Our expertise in web accessibility ensures your website meets the Web Content Accessibility Guidelines (WCAG) 2.2 standards.</p>
-            </Titlediv>
+            </div>
             <div class="processBlock">
+                <Image class="image" src={functional} alt="a gear"/>
                 <h3 class="process">Functional</h3>
                 <p class="text">We ensure that your website is stays relevant, functional and user-friendly.</p>
-            </Titlediv>
+            </div>
             <div class="processBlock">
+                <Image class="image" src={findable} alt="a magnifying glass"/>
                 <h3 class="process">Findable</h3>
                 <p class="text">We implement SEO best practices to ensure your website is found by search engines.</p>
             </div>
@@ -59,6 +66,11 @@ import Consultation from "./Consultation.astro";
     .processBlock{
         width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
 
     .processTitle,
@@ -66,10 +78,19 @@ import Consultation from "./Consultation.astro";
         font-weight: bold;
     }
 
+    .image{
+        width: 50%;
+        height: auto;
+        align-self: center;
+    }
+
     @media screen and (max-width: 768px) {
         .processContainer{
             flex-direction: column;
             align-items:  flex-start;
+        }
+        .image{
+            width: 30%;
         }
     }
 
@@ -77,6 +98,10 @@ import Consultation from "./Consultation.astro";
         .processContainer{
             flex-wrap: wrap;
             align-items: flex-start;
+        }
+        
+        .image{
+            width: 40%;
         }
     }
 </style>
