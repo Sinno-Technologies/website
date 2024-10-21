@@ -57,7 +57,6 @@ const GoogleReviews = () => {
         .title {
           width: 100%;
           height: auto;
-          font-size: 3.5rem;
           font-weight: bold;
           text-align: center;
           color: var(--black);

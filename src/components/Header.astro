@@ -6,16 +6,21 @@ import Nav from "../components/Nav.jsx";
 ---
 <header class="header" id="header">
     <section class="wrapper">
-        <section class="right">
+        <div class="right hamburger">
             <HamburgerMenu client:load/>
-        </section>
-        <section class="left">
+        </div>
+        <div class="right nav">
+            <Nav client:load/>
+        </div>
+        <div class="left">
             <a href="/">
                 <Image src={LogoMain}  alt="Sinno Technologies Main Logo."/>
             </a>
-        </section>
+        </div>
     </section>
-	<Nav client:load/>
+    <div class="hamburger">
+        <Nav client:load/>
+    </div>
 </header>
 
 <style>
@@ -58,5 +63,27 @@ import Nav from "../components/Nav.jsx";
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .nav {
+            display: none;
+        }
     }
 </style>

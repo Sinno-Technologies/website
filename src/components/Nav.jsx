@@ -103,35 +103,50 @@ const Nav = () => {
         .navContainer {
           position: sticky;
           width: 100%;
-          max-height: ${$isNavOpen ? 100 : 0}vh;
-          opacity: ${$isNavOpen ? 1 : 0};
-          transition: opacity 0.5s, max-height 0.5s;
+          max-height: 100vh;
+          opacity: 1;
           overflow: hidden;
         }
         .navLinks {
           width: 100%;
           height: 100%;
           padding: 1rem;
-          border-bottom: 2px solid var(--yellow);
         }
         .navLinks ul {
           display: flex;
-          flex-direction: column;
-          justify-content: center;
+          flex-direction: row;
+          justify-content: flex-end;
           align-items: center;
           gap: 1rem;
         }
-        .link {
-          font-size: 1.8rem;
-        }
-        .link:hover {
-          text-decoration: underline var(--yellow);
-          transition: 0.3s;
+        
+        .link{
+          font-size: var(--font-size-lg);
         }
 
-        @media screen and (max-width: 992px) {
-          .link {
-            font-size: 1.4rem;
+        @media screen and (max-width: 576px) {
+          .link{
+            font-size: var(--font-size-sm);
+          }
+        }
+
+        @media (mind-width: 577px) and (max-width: 768px) {
+          .link{
+            font-size: var(--font-size-base);
+          }
+        }
+        @media screen and (max-width: 768px) {
+          .navContainer{
+            max-height: ${$isNavOpen ? 100 : 0}vh;
+            opacity: ${$isNavOpen ? 1 : 0};
+            transition: opacity 0.5s, max-height 0.5s;
+          }
+          .navLinks{
+            border-bottom: 2px solid var(--yellow);
+          }
+          .navLinks ul{
+            flex-direction: column;
+            justify-content: center;
           }
         }
       `}</style>
