@@ -1,10 +1,5 @@
 import { useStore } from "@nanostores/react"
 import { isNavOpen } from "../stores/navStore"
-import { Image } from "astro:assets"
-// import { Burger } from "../assets/icons/burger_icon_white.svg"
-// import { Close } from "../assets/icons/close_icon_white.svg"
-// import { ReactComponent as BurgerIcon } from "../assets/icons/burger_icon_white.svg"
-// import { ReactComponent as CloseIcon } from "../assets/icons/close_icon_white.svg"
 const HamburgerMenu = () => {
   const $isNavOpen = useStore(isNavOpen)
   return (
