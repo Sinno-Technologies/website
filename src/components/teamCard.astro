@@ -1,0 +1,56 @@
+---
+import "../styles/global.css"
+import { Image } from "astro:assets"
+
+export interface Props {
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+  linkedInUrl?: string; 
+  resume?: string;
+}
+
+const { name, title, bio, image, linkedInUrl, resume } = Astro.props;
+---
+
+<div class="team-member">
+  <Image src={image} alt={`${name}'s photo`} class="profile-pic" />
+  <h2>{name}</h2>
+  <h4>{title}</h4>
+  <p>{bio}</p>
+  <div class="linkContainer">
+    {linkedInUrl && (
+      <a href={linkedInUrl} class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    )}
+    {resume && <a href={resume} class="link" target="_blank" rel="noopener noreferrer">Resume</a>}
+  </div>
+</div>
+
+<style>
+  .team-member {
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  .linkContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>
