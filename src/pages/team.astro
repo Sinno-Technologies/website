@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro"
+import TeamMember from "../components/teamCard.astro"
+import Jamil from "../assets/jamil.jpeg"
+
+const teamMembers = [{
+name: "Jamil Sinno",
+title: "Founder & Principal Consultant",
+bio: "Test Bio",
+image: Jamil,
+linkedInUrl: "https://www.linkedin.com/in/jamilsinno",
+resume: "../../public/resume.pdf",
+},
+{
+name: "Jalal Sinno",
+title: "Quality Assurance Tester",
+bio: "Test Bio",
+image: Jamil,
+linkedInUrl: "https://www.linkedin.com/in/jalalsinno",
+resume: "/public/resume.pdf"
+}]
+---
+
+<Layout
+  seo="Sinno Technologies Limited Team Members"
+  >
+  <div class="wrapper">
+    <div class="maxWidth content">
+      <h2>Meet Our Team</h2>
+      <p>Our team is dedicated to delivering innovative and accessible software solutions to help your business thrive.</p>
+    </div>
+    <div>
+      {teamMembers.map((member) => (
+        <TeamMember {...member} />
+      ))}
+    </div>
+  </div>
+</Layout>
