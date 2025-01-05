@@ -40,6 +40,16 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
           <li>
             <a
               className={`link ${colorWhite ? "colorWhite" : ""}`}
+              href="/team"
+              onClick={toggleNav}
+              tabIndex={$isNavOpen ? 0 : -1}
+            >
+              Team
+            </a>
+          </li>
+          <li>
+            <a
+              className={`link ${colorWhite ? "colorWhite" : ""}`}
               href="/contact"
               onClick={toggleNav}
               tabIndex={$isNavOpen ? 0 : -1}

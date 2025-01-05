@@ -6,6 +6,7 @@ import GitHub from "../assets/icons/github.svg"
 import Email from "../assets/icons/email.svg"
 import Resume from "../assets/icons/resume.svg"
 import Consultation from "./Consultation.astro";
+import Button from "./Button.astro";
 ---
 
 <section class="teamContainer" id="team">
@@ -13,7 +14,7 @@ import Consultation from "./Consultation.astro";
     <div class="contentContainer maxWidth">
         <div class="textContainer">
             <h3 class="name">Jamil Sinno</h3>
-            <span class="role">Founder & Principal Consultant</span>
+            <span class="role">Principal Consultant</span>
             <span class="role">DHS Trusted Tester</span>
             <span class="location">Halifax, NS</span>
             <p class="text">
@@ -33,7 +34,7 @@ import Consultation from "./Consultation.astro";
             <Image class="image" src={Jamil} alt="Photo of Jamil Sinno"/>
         </div>
     </div>
-        <Consultation backgroundColor="var(--black)" color="var(--white)"/>
+        <Button backgroundColor="var(--black)" color="var(--white)" href="/team" text="Meet Our Team"
 </section>
 
 <style>
