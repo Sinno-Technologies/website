@@ -1,0 +1,23 @@
+---
+export interface Props {
+    backgroundColor: 'var(--yellow)' | 'var(--black)';
+    color: 'var(--black)' | 'var(--white)';
+    href: String;
+    text: String;
+}
+
+const { backgroundColor, color, href, text } = Astro.props
+---
+
+<a href={href} class=`button` style={`background-color: ${backgroundColor}; color: ${color}`}>{text}</a>
+
+<style>
+    .button{
+        min-width: 25%;
+        height: auto;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        color: var(--black);
+        text-align: center;
+    }
+</style>
