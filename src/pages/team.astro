@@ -13,7 +13,7 @@ import { teamMembers } from "../data/teamMembers.js";
       <h2>Meet Our Team</h2>
       <p>Our team is dedicated to delivering innovative and accessible software solutions to help your business thrive.</p>
     </div>
-    <div class="teamMembers">
+    <div class="teamMembers maxWidth">
       {teamMembers.map((member) => (
         <TeamMember {...member} />
       ))}
