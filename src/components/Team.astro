@@ -13,10 +13,17 @@ import Button from "./Button.astro";
     <h2 class="title">Meet Our Founder</h2>
     <div class="contentContainer maxWidth">
         <div class="textContainer">
-            <h3 class="name">Jamil Sinno</h3>
-            <span class="role">Principal Consultant</span>
-            <span class="role">DHS Trusted Tester</span>
-            <span class="location">Halifax, NS</span>
+            <div class="teamCard">
+                <div class="imageContainer">
+                    <Image class="image" src={Jamil} alt="Photo of Jamil Sinno"/>
+                </div>
+                <div class="teamTextContainer">
+                    <h3 class="name">Jamil Sinno</h3>
+                    <span class="role">Principal Consultant</span>
+                    <span class="role">DHS Trusted Tester</span>
+                    <span class="location">Halifax, NS</span>
+                </div>
+            </div>
             <p class="text">
                 Sinno Technologies Limited is dedicated to promoting inclusivity and accessibility. Founded in 2023, we are a professional software development and accessibility consulting firm. Today, Jamil works with clients to create inclusive digital experiences that drive engagement, generate leads, and improve user experience.
             </p>
@@ -29,9 +36,6 @@ import Button from "./Button.astro";
                     <a href="/resume.pdf" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={Resume} alt="Resume Icon"/>Resume</a>
                 </div>
             </div>
-        </div>
-        <div class="imageContainer">
-            <Image class="image" src={Jamil} alt="Photo of Jamil Sinno"/>
         </div>
     </div>
         <Button backgroundColor="var(--black)" color="var(--white)" href="/team" text="Meet Our Team"
@@ -51,6 +55,20 @@ import Button from "./Button.astro";
         padding: 2rem 1rem;
     }
 
+    .teamCard{
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .teamTextContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .contentContainer {
         width: 100%;
         height: auto;
@@ -66,16 +84,21 @@ import Button from "./Button.astro";
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
+    }
+
+    .text{
+        text-align: justify;
     }
 
     .image {
         width: 100%;
         height: auto;
-        border-radius: 50%;
-        max-width: 500px;
-        max-height: 500px;
+        border-radius: 10%;
+        max-width: 250px;
+        max-height: 250px;
+        box-shadow: 4px 4px 4px rgba(0,0,0,0.9);
     }
 
     .role{
@@ -85,7 +108,7 @@ import Button from "./Button.astro";
     .links{
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
     }
@@ -108,6 +131,7 @@ import Button from "./Button.astro";
     
     .linkTitle{
         font-weight: bold;
+        text-align: center;
     }
 
     .icon{
@@ -130,22 +154,12 @@ import Button from "./Button.astro";
 
         .textContainer,
         .imageContainer{
+    align-items: center;
             max-width: 100%;
-        }
-        .image {
-            max-width: 300px;
-            max-height: 300px;
         }
 
         .links{
             flex-direction: column;
-        }
-    }
-
-    @media screen and (min-width: 769px) and (max-width: 992px) {
-        .image {
-            max-width: 400px;
-            max-height: 400px;
         }
     }
 </style>

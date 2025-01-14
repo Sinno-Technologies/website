@@ -1,11 +1,33 @@
 ---
+import { Image } from "astro:assets";
+import accessibility from "../assets/icons/accessibility.svg";
+import functional from "../assets/icons/functional.svg";
+import findable from "../assets/icons/findable.svg";
 ---
 
 <section class="container">
     <div class="background">
         <div class="content maxWidth">
-            <h1 class="title"><span class="highlight">Accessible</span> websites that work.</h1>
-            <h5 class="subtitle">Grow your business with a fast and accessible website that reflects your brand's values and connects with your customers.</h5>
+            <div class="titleContainer">
+                <h1 class="title">Websites made <span class="highlight">accessible</span>.</h1>
+            </div>
+            <div class="processContainer">
+                <div class="processBlock">
+                    <Image class="image" src={accessibility} alt="An accessibility person"/>
+                    <h3 class="process">Accessible</h3>
+                    <p class="text">Good design is inclusive. Design your website to meet the Web Content Accessibility Guidelines (WCAG) 2.2 standards.</p>
+                </div>
+                <div class="processBlock">
+                    <Image class="image" src={functional} alt="a gear"/>
+                    <h3 class="process">Functional</h3>
+                    <p class="text">Stay on top of trends with a user-friendly, functional website.</p>
+                </div>
+                <div class="processBlock">
+                    <Image class="image" src={findable} alt="a magnifying glass"/>
+                    <h3 class="process">Findable</h3>
+                    <p class="text">Increase traffic to your business with a search engine friendly website.</p>
+                </div>
+            </div>
             <a href="/contact" class="contact">Contact Us</a>
         </div>
     </div>
@@ -18,7 +40,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         color: var(--white);
     }
 
@@ -38,18 +60,53 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-start;
         gap: 5rem;
         padding: 1rem 0;
     }
 
+    .titleContainer{
+        width:100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .title{
         width: 100%;
         height: auto;
-        text-align: left;
+        text-align: center;
         font-weight: bold;
         color: var(--white);
+    }
+
+    .processContainer{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .processBlock{
+        width: 100%;
+        height: 100%;
+        background-color: var(--sectYellow);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: var(--black);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .image{
+        width: 50px;
+        height: 50px;
     }
 
     .subtitle{
@@ -93,8 +150,8 @@
             justify-content: flex-start;;
             height: auto;
         }
-
-        .subtitle{
-            max-width: 100%;
+        .processContainer{
+            grid-template-columns: repeat(1, 1fr);
         }
+
     }
