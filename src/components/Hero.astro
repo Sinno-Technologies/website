@@ -11,24 +11,26 @@ import findable from "../assets/icons/findable.svg";
             <div class="titleContainer">
                 <h1 class="title">Websites made <span class="highlight">accessible</span>.</h1>
             </div>
-            <div class="processContainer">
-                <div class="processBlock">
-                    <Image class="image" src={accessibility} alt="An accessibility person"/>
-                    <h3 class="process">Accessible</h3>
-                    <p class="text">Good design is inclusive. Design your website to meet the Web Content Accessibility Guidelines (WCAG) 2.2 standards.</p>
+            <div class="heroBottom">
+                <div class="processContainer">
+                    <div class="processBlock">
+                        <Image class="image" src={accessibility} alt="An accessibility person"/>
+                        <h3 class="process">Accessible</h3>
+                        <p class="text">Good design is inclusive. Design your website to meet the Web Content Accessibility Guidelines (WCAG) 2.2 standards.</p>
+                    </div>
+                    <div class="processBlock">
+                        <Image class="image" src={functional} alt="a gear"/>
+                        <h3 class="process">Functional</h3>
+                        <p class="text">Stay on top of trends with a user-friendly, functional website.</p>
+                    </div>
+                    <div class="processBlock">
+                        <Image class="image" src={findable} alt="a magnifying glass"/>
+                        <h3 class="process">Findable</h3>
+                        <p class="text">Increase traffic to your business with a search engine friendly website.</p>
+                    </div>
                 </div>
-                <div class="processBlock">
-                    <Image class="image" src={functional} alt="a gear"/>
-                    <h3 class="process">Functional</h3>
-                    <p class="text">Stay on top of trends with a user-friendly, functional website.</p>
-                </div>
-                <div class="processBlock">
-                    <Image class="image" src={findable} alt="a magnifying glass"/>
-                    <h3 class="process">Findable</h3>
-                    <p class="text">Increase traffic to your business with a search engine friendly website.</p>
-                </div>
+                <a href="/contact" class="contact">Contact Us</a>
             </div>
-            <a href="/contact" class="contact">Contact Us</a>
         </div>
     </div>
 </section>
@@ -74,6 +76,16 @@ import findable from "../assets/icons/findable.svg";
         align-items: center;
     }
 
+    .heroBottom{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+    }
+
     .title{
         width: 100%;
         height: auto;
@@ -101,7 +113,6 @@ import findable from "../assets/icons/findable.svg";
         color: var(--black);
         text-align: center;
         padding: 1rem;
-        border-radius: 0.5rem;
     }
 
     .image{
