@@ -17,21 +17,21 @@ const { seo } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Sinno Technologies is dedicated to enhancing your website’s accessibility and user experience. Our services include website rejuvenations, accessibility audits, workshops and webinars, helping you meet WCAG, ADA, and ACA standards.">
+        <meta name="description" content={seo?.description || "Sinno Technologies is dedicated to enhancing your website’s accessibility and user experience. Our services include website rejuvenations, accessibility audits, workshops and webinars, helping you meet WCAG, ADA, and ACA standards."}>
         <meta name="keywords" content="Web Accessibility, Accessibility Audit, Website Rejuvenation, Web Development, Digital Accessibility, SEO, Responsive Design, Halifax, Nova Scotia, Canada">
         <meta name="geo.placename" content="Halifax, Nova Scotia, Canada">
         <meta name="geo.region" content="CA-NS">
         <meta name="geo.position" content="44.651070, -63.582687">
         <meta name="language" content="English">
-        <meta property="og:title" content="Sinno Technologies Ltd.">
+        <meta property="og:title" content={seo?.title || "Sinno Technologies Ltd."}>
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://www.sinno.ca/logo_header_white.svg">
-        <meta property="og:description" content="Sinno Technologies is dedicated to enhancing your website’s accessibility and user experience. Our services include website rejuvenations, accessibility audits, workshops and webinars, helping you meet WCAG, ADA, and ACA standards.">
+        <meta property="og:description" content={seo?.description || "Sinno Technologies is dedicated to enhancing your website’s accessibility and user experience. Our services include website rejuvenations, accessibility audits, workshops and webinars, helping you meet WCAG, ADA, and ACA standards."}>
         <meta name="robots" content="index, follow">
         <meta property="og:url" content="https://www.sinno.ca">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Sinno Technologies Ltd.">
-        <meta name="twitter:description" content="Sinno Technologies is dedicated to enhancing your website’s accessibility and user experience. Our services include website rejuvenations, accessibility audits, workshops and webinars, helping you meet WCAG, ADA, and ACA standards.">
+        <meta name="twitter:title" content={seo?.title || "Sinno Technologies Ltd."}>
+        <meta name="twitter:description" content={seo?.description || "Sinno Technologies is dedicated to enhancing your website’s accessibility and user experience. Our services include website rejuvenations, accessibility audits, workshops and webinars, helping you meet WCAG, ADA, and ACA standards."}>
         <meta name="twitter:image" content="https://www.sinno.ca/logo_header_white.svg">
         <link rel="icon" type="image/svg+xml" href="/icons/main_icon_white.svg" />
         <link rel="canonical" href="https://www.sinno.ca">

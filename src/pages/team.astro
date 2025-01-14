@@ -5,9 +5,10 @@ import Consultation from "../components/Consultation.astro";
 import { teamMembers } from "../data/teamMembers.js";
 ---
 
-<Layout
-  seo="Sinno Technologies Limited Team Members"
-  >
+<Layout seo={{
+	title: "Sinno Technologies Limited Team Page",
+	description: "Sinno Technology Limited's team members and trusted partners."
+}}>
   <div class="wrapper">
     <div class="maxWidth content">
       <h2>Meet Our Team</h2>
@@ -26,6 +27,11 @@ import { teamMembers } from "../data/teamMembers.js";
   .wrapper{
     padding: 0 0 1rem 0;
   }
+
+  .content{
+    text-align: center;
+  }
+
   .teamMembers{
     padding: 1rem 0;
     display: grid;
