@@ -43,7 +43,7 @@ const GoogleReviews = () => {
           background-color: var(--sectYellow);
           gap: 2rem;
           width: 100%;
-          height: auto;
+          height: 100%;
           padding: 1rem;
         }
         .contentContainer{
@@ -52,7 +52,7 @@ const GoogleReviews = () => {
           justify-content: center;
           align-items: center;
           width: 100%;
-          height: auto;
+          height: 100%;
         }
         .title {
           width: 100%;
@@ -77,7 +77,7 @@ const GoogleReviews = () => {
         }
 
         .body {
-          text-align: left;
+          text-align: center;
           width: 100%;
           height: auto;
           overflow-wrap: break-word;
@@ -91,6 +91,8 @@ const GoogleReviews = () => {
           height: auto;
           text-align: left;
           padding-top: 1rem;
+          width: 100%;
+          height: 100%;
         }
 
         .stars *,
