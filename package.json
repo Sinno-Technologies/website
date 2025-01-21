@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.3",
-    "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/react": "^4.1.6",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
     "@nanostores/react": "^0.7.1",
     "@types/react": "^18.2.25",
     "@types/react-dom": "^18.2.10",
-    "astro": "^3.4.0",
+    "astro": "^5.1.8",
     "astro-seo": "^0.8.0",
     "nanostores": "^0.9.3",
     "react": "^18.2.0",
