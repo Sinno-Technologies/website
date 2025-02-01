@@ -15,7 +15,7 @@ export const teamMembers = [
   {
     name: "Jalal Sinno",
     title: "Quality Assurance Tester",
-    bio: "Jalal is an expert in Cybersecurity and Testing. With 6 years of experience in the field, he ensures applications are secure against vulnerabilities and exploits.",
+    bio: "Jalal is an expert in Cyber Security and Testing. With 6 years of experience in the field, he ensures applications are secure against vulnerabilities and exploits.",
     image: Jalal,
     linkedInUrl: "https://www.linkedin.com/in/jalal-sinno",
     resume: jalalResume,

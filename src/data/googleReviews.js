@@ -1,7 +1,7 @@
 const reviews = [
   {
     author: "Manjyot Aujla",
-    company: "Nova Scotia Cybersecurity and Digital Solutions",
+    company: "Nova Scotia Cyber Security and Digital Solutions",
     body: "Not only Jamil was able to provide some great statistics but also gave a high level overview of all the big topics. I found it useful and will surely check the tools he mentioned. However, I wish we had more time so we may know more about those tools.",
   },
   {
