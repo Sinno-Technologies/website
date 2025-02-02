@@ -2,27 +2,28 @@
 ---
 <section class="sectionContainer" id="contact">
     <div class="contentContainer">
-        <p class="subtitle">We&apos;d love to hear from you. Fill out the form below and we&apos;ll get back to you as soon as possible.</p>
+        <p class="subtitle">In need of a website, application or web accessibility expertise? We&apos;d love to hear from you!</p>
+        <p class="subtitle">Fill out the form below and we&apos;ll get back to you as soon as possible.</p>
         <p class="star">* means required</p>
         <form class="form" name="contactForm" method="POST" netlify>
 
             <label class="label" for="fname" id="firstNameLabel" aria-label="First Name">First Name*</label>
-            <input class="input" type="text" id="fname" name="firstname" placeholder="Your first name" aria-labelledby="firstNameLabel" required>
+            <input class="input" type="text" id="fname" name="firstname" placeholder="Jamil" aria-labelledby="firstNameLabel" required>
 
             <label class="label" for="lname" id="lastNameLabel" aria-label="Last Name">Last Name*</label>
-            <input class="input" type="text" id="lname" name="lastname" placeholder="Your last name" aria-labelledby="lastNameLabel" required>
+            <input class="input" type="text" id="lname" name="lastname" placeholder="Sinno" aria-labelledby="lastNameLabel" required>
 
             <label class="label" for="email" id="emailLabel" aria-label="Email Address">Email Address*</label>
-            <input class="input" type="email" id="emailText" name="email" placeholder="Your email address" aria-labelledby="emailLabel" required>
+            <input class="input" type="email" id="emailText" name="email" placeholder="contact@sinno.ca" aria-labelledby="emailLabel" required>
 
             <label class="label" for="company" id="companyLabel" aria-label="Company">Company</label>
-            <input class="input" type="text" id="companyText" name="company" placeholder="Your company name" aria-labelledby="companyLabel">
+            <input class="input" type="text" id="companyText" name="company" placeholder="Sinno Technologies Ltd." aria-labelledby="companyLabel">
 
             <label class="label" for="number" id="phoneNumberLabel" aria-label="Phone Number">Phone Number (Numbers only)</label>
-            <input class="input" type="tel" id="phoneNumberText" name="phone number" aria-labelledby="phoneNumberLabel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Please use XXX XXX XXXX format">
+            <input class="input" type="tel" id="phoneNumberText" name="phone number" aria-labelledby="phoneNumberLabel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="9024029797">
 
             <label class="label" id="messageLabel" for="message" aria-label="Message">Message*</label>
-            <textarea id="messageText" rows="6" name="message" aria-labelledby="messageLabel" placeholder="Your message here" required></textarea>
+            <textarea id="messageText" rows="6" name="message" aria-labelledby="messageLabel" placeholder="I heard Sinno Technologies builds accessible websites; ensuring businesses thrive via their online presence. I'd like to learn more." required></textarea>
 
             <button class="submit" type="submit">Submit</button>
 
@@ -57,6 +58,7 @@
     .subtitle{
         text-align: center;
         letter-spacing: 0.1rem;
+        padding-bottom: 0.5rem;
     }
 
     .star{
@@ -88,7 +90,7 @@
         padding: 0.5rem;
 		background-color: var(--sectWhite);
         border-radius: 0.5rem;
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-base);
     }
 
     .submit{
@@ -101,7 +103,7 @@
         border: 1px solid var(--black); 
         color: var(--white);
         border-radius: 0.5em;
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-base);
     }
 
     .submit:hover {
@@ -116,14 +118,6 @@
         .input,
         #messageText{
             font-size: var(--font-size-sm);
-        }
-    }
-    @media (min-width: 577px) and (max-width: 768px) {
-        .label,
-        .submit,
-        .input,
-        #messageText{
-            font-size: var(--font-size-base);
         }
     }
 </style>
