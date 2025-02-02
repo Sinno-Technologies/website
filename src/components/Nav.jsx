@@ -114,7 +114,7 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
           padding: 0.5rem;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1200px) {
           .navContainer{
             max-height: ${$isNavOpen ? 100 : 0}vh;
             opacity: ${$isNavOpen ? 1 : 0};
