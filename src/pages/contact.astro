@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Social from '../components/Social.astro';
+import GoogleMap from "../components/GoogleMap.jsx"
 ---
 
 <Layout seo={{
@@ -32,6 +33,10 @@ import Social from '../components/Social.astro';
                         <Social />
                     </div>
                 </div>
+                <div>
+                    <h2>Locate Us</h2>
+                    <GoogleMap client:only/>
+                </div>
             </div>
             <ContactForm />
         </div>
@@ -51,8 +56,15 @@ import Social from '../components/Social.astro';
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 2rem;
-        padding: 1rem 0;
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .contactInfo div{
+        width: 100%;
+        height: auto;
     }
 
     @media screen and (max-width: 768px) {
