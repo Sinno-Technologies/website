@@ -19,8 +19,8 @@
             <label class="label" for="company" id="companyLabel" aria-label="Company">Company</label>
             <input class="input" type="text" id="companyText" name="company" placeholder="Sinno Technologies Ltd." aria-labelledby="companyLabel">
 
-            <label class="label" for="number" id="phoneNumberLabel" aria-label="Phone Number">Phone Number (Numbers only)</label>
-            <input class="input" type="tel" id="phoneNumberText" name="phone number" aria-labelledby="phoneNumberLabel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="9024029797">
+            <label class="label" for="number" id="phoneNumberLabel" aria-label="Phone Number">Phone Number</label>
+            <input class="input" type="tel" oninput="this.value = this.value.replace(/[^0-9]/g, '');" minlength="10" maxlength="14" id="phoneNumberText" name="phone number" aria-labelledby="phoneNumberLabel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="9024029797">
 
             <label class="label" id="messageLabel" for="message" aria-label="Message">Message*</label>
             <textarea id="messageText" rows="6" name="message" aria-labelledby="messageLabel" placeholder="I heard Sinno Technologies builds accessible websites; ensuring businesses thrive via their online presence. I'd like to learn more." required></textarea>
