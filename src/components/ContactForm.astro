@@ -49,7 +49,7 @@
 
         function sanitizePhoneNumberInput(number: string): string  {
             const numbers = '1234567890'
-            return number.split('').filter(x => !x.includes(numbers)).join('')
+            return number.split('').filter(x => numbers.includes(x)).join('')
         }
 
         function sanitizeTextInput(text: string): string {
