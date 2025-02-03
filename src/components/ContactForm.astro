@@ -8,27 +8,97 @@
         <form class="form" name="contactForm" method="POST" netlify>
 
             <label class="label" for="fname" id="firstNameLabel" aria-label="First Name">First Name*</label>
-            <input class="input" type="text" id="fname" name="firstname" placeholder="Jamil" aria-labelledby="firstNameLabel" required>
+            <input class="input" type="text" id="fname" name="firstname" placeholder="First Name" aria-labelledby="firstNameLabel" maxlength="40" required>
 
             <label class="label" for="lname" id="lastNameLabel" aria-label="Last Name">Last Name*</label>
-            <input class="input" type="text" id="lname" name="lastname" placeholder="Sinno" aria-labelledby="lastNameLabel" required>
+            <input class="input" type="text" id="lname" name="lastname" placeholder="Last Name" aria-labelledby="lastNameLabel" maxlength="40" required>
 
             <label class="label" for="email" id="emailLabel" aria-label="Email Address">Email Address*</label>
-            <input class="input" type="email" id="emailText" name="email" placeholder="contact@sinno.ca" aria-labelledby="emailLabel" required>
+            <input class="input" type="email" id="emailText" name="email" placeholder="example@sinno.ca" aria-labelledby="emailLabel" maxlength="40" required>
 
             <label class="label" for="company" id="companyLabel" aria-label="Company">Company</label>
-            <input class="input" type="text" id="companyText" name="company" placeholder="Sinno Technologies Ltd." aria-labelledby="companyLabel">
+            <input class="input" type="text" id="companyText" name="company" placeholder="Your Company Name" aria-labelledby="companyLabel" maxlength="40">
 
             <label class="label" for="number" id="phoneNumberLabel" aria-label="Phone Number">Phone Number</label>
-            <input class="input" type="tel" oninput="this.value = this.value.replace(/[^0-9]/g, '');" minlength="10" maxlength="14" id="phoneNumberText" name="phone number" aria-labelledby="phoneNumberLabel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="9024029797">
+            <input class="input" type="tel" minlength="10" maxlength="14" id="phoneNumberText" name="phone number" aria-labelledby="phoneNumberLabel" placeholder="(XXX) XXX XXXX">
 
             <label class="label" id="messageLabel" for="message" aria-label="Message">Message*</label>
-            <textarea id="messageText" rows="6" name="message" aria-labelledby="messageLabel" placeholder="I heard Sinno Technologies builds accessible websites; ensuring businesses thrive via their online presence. I'd like to learn more." required></textarea>
+            <textarea id="messageText" rows="6" name="message" aria-labelledby="messageLabel" maxlength="150" placeholder="I heard Sinno Technologies builds accessible websites; ensuring businesses thrive via their online presence. I'd like to learn more." required></textarea>
+            <p>Total Characters: <span id="characterCountText">0</span>/150</p>
 
             <button class="submit" type="submit">Submit</button>
 
         </form>
     </div>
+    <script>
+        function constructPhoneNumber(number: string): string  {
+            if (!number) return ''
+            const length = number.length
+            const phoneNumber = number.split('').filter(x => x !== "(" && x !== ")" && x !== " ").join("")
+            if (phoneNumber.length <= 3) return `(${phoneNumber}`
+            if (phoneNumber.length <= 6) {
+                const areaCode = phoneNumber.slice(0,3)
+                const digits = phoneNumber.slice(3,length)
+                return `(${areaCode}) ${digits}`
+            }
+            const areaCode = phoneNumber.slice(0,3)
+            const firstDigits = phoneNumber.slice(3, 6)
+            const lastDigits = phoneNumber.slice(6, length)
+            return `(${areaCode}) ${firstDigits} ${lastDigits}`
+        }
+
+        function sanitizePhoneNumberInput(number: string): string  {
+            const numbers = '1234567890'
+            return number.split('').filter(x => !x.includes(numbers)).join('')
+        }
+
+        function sanitizeTextInput(text: string): string {
+            const allowedChars = '1234567890?-_!@#$,.'
+            return text.split('').filter(char => {
+                const charCode = char.charCodeAt(0)
+                return (
+                    allowedChars.includes(char) || 
+                    (charCode >= 65 && charCode <= 90) || 
+                    (charCode >= 97 && charCode <= 122)  
+                )
+            }).join('')
+        }
+
+        function runPhoneNumber(e: InputEvent) {
+            const inputElement = e.target as HTMLInputElement;
+            const number = inputElement.value;
+            const sanitizedNumber = sanitizePhoneNumberInput(number);
+            const formattedNumber = constructPhoneNumber(sanitizedNumber);
+            inputElement.value = formattedNumber;
+        }
+
+        function runSanitizeText(e: InputEvent) {
+            const inputElement = e.target as HTMLInputElement
+            const text = inputElement.value
+            const sanitizedText = sanitizeTextInput(text)
+            inputElement.value = sanitizedText
+        }
+
+        function stringLength(e: InputEvent) {
+            const inputElement = e.target as HTMLInputElement
+            const length = inputElement.value.length
+            document.getElementById("characterCountText").textContent = String(length)
+        }
+        const phoneNumber = document.getElementById("phoneNumberText") as HTMLInputElement;
+        const firstName = document.getElementById("fname") as HTMLInputElement;
+        const lastName = document.getElementById("lname") as HTMLInputElement;
+        const email = document.getElementById("emailText") as HTMLInputElement;
+        const company = document.getElementById("companyText") as HTMLInputElement;
+        const message = document.getElementById("messageText") as HTMLTextAreaElement;
+        
+        phoneNumber.addEventListener('input', runPhoneNumber)
+        firstName.addEventListener('input', runSanitizeText) 
+        lastName.addEventListener('input', runSanitizeText) 
+        email.addEventListener('input', runSanitizeText) 
+        company.addEventListener('input', runSanitizeText) 
+        message.addEventListener('input', runSanitizeText) 
+        message.addEventListener('input', stringLength)
+    </script>
 </section>
 <style>
     .sectionContainer{
