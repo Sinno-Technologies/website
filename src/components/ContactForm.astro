@@ -31,10 +31,10 @@
         </form>
     </div>
     <script>
-        function constructPhoneNumber(number: string): string  {
-            if (!number) return ''
-            const length = number.length
-            const phoneNumber = number.split('').filter(x => x !== "(" && x !== ")" && x !== " ").join("")
+        function constructPhoneNumber(text: string): string  {
+            if (!text) return ''
+            const length = text.length
+            const phoneNumber = text.split('').filter(x => x !== "(" && x !== ")" && x !== " ").join("")
             if (phoneNumber.length <= 3) return `(${phoneNumber}`
             if (phoneNumber.length <= 6) {
                 const areaCode = phoneNumber.slice(0,3)
