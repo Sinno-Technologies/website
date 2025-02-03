@@ -53,7 +53,7 @@
         }
 
         function sanitizeTextInput(text: string): string {
-            const allowedChars = '1234567890?-_!@#$,.'
+            const allowedChars = '1234567890?-_!@#$,. '
             return text.split('').filter(char => {
                 const charCode = char.charCodeAt(0)
                 return (
