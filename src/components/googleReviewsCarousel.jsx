@@ -22,10 +22,10 @@ const GoogleReviews = () => {
         >
           {reviews.map((review, index) => (
             <section className="slide" key={index}>
-              <p className="body">"{review.body}"</p>
-              <section className="stars">
-                <span className="author">- {review.author}</span>
-                <span>{review.company}</span>
+              <p className="body center">"{review.body}"</p>
+              <section className="stars center">
+                <span className="author center">- {review.author}</span>
+                <span className="center" >{review.company}</span>
               </section>
             </section>
           ))}
