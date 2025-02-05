@@ -1,11 +1,38 @@
 ---
 import Nav from "./Nav.jsx";
+import "../styles/global.css"
+import Social from "./Social.astro"
 ---
 <footer class="footer">
     <Nav colorWhite={true} footerVisible={true} client:load/>
-    <p class="text">&copy; 2025 Sinno Technologies Limited. All rights reserved.</p>
-    <p class="text">Established 2023</p>
-    <p class="text">Halifax, NS</p>
+        <div class="footerMid">
+            <div class="contactContainer left">
+                <h5>Contact Us</h5>
+                <div>
+                    <span>Email: <a href="mailto:contact@sinno.ca">contact@sinno.ca</a></span>
+                </div>
+            </div>
+            <Social/>
+            <div class="contactContainer right">
+                <h5>Based In</h5>
+                <div>
+                    <span>Halifax, Nova Scotia, Canada</span>
+                </div>
+            </div>
+        </div>
+        <div class="footerLower">
+                <div class="copyContainer left">
+                    <span class="text">&copy; 2025 Sinno Technologies Limited.</span> 
+                    <span> All rights reserved.</span>
+                </div>
+                <div class="textContainer center">
+                    <p class="text">Website Design | Web Development Services | WCAG | Web Development Halifax | Accessibility Halifax | Mobile App Development | Web Development Services Canada | Web Accessibility Canada</p>
+                </div>
+                <div class="copyContainer right">
+                    <a class="sitemap" href="https://www.sinno.ca/sitemap-0.xml">Sitemap</a>
+                    <span class="text">Established 2023</span>
+                </div>
+        </div>
 </footer>
 <style>
     .footer{
@@ -20,7 +47,101 @@ import Nav from "./Nav.jsx";
         color: var(--white);
     }
 
-    .text{
+    .footerMid {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        border-top: 1px solid var(--white);
+    }
+
+    .contactContainer {
+        width: auto;
+        height: auto;
+        color: var(--white);
+    }
+
+    h5 { 
+        color: var(--yellow);
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    .footerLower {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 1rem;
+        gap: 1rem;
+        font-size: var(--font-size-sm);
+    }
+
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        height: auto;
+        font-
+    }
+
+    .copyContainer{
+        width: 25%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .sitemap{
+        color: var(--yellow);
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .center {
         text-align: center;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .text{
+        line-height: 1.2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .footerMid,
+        .footerLower{
+            flex-direction: column;
+        }
+
+        .footerMid{
+            padding-top: 1rem;
+            gap: 0.5rem;
+        }
+
+        h5 {
+            margin-top: 0;
+        } 
+
+        .contactContainer,
+        .textContainer,
+        .copyContainer{
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
     }
 </style>

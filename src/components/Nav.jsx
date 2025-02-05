@@ -59,16 +59,6 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
           </li>
           <li>
             <a
-              className={`link ${colorWhite ? "colorWhite" : ""}`}
-              href="https://www.sinno.ca/sitemap-0.xml"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Sitemap
-            </a>
-          </li>
-          <li>
-            <a
               className={`link calendly`}
               href="/calendly"
               onClick={toggleNav}
