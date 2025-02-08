@@ -3,10 +3,9 @@ import cardData from "../data/cardData";
 import Card from "./Card.astro";
 import parkland from "../assets/ParklandPM.png";
 import unum from "../assets/unumHealth.png";
-import game from "../assets/game_tracker.gif";
 import ramp from "../assets/rampatl.png";
 
-const imgArr = [parkland, unum, game, ramp];
+const imgArr = [parkland, unum, ramp];
 ---
 
 <section class="mainContainer" id="projects">
@@ -64,7 +63,8 @@ const imgArr = [parkland, unum, game, ramp];
         width: 100%;
         height: auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
         gap: 1rem;
     }
 

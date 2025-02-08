@@ -18,15 +18,6 @@ const cardData = [
     rel: "noreferrer noopener nofollow",
   },
   {
-    title: "Game Tracker App",
-    body: "Designed in HTML, CSS, JavaScript, EJS, Node.js, Express, Passport.js, Tailwind CSS, Daisy UI, MongoDB",
-    img: "/src/assets/game_tracker.png",
-    alt: "Gif of the Game Tracker App. The gif is demonstrating a login feature being performed.",
-    href: "https://github.com/jamilsinno/game-mvc-auth-local",
-    target: "_blank",
-    rel: "noreferrer noopener nofollow",
-  },
-  {
     title: "R.A.M.P. Atlantic Ltd.",
     body: "Business Website - Civil Engineering Firm. Designed in HTML, CSS & JS",
     img: "/src/assets/rampatl.png",

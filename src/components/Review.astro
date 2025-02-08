@@ -1,0 +1,61 @@
+---
+interface Props {
+    key: string;
+    body: string;
+    link?: string;
+    author: string;
+    }
+
+    const { key, body, link, author } = Astro.props
+---
+<section class="slide" id={key}>
+    <p class="body center">"{body}"</p>
+    <section class="stars center">
+        {link ? <a href={link} target="_blank" class="underline">-{author}</a> : <span class="author center">-{author}</span>}
+    </section>
+</section>
+<style>
+    .slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        max-width: 500px;
+        height: 100%;
+        text-align: left;
+        color: var(--black);
+        border: 2px solid var(--black);
+        background-color: var(--sectWhite);
+        border-radius: 0.5rem;
+        box-shadow: 4px 4px 4px var(--black);
+    }
+
+
+    .body {
+        width: 100%;
+        height: 100%;
+        overflow-wrap: break-word;
+        padding: 0.1rem;
+        text-align: center;
+        line-height: 1.6rem;
+    }
+
+    .stars {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        text-align: center;
+        padding-top: 1rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .stars *,
+    .body {
+        font-size: var(--font-size-base);
+    }
+
+</style>

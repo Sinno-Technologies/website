@@ -34,6 +34,8 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+        align-items: center;
+        text-align: center;
 		background-color: var(--white);
 		border-radius: 0.5rem;
 		background-position: 100%;
@@ -41,6 +43,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		width: 100%;
 		height: auto;
 		box-shadow: 2px 2px 2px rgba(0,0,0,0.9);
+        max-width: 500px;
 	}
 
 	.link-card > .pLink{
