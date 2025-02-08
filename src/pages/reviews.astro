@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro"
 import "../styles/global.css"
 import reviewData from "../data/googleReviews"
 import Review from "../components/Review.astro"
+import Hero from "../components/Hero.astro"
+
 ---
 
 <Layout 
@@ -12,7 +14,7 @@ import Review from "../components/Review.astro"
     }}
     >
     <section class="wrapper">
-        <h1 class="center">Here's What Our Clients Have To Say About Us</h1>
+        <Hero title="Testimonials" subtitle="Here's What Our Clients Have To Say About Us" />
         <div class="reviewsContainer">
             {reviewData.map((review,index) => (
             <Review {...review} />
@@ -22,11 +24,11 @@ import Review from "../components/Review.astro"
 </Layout>
 <style>
     .wrapper{
-        padding: 1rem;
         background-color: var(--bgWhite);
     }
 
-    h1{
+    h1, 
+    h3{
         padding: 1rem;
     }
 
@@ -34,6 +36,7 @@ import Review from "../components/Review.astro"
         display: grid;
         grid-template-columns: repeat(1,1fr);
         justify-items: center;
+        padding: 1rem;
         gap:1rem;
     }
 p
