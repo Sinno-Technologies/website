@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro"
+import "../styles/global.css"
+import reviewData from "../data/googleReviews"
+import Review from "../components/Review.astro"
+---
+
+<Layout 
+    seo={{
+        title: "Reviews Page",
+        description: "See what people are saying about Sinno Technologies Limited"
+    }}
+    >
+    <section class="wrapper">
+        <h1 class="center">Here's What Our Clients Have To Say About Us</h1>
+        <div class="reviewsContainer">
+            {reviewData.map((review,index) => (
+            <Review {...review} />
+            ))} 
+        </div>
+    </section>
+</Layout>
+<style>
+    .wrapper{
+        padding: 1rem;
+        background-color: var(--bgWhite);
+    }
+
+    h1{
+        padding: 1rem;
+    }
+
+    .reviewsContainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+        gap:1rem;
+    }
+p
+    @media (min-width: 501px) and (max-width: 850px) {
+        .reviewsContainer{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width: 851px) and (max-width: 1200px) {
+        .reviewsContainer{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media (min-width: 1201px) {
+        .reviewsContainer{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+</style>

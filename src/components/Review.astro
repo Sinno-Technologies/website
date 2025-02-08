@@ -4,14 +4,16 @@ interface Props {
     body: string;
     link?: string;
     author: string;
+    company: string;
     }
 
-    const { key, body, link, author } = Astro.props
+    const { key, body, link, author, company } = Astro.props
 ---
 <section class="slide" id={key}>
     <p class="body center">"{body}"</p>
     <section class="stars center">
-        {link ? <a href={link} target="_blank" class="underline">-{author}</a> : <span class="author center">-{author}</span>}
+        {link ? <a href={link} target="_blank" class="author underline">- {author}</a> : <span class="author center">- {author}</span>}
+        <span class="author">{company}</span>
     </section>
 </section>
 <style>
@@ -51,6 +53,11 @@ interface Props {
         padding-top: 1rem;
         width: 100%;
         height: 100%;
+        gap: 1rem;
+    }
+
+    .author {
+        font-style: italic;
     }
 
     .stars *,

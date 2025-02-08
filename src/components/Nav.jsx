@@ -2,74 +2,63 @@ import { useStore } from "@nanostores/react"
 import { isNavOpen } from "../stores/navStore"
 import { useEffect } from "react"
 
-const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVisible = false}) => {
-  const $isNavOpen = useStore(isNavOpen)
+const Nav = ({ colorWhite = false, flexColumn = false, justify = false, footerVisible = false }) => {
+    const $isNavOpen = useStore(isNavOpen)
 
-  const toggleNav = () => {
-    isNavOpen.set(!$isNavOpen)
-  }
-
-  const handleKeyDown = (event) => {
-    if (event.key === "Escape" && $isNavOpen) {
-      toggleNav()
+    const toggleNav = () => {
+        isNavOpen.set(!$isNavOpen.get())
     }
-  }
 
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown)
+    const navLinks = [{
+        href: "/",
+        name: "Home",
+    }, {
+        href: "/team",
+        name: "Team",
+    }, {
+        href: "/reviews",
+        name: "Reviews",
+    }, {
+        href: "/contact",
+        name: "Contact",
+    }, {
+        href:"/calendly",
+        name:"Free Consultation",
+    },]
 
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown)
+    const handleKeyDown = (event) => {
+        if (event.key === "Escape" && $isNavOpen) {
+            toggleNav()
+        }
     }
-  }, [$isNavOpen])
 
-  return (
-    <section className={`navContainer ${footerVisible ? "footerVisible" : ""}`} onClick={$isNavOpen ? toggleNav : null}>
-      <nav className="navLinks">
-        <ul className={`list ${flexColumn ? "flexColumn" : ""}`}>
-          <li>
-            <a
-              className={`link ${colorWhite ? "colorWhite" : ""}`}
-              href="/"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              className={`link ${colorWhite ? "colorWhite" : ""}`}
-              href="/team"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Team
-            </a>
-          </li>
-          <li>
-            <a
-              className={`link ${colorWhite ? "colorWhite" : ""}`}
-              href="/contact"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Contact
-            </a>
-          </li>
-          <li>
-            <a
-              className={`link calendly`}
-              href="/calendly"
-              onClick={toggleNav}
-              tabIndex={$isNavOpen ? 0 : -1}
-            >
-              Book a Consultation
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <style jsx="true">{`
+    useEffect(() => {
+        document.addEventListener("keydown", handleKeyDown)
+
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown)
+        }
+    }, [$isNavOpen])
+
+    return (
+        <section className={`navContainer ${footerVisible ? "footerVisible" : ""}`} onClick={$isNavOpen ? toggleNav : null}>
+            <nav className="navLinks">
+                <ul className={`list ${flexColumn ? "flexColumn" : ""}`}>
+                    {navLinks.map((link, index) => (
+                        <li key={index}>
+                            <a
+                                className={`link ${colorWhite ? "colorWhite" : ""} ${link.href === '/calendly' ? "calendly" : ""}`}
+                                href={link.href}
+                                onClick={toggleNav}
+                                tabIndex={$isNavOpen ? 0 : -1}
+                            >
+                                {link.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+            <style jsx="true">{`
         .navContainer {
           position: sticky;
           width: 100%;
@@ -102,11 +91,12 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
         .calendly{
           background-color: var(--yellow);
           padding: 0.5rem;
+          color: black;
         }
 
         @media screen and (max-width: 1200px) {
           .navContainer{
-            max-height: ${$isNavOpen ? 100 : 0}vh;
+            max-height: ${$isNavOpen ? "100vh" : "0"};
             opacity: ${$isNavOpen ? 1 : 0};
             transition: opacity 0.5s, max-height 0.5s;
           }
@@ -125,8 +115,8 @@ const Nav = ({colorWhite = false, flexColumn = false, justify = false, footerVis
           opacity: 1;
         }
       `}</style>
-    </section>
-  )
+        </section>
+    )
 }
 
 export default Nav
