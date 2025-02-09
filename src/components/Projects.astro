@@ -7,6 +7,7 @@ import ramp from "../assets/rampatl.png";
 import manuela from "../assets/manuela.png"
 import teapothecary from "../assets/teapothecary.png"
 import foodelity from "../assets/foodelity.png"
+import Button from "../components/Button.astro"
 
 let imgArr = [teapothecary, foodelity, manuela,parkland, unum, ramp];
 let data = cardData
@@ -40,7 +41,12 @@ interface Props {
                 />
             ))}
         </div>
-        <a href="/projects" class="buttonProjects">View More Of Our Work</a>
+        <Button 
+            backgroundColor="var(--black)"
+            color="var(--white)"
+            href="/projects"
+            text="View More Of Our work"
+            />
     </div>
 </section>
 

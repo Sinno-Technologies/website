@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import accessibility from "../assets/icons/accessibility.svg";
 import functional from "../assets/icons/functional.svg";
 import findable from "../assets/icons/findable.svg";
+import Button from "../components/Button.astro";
 ---
 
 <section class="container">
@@ -29,7 +30,12 @@ import findable from "../assets/icons/findable.svg";
                         <p class="text">Increase traffic to your business with a search engine friendly website.</p>
                     </div>
                 </div>
-                <a href="/contact" class="contact">Contact Us</a>
+                <Button 
+                    backgroundColor="var(--yellow)"
+                    color="var(--black)"
+                    href="/contact"
+                    text="Contact Us"
+                    />
             </div>
         </div>
     </div>
