@@ -44,7 +44,7 @@ const Nav = ({ colorWhite = false, flexColumn = false, justify = false, footerVi
     }, [$isNavOpen])
 
     return (
-        <section className={`navContainer ${footerVisible ? "footerVisible" : ""}`} onClick={$isNavOpen ? toggleNav : null}>
+        <section className={`navContainer ${footerVisible ? "footerVisible" : ""}`} onClick={$isNavOpen ? toggleNav : null} aria-hidden={$isNavOpen ? null : true}>
             <nav className="navLinks">
                 <ul className={`list ${flexColumn ? "flexColumn" : ""}`}>
                     {navLinks.map((link, index) => (

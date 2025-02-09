@@ -6,16 +6,16 @@ import Nav from "../components/Nav.jsx";
 ---
 <header class="header" id="header">
     <section class="wrapper">
+        <div class="left">
+            <a href="/">
+                <Image src={LogoMain}  alt="Sinno Technologies Main Logo."/>
+            </a>
+        </div>
         <div class="right hamburger">
             <HamburgerMenu client:load/>
         </div>
         <div class="right nav">
             <Nav justify={true} client:load/>
-        </div>
-        <div class="left">
-            <a href="/">
-                <Image src={LogoMain}  alt="Sinno Technologies Main Logo."/>
-            </a>
         </div>
     </section>
     <div class="hamburger">
@@ -39,7 +39,7 @@ import Nav from "../components/Nav.jsx";
     }
     .wrapper{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         width: 100%;
