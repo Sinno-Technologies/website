@@ -1,5 +1,8 @@
 ---
 import { Image } from "astro:assets"
+import LinkedIn from "../assets/icons/linkedin.svg"
+import Email from "../assets/icons/email.svg"
+import Resume from "../assets/icons/resume.svg"
 
 export interface Props {
   name: string;
@@ -8,9 +11,10 @@ export interface Props {
   image: string;
   linkedInUrl?: string; 
   resume?: string;
+  email: string;
 }
 
-const { name, title, bio, image, linkedInUrl, resume } = Astro.props;
+const { name, title, bio, image, linkedInUrl, resume, email } = Astro.props as Props;
 ---
 
 <div class="team-member">
@@ -20,11 +24,16 @@ const { name, title, bio, image, linkedInUrl, resume } = Astro.props;
     <h4>{title}</h4>
   </div>
   <p class="bio">{bio}</p>
-  <div class="linkContainer">
+  <div class="links">
     {linkedInUrl && (
-      <a href={linkedInUrl} class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href={linkedInUrl} class="link" target="_blank" rel="noopener noreferrer"><Image class="icon" src={LinkedIn} alt="LinkedIn Icon"/>LinkedIn</a>
     )}
-    {resume && <a href={resume} class="link" target="_blank" rel="noopener noreferrer">Resume</a>}
+    {email && (
+        <a href={`mailto:${email}`} class="link" rel="noreferrer noopener nofollow"><Image class="icon" src={Email} alt="Email Icon"/>Email</a>
+    )}
+    {resume && (
+        <a href={resume} class="link" target="_blank" rel="noopener noreferrer"><Image class="icon" src={Resume} alt="Resume Icon"/>Resume</a>
+    )}
   </div>
 </div>
 
@@ -54,15 +63,33 @@ const { name, title, bio, image, linkedInUrl, resume } = Astro.props;
     margin-bottom: 1rem;
   }
 
-  .linkContainer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    gap: 1rem;
-  }
+    .links{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        height: auto;
+        justify-items: center;
+    }
+
+    .link{
+        color: var(--black);
+        text-decoration: underline;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+        width: auto;
+    }
+
+    .link:focus{
+        outline: 2px dotted var(--black);
+    }
+    
+    .icon{
+        max-width: 30px;
+        max-height: 30px;
+    }
 
   .bio {
     width: 100%;

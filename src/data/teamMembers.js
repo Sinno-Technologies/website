@@ -11,6 +11,7 @@ export const teamMembers = [
     image: Jamil,
     linkedInUrl: "https://www.linkedin.com/in/jamilsinno",
     resume: jamilResume,
+    email: "jamil@sinno.ca",
   },
   {
     name: "Jalal Sinno",
@@ -19,5 +20,6 @@ export const teamMembers = [
     image: Jalal,
     linkedInUrl: "https://www.linkedin.com/in/jalal-sinno",
     resume: jalalResume,
+    email: "jalal@sinno.ca",
   },
 ];

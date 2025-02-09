@@ -1,58 +1,57 @@
 ---
 import { Image } from "astro:assets";
-import Jamil from "../assets/jamil.jpeg";
+import Jamil from "../assets/jamil_main.jpeg";
 import LinkedIn from "../assets/icons/linkedin.svg"
 import GitHub from "../assets/icons/github.svg"
 import Email from "../assets/icons/email.svg"
 import Resume from "../assets/icons/resume.svg"
-import Consultation from "./Consultation.astro";
 import Button from "./Button.astro";
+import Logo from "../assets/icons/main_icon.svg"
 ---
 
 <section class="teamContainer" id="team">
-    <h2 class="title">Meet Our Founder</h2>
-    <div class="contentContainer maxWidth">
-        <div class="textContainer">
-            <div class="teamCard">
-                <div class="imageContainer">
-                    <Image class="image" src={Jamil} alt="Photo of Jamil Sinno"/>
-                </div>
+        <h2 class="title">Meet Our Founder</h2>
+        <div class="contentContainer maxWidth">
+            <div class="imageContainer">
+                <Image class="image" src={Jamil} alt="Photo of Jamil Sinno"/>
+            </div>
+            <div class="textContainer">
                 <div class="teamTextContainer">
-                    <h3 class="name">Jamil Sinno</h3>
-                    <span class="role">Principal Consultant</span>
-                    <span class="role">DHS Trusted Tester</span>
-                    <span class="location">Halifax, NS</span>
+                    <Image src={Logo} alt="Sinno Technologies Limited Logo Icon" width="50" height="50"/>
+                    <h3 class="name center">Jamil Sinno, MASc., B.Eng</h3>
+                    <p class="role center">Principal Consultant, DHS Trusted Tester</p>
+                </div>
+                <p class="left">
+                Jamil Sinno started his career with a Bachelor of Chemical Engineering. With plenty of hard work, late nights studying, and zeal, he soared through his Master's of Applied Science in Industrial Engineering. He wrote his thesis on Waste Management Practices in the Healthcare Sector in Nova Scotia, and from there, his passion for environmental and social issues grew stronger.</p>
+                <p class="left">Eventually, he returned to his original love of technology and made a courageous leap of faith to start his own business - Sinno Technologies Limited. With his own business, he is now able to work with small businesses and the fantastic people who own them. Over time, his interests evolved even further into accessibility and is now a DHS Trusted Tester.</p>
+                <p class="left">Jamil is steadfast in ensuring that everyone can feel like they belong online, and with his web accessibility services, he can provide caring, and inclusive services to everyone.
+                </p>
+                <div class="linkContainer">
+                    <h5 class="linkTitle">Connect with me:</h5>
+                    <div class="links">
+                        <a href="https://www.linkedin.com/in/jamilsinno/" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={LinkedIn} alt="LinkedIn Icon"/>LinkedIn</a>
+                        <a href="https://github.com/jamilsinno" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={GitHub} alt="GitHub Icon"/>GitHub</a>
+                        <a href="mailto:jamil@sinno.ca" class="link" rel="noreferrer noopener nofollow"><Image class="icon" src={Email} alt="Email Icon"/>Email</a>
+                        <a href="/resume.pdf" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={Resume} alt="Resume Icon"/>Resume</a>
+                    </div>
                 </div>
             </div>
-            <p class="text">
-                Sinno Technologies Limited is dedicated to promoting inclusivity and accessibility. Founded in 2023, we are a professional software development and accessibility consulting firm. Today, Jamil works with clients to create inclusive digital experiences that drive engagement, generate leads, and improve user experience.
-            </p>
-            <div class="linkContainer">
-                <h3 class="linkTitle">Connect with me:</h3>
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/jamilsinno/" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={LinkedIn} alt="LinkedIn Icon"/>LinkedIn</a>
-                    <a href="https://github.com/jamilsinno" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={GitHub} alt="GitHub Icon"/>GitHub</a>
-                    <a href="mailto:jamil@sinno.ca" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={Email} alt="Email Icon"/>Email</a>
-                    <a href="/resume.pdf" class="link" rel="noreferrer noopener nofollow" target="_blank"><Image class="icon" src={Resume} alt="Resume Icon"/>Resume</a>
-                </div>
-            </div>
-        </div>
     </div>
-        <Button backgroundColor="var(--black)" color="var(--white)" href="/team" text="Meet Our Team"
+        <Button backgroundColor="var(--black)" color="var(--white)" href="/team" text="Meet Our Team"/>
 </section>
 
 <style>
     .teamContainer {
         width: 100%;
         height: auto;
-        background-color: var(--sectYellow);
+        background-color: var(--sectWhite);
         color: var(--black);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        padding: 2rem 1rem;
+        padding: 1rem;
     }
 
     .teamCard{
@@ -80,29 +79,33 @@ import Button from "./Button.astro";
     }
 
     .textContainer{
-        max-width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        border: 1px solid var(--black);
+        border-radius: 0.5rem;
+        box-shadow: 4px 4px 4px var(--black);
+        padding: 1rem;
     }
 
-    .text{
-        text-align: center;
+    .imageContainer{
+        min-width: 25%;
+        max-width: 33%;
+        height: 100%;
     }
 
     .image {
         width: 100%;
-        height: auto;
-        border-radius: 10%;
-        max-width: 250px;
-        max-height: 250px;
+        height: 100%;
+        border-radius: 0.5rem;
         box-shadow: 4px 4px 4px rgba(0,0,0,0.9);
     }
 
     .role{
         font-weight: bold;
+        font-style: italic;
     }
     
     .links{
@@ -147,7 +150,7 @@ import Button from "./Button.astro";
         }
 
         .contentContainer{
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
 
         .textContainer,
