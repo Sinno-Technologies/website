@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Social from '../components/Social.astro';
-import GoogleMap from "../components/GoogleMap.jsx"
+import GoogleMap from "../components/GoogleMap.jsx";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout seo={{
@@ -10,9 +11,10 @@ import GoogleMap from "../components/GoogleMap.jsx"
     description: "Contact Us Page",
 }}>
     <section id="contact" class="wrapper">
-        <div>
-            <h1 class="contact">Contact</h1>
-        </div>
+        <Hero
+            title="Get In Touch"
+            subtitle="In need of a website, mobile application or web accessibility expertise?"
+        />
         <div class="content maxWidth">
             <div class="contactInfo">
                 <div>
