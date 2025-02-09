@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CalendlyApp from '../components/CalendlyApp.astro';
+import Hero from "../components/Hero.astro"
 ---
 
 <Layout seo={{
@@ -8,7 +9,10 @@ import CalendlyApp from '../components/CalendlyApp.astro';
     description: "Book A Free Consultation Page",
 }}>
     <section id="calendly" class="wrapper sectionContainer">
-        <h1 class="contact">Book A Free Consultation</h1>
+        <Hero
+            title="Book A Free Consultation"
+            subtitle="Do you want to improve your web presence and grow your website? Schedule a free 30-minute conversation and start your journey with us."
+        />
         <CalendlyApp/>
     </section>
 </Layout>
@@ -21,12 +25,8 @@ import CalendlyApp from '../components/CalendlyApp.astro';
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 1rem;
+        padding: 1rem;
         background-color: var(--sectWhite);
-    }
-
-    .contact{
-        text-align: center;
     }
 </style>
 
