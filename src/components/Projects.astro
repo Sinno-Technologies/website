@@ -4,15 +4,30 @@ import Card from "./Card.astro";
 import parkland from "../assets/ParklandPM.png";
 import unum from "../assets/unumHealth.png";
 import ramp from "../assets/rampatl.png";
+import manuela from "../assets/manuela.png"
+import teapothecary from "../assets/teapothecary.png"
+import foodelity from "../assets/foodelity.png"
 
-const imgArr = [parkland, unum, ramp];
+let imgArr = [teapothecary, foodelity, manuela,parkland, unum, ramp];
+let data = cardData
+
+interface Props {
+        page?: 'Home' | 'Projects',
+    }
+
+    const { page } = Astro.props as Props
+
+    if (page === 'Home'){
+        imgArr = imgArr.slice(0,3);
+        data = cardData.slice(0,3)
+        }
 ---
 
 <section class="mainContainer" id="projects">
     <div class="contentContainer maxWidth">
         <h2 class="projects">Projects</h2>
         <div class="cardContainer">
-            {cardData.map((card, index) => (
+            {data.map((card, index) => (
                 <Card
                 key={index}
                 title={card.title}
@@ -25,7 +40,7 @@ const imgArr = [parkland, unum, ramp];
                 />
             ))}
         </div>
-        <a href="https://github.com/jamilsinno?tab=repositories" target="_blank" rel="noreferrer noopener nofollow" class="buttonProjects">View more projects on GitHub</a>
+        <a href="/projects" class="buttonProjects">View More Of Our Work</a>
     </div>
 </section>
 

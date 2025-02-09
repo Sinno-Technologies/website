@@ -33,7 +33,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		list-style: none;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-start;
         align-items: center;
         text-align: center;
 		background-color: var(--white);
@@ -51,7 +51,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-start;
 		text-decoration: none;
 		line-height: 1.4;
 		padding: 1rem;
@@ -67,6 +67,7 @@ const { href, title, body, img, alt, target, rel } = Astro.props;
 	.image{
 		width:100%;
 		height: auto;
+        max-height: 250px;
 		border-radius: 0.5rem;
 		max-height: 500px;
 	}

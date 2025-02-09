@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro"
+import "../styles/global.css"
+import cardData from "../data/cardData"
+import Card from "../components/Card.astro"
+import Hero from "../components/Hero.astro"
+import parkland from "../assets/ParklandPM.png";
+import unum from "../assets/unumHealth.png";
+import ramp from "../assets/rampatl.png";
+import manuela from "../assets/manuela.png"
+import teapothecary from "../assets/teapothecary.png"
+import foodelity from "../assets/foodelity.png"
+
+let imgArr = [teapothecary, foodelity, manuela,parkland, unum, ramp];
+
+---
+
+<Layout 
+    seo={{
+        title: "Projects Page",
+        description: "View the full list of Sinno Technologies Limited's work"
+    }}
+    >
+    <section class="wrapper">
+        <Hero title="Our Work" subtitle="Learn more about what we can do at Sinno Technologie Limited" />
+        <div class="projectsContainer">
+            {cardData.map((card, index) => (
+                <Card
+                key={index}
+                title={card.title}
+                body={card.body}
+                img={imgArr[index]}
+                href={card.href}
+                alt={card.alt}
+                target={card.target}
+                rel={card.rel}
+                />
+            ))}
+        </div>
+    </section>
+</Layout>
+<style>
+    .wrapper{
+        background-color: var(--bgWhite);
+    }
+
+    h1, 
+    h3{
+        padding: 1rem;
+    }
+
+    .projectsContainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+        padding: 1rem;
+        gap:1rem;
+    }
+p
+    @media (min-width: 501px) and (max-width: 850px) {
+        .projectsContainer{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width: 851px) {
+        .projectsContainer{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>

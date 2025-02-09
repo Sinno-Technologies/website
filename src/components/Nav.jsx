@@ -13,14 +13,17 @@ const Nav = ({ colorWhite = false, flexColumn = false, justify = false, footerVi
         href: "/",
         name: "Home",
     }, {
+        href: "/projects",
+        name: "Our Work",
+    }, {
         href: "/team",
-        name: "Team",
+        name: "Our Team",
     }, {
         href: "/reviews",
         name: "Reviews",
     }, {
         href: "/contact",
-        name: "Contact",
+        name: "Contact Us",
     }, {
         href:"/calendly",
         name:"Free Consultation",
