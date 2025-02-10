@@ -6,10 +6,12 @@ import { teamMembers } from "../data/teamMembers.js";
 import Hero from "../components/Hero.astro";
 ---
 
-<Layout seo={{
-	title: "Team Page",
-	description: "Team members and trusted partners page."
-}}>
+<Layout 
+    canonical="/team/"
+    seo={{
+        title: "Team Page",
+        description: "Team members and trusted partners page."
+    }}>
   <section class="wrapper">
     <Hero
         title="Meet Our Team"
