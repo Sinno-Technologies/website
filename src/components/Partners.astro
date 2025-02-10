@@ -1,0 +1,48 @@
+---
+import { Image} from "astro:assets"
+import Chamber from "../assets/memberships/hfxChamber.webp";
+import Partnership from "../assets/memberships/hfxPartnership.webp";
+import Connector from "../assets/memberships/hfxConnector.webp";
+import DNS from "../assets/memberships/dns.webp"
+---
+<section class="wrapper">
+    <h2>Our Partners</h2>
+    <div class="logoContainer">
+        <Image class="logo" src={DNS} alt="Digital Nova Scotia Logo" />
+        <Image class="logo" src={Chamber} alt="Halifax Chamber of Commerce Logo" />
+        <Image class="logo" src={Partnership} alt="Halifax Partnership Logo" />
+        <Image class="logo" src={Connector} alt="Halifax Partnership Connector Logo" />
+    </div>
+</section>
+<style>
+    .wrapper{
+        display: flex
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .logoContainer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .logo{
+        width: 150px;
+        height: auto;
+    }
+
+    @media screen and (max-width: 768px){
+        .logoContainer{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+    }
+</style>
+
+
