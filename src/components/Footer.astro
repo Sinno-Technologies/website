@@ -2,6 +2,9 @@
 import Nav from "./Nav.jsx";
 import "../styles/global.css"
 import Social from "./Social.astro"
+
+const dateObj = new Date();
+const year = dateObj.getUTCFullYear();
 ---
 <footer class="footer">
     <Nav colorWhite={true} footerVisible={true} client:load/>
@@ -22,7 +25,7 @@ import Social from "./Social.astro"
         </div>
         <div class="footerLower">
                 <div class="copyContainer left">
-                    <span class="text">&copy; 2025 Sinno Technologies Limited.</span> 
+                    <span class="text">&copy;{year} Sinno Technologies Limited.</span> 
                     <span> All rights reserved.</span>
                 </div>
                 <div class="textContainer center">
