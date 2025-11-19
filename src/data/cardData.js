@@ -19,7 +19,7 @@ const cardData = [
   },
   {
     title: "UNUM Health",
-    body: "UNUM Health, based out of New Brunswick, Canada, is an all-in-one solution for your home care needs. The app helps you schedule, maintain and connect with everyone in your home care ecosystem. A Full Stack Application built with React, PHP, and PostgreSQL in Docker environment",
+    body: "UNUM Health, based out of New Brunswick, Canada, is an all-in-one solution for your home care needs. The app helps you schedule, maintain and connect with everyone in your home care ecosystem. A Full Stack Application built with React, PHP, and PostgreSQL utilizing Docker environments",
     img: "/src/assets/unumHealth.png",
     alt: "Unum Health Login Page",
     href: "https://www.unumhealth.com",
