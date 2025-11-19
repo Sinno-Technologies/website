@@ -1,15 +1,12 @@
 ---
 import cardData from "../data/cardData";
 import Card from "./Card.astro";
-import parkland from "../assets/ParklandPM.png";
 import unum from "../assets/unumHealth.png";
-import ramp from "../assets/rampatl.png";
 import manuela from "../assets/manuela.png"
 import teapothecary from "../assets/teapothecary.png"
-import foodelity from "../assets/foodelity.png"
 import Button from "../components/Button.astro"
 
-let imgArr = [teapothecary, foodelity, manuela,parkland, unum, ramp];
+let imgArr = [teapothecary, manuela, unum];
 let data = cardData
 
 interface Props {
@@ -27,6 +24,10 @@ interface Props {
 <section class="mainContainer" id="projects">
     <div class="contentContainer maxWidth">
         <h2 class="projects">Projects</h2>
+        <div class="success">
+            <p>Clients who have chosen to work with Sinno Technologies to build their websites experience an increase in online visibility and higher search engine results, leading to increased sales, business growth, and success.</p>
+            <p>View the work we've delivered to some of our happy clients below!</p>
+        </div>
         <div class="cardContainer">
             {data.map((card, index) => (
                 <Card
@@ -94,6 +95,21 @@ interface Props {
         color: var(--white);
         background-color: var(--black);
         border-radius: 0.5em;
+        text-align: center;
+    }
+
+    .success{
+        max-width: 1000px;
+        border: 1px solid var(--black);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 4px 4px 4px var(--black);
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 1rem;
         text-align: center;
     }
 
