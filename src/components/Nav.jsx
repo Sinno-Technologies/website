@@ -2,7 +2,7 @@ import { useStore } from "@nanostores/react"
 import { isNavOpen } from "../stores/navStore"
 import { useEffect } from "react"
 
-const Nav = ({ colorWhite = false, flexColumn = false, justify = false, footerVisible = false }) => {
+const Nav = ({ colorWhite = false, flexColumn = false, justify = false, footerVisible = false, mobile = false }) => {
     const $isNavOpen = useStore(isNavOpen)
 
     const toggleNav = () => {
@@ -50,7 +50,7 @@ const Nav = ({ colorWhite = false, flexColumn = false, justify = false, footerVi
                                 className={`link ${colorWhite ? "colorWhite" : ""} ${link.href === '/calendly' ? "calendly" : ""}`}
                                 href={link.href}
                                 onClick={toggleNav}
-                                tabIndex={$isNavOpen ? 0 : -1}
+                                tabIndex={mobile === false ? 0 : $isNavOpen ? 0 : -1}
                             >
                                 {link.name}
                             </a>
