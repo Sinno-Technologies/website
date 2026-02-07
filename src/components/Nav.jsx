@@ -16,6 +16,9 @@ const Nav = ({ colorWhite = false, flexColumn = false, justify = false, footerVi
         href: "/projects",
         name: "Our Work",
     }, {
+        href: "/team",
+        name: "Our Team",
+    },{
         href: "/reviews",
         name: "Reviews",
     }, {
